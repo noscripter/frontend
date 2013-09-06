@@ -6,7 +6,7 @@
       <h1><%= @category.title %></h1>
     </div>
   </header>
-  <div class="browse-container full-width group">
+  <div class="browse-container full-width group <% if @category.title == "Businesses and self-employed" %>browse-proto<% end %>">
 
 
   <!-- Business and self-employed static prototype -->
