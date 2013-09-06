@@ -196,6 +196,16 @@
   }
   
   .browse-proto {
-    
+    nav.popular {
+      ul {
+        li {
+          a {
+            @include core-24;
+            font-weight:600;
+          }
+        }
+      }
+    }
   }
+  
 }
