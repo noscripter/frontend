@@ -287,17 +287,26 @@
         }
       }
 
-      ul.a-l,
-      ul.m-z {
+      .a-l,
+      .m-z {
         @include media(desktop) {
-          width:50%;
+          margin-top:10px;
+          width:47%;
           float:left;
         }
 
         li {
 
+          display:block;
+
           &:after {
             clear: both;
+            visibility: hidden;
+            display: block;
+            font-size: 0;
+            content: " ";
+            clear: both;
+            height: 0;
           }
 
           h2 {
@@ -316,9 +325,57 @@
 
       ul.m-z {
         @include media(desktop) {
-          width:49%;
-          margin-left:1%;
+          width:47%;
+          margin-left:6%;
           float:left;
+        }
+      }
+
+      .whitehall-links {
+        @include media(desktop) {
+          margin:-6px 0 0 0;
+          width:75%;
+          float:right;
+        }
+
+        p {
+
+          margin:8px 0 0 0;
+
+          a {
+            @include bold-24;
+            
+            text-decoration:none;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+
+        ul.whitehall-categories {
+          li {
+            width:30%;
+            margin:10px 5% 8px 0;
+            float:left;
+            display:block;
+
+            p {
+              a {
+                @include core-16;
+                margin-bottom:0;
+                text-decoration: underline;
+              }
+            }
+
+            &:last-child {
+              margin-right:0;
+            }
+
+            ul li {
+              width:100%;
+            }
+          }
         }
       }
 
