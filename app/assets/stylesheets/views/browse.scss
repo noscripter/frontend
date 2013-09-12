@@ -195,6 +195,185 @@
     }
   }
   
+  // styles specific to subsection level of browse prototype
+
+  .browse-subsection-proto {
+
+    h1, h1 a {
+      @include bold-24;
+    }
+
+    .links {
+        @include media(desktop) {
+          margin:-6px 0 0 0;
+          width:50%;
+          float:left;
+        }
+
+        a.button {
+          @include button($grey-3);
+          font-weight:600;
+          margin-top:10px;
+        }
+
+        .destination {
+          margin-left: 6px;
+        }
+
+        h2,
+        ul.links-group li {
+
+          @include bold-19;
+
+          a {
+            text-decoration:none;
+
+            &:hover {
+              text-decoration:underline;
+            }
+          }
+
+          span { 
+            margin-left:10px;
+            @include core-14;
+            text-transform:uppercase;
+            color:#222;
+          }
+        }
+
+        p {
+          a {
+            @include bold-19;
+            margin-bottom:0;
+          }
+        }
+
+        ul.service {
+
+
+          li {
+            border-bottom: 1px $grey-2 solid;
+            padding-bottom:20px;
+            margin-bottom: 18px;
+
+            p {
+              @include core-16;
+              margin:10px 0 0 0;
+
+              a {
+                @include core-16;                
+              }
+            }
+          }
+        }
+
+        ul.guide {
+          @include media(desktop) {
+            display:inline-block;
+            padding: 3px 0;
+          }
+
+          li {
+            @include media(desktop) {
+              float:left;
+              margin-bottom:0;
+
+              &:after {
+                content: "|";
+                margin-left: 7px;
+                margin-right: 7px;
+              }
+
+              &:last-child:after {
+                content: "";
+              }
+
+              a {
+                text-decoration:none;
+                color:#222;
+
+                &:hover {
+                  text-decoration:underline;
+                }
+              }
+
+            }
+          }  
+        }
+      }
+
+    .selected-links {
+      
+      @include media(desktop) {
+        display: inline-block;
+        width: 100%;
+        margin: 30px 0 0 0;
+        padding: 15px 0 0 0;
+        border-top: 1px $grey-2 solid;
+      }
+
+      h1 {
+        @include media(desktop) {
+          max-width:170px;
+          float:left;
+        }
+
+        a {
+          text-decoration: none;
+
+          &:hover {
+            text-decoration:underline;
+          }
+        }
+      }
+
+      .links {
+
+        h2 {
+          @include bold-19;
+        }
+
+        @include media(desktop) {
+          margin:-6px 0 0 0;
+          width:66.6666%;
+          float:right;
+        }
+
+        ul.listed-links {
+
+          margin-top:8px;
+
+          li {
+            @include bold-19;
+            margin:0 0 10px 0;
+            padding:0;
+
+            a {
+              text-decoration:none;
+
+              &:hover {
+                text-decoration:underline;
+              }
+            }
+
+            span { 
+              margin-left:10px;
+              @include core-14;
+              text-transform:uppercase;
+              color:#222;
+            }
+          }
+        }
+      }
+    }
+
+    .separate {
+      border-top: 5px $light-blue solid;
+    }
+  }
+
+
+
 
   // styles specific to section level of browse prototype
 
@@ -339,12 +518,10 @@
         }
 
         p {
-
+          @include bold-24;
           margin:8px 0 0 0;
 
           a {
-            @include bold-24;
-            
             text-decoration:none;
 
             &:hover {

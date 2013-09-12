@@ -1,13 +1,102 @@
 <% content_for :title do %><%= @page_title %><% end %>
 
-<main id="content" role="main" class="group category-page">
+<main id="content" role="main" class="group category-page <% if @sub_category.title == "Setting up" %>browse-proto<% end %>">
   <header class="page-header group">
     <div class="full-width">
-      <h1><%= @sub_category.title %></h1>
+      <h1><% if @sub_category.title == "Setting up" %><span>Businesses and self-employed</span>Starting a business<% else %><%= @sub_category.title %><% end %></h1>
     </div>
   </header>
 
-  <div class="browse-container full-width group">
+  <div class="browse-container full-width group <% if @sub_category.title == "Setting up" %>browse-subsection-proto<% end %>">
+
+
+
+
+
+<!-- Starting a business static prototype -->
+<% if @sub_category.title == "Setting up" %>
+
+
+<nav class="links">
+  <h2><a href="https://www.gov.uk/starting-up-a-business">Start your own business</a><span>Guide</span></h2>
+  <ul class="guide">
+  <li><a href="https://www.gov.uk/starting-up-a-business/start-with-an-idea">Start with an idea</a></li>
+  <li><a href="https://www.gov.uk/starting-up-a-business/get-funding">Get funding</a></li>
+  <li><a href="https://www.gov.uk/starting-up-a-business/research-your-market">Research your market</a></li>
+  <li><a href="https://www.gov.uk/starting-up-a-business/develop-and-plan">Develop and plan</a></li>
+  <li><a href="https://www.gov.uk/starting-up-a-business/find-partners-and-suppliers">Find partners and suppliers</a></li>
+  <li><a href="https://www.gov.uk/starting-up-a-business/set-up-your-business">Set up your business</a></li>
+  </ul>
+</nav>
+
+<nav class="links">
+  <h2><a href="https://www.gov.uk/starting-up-a-business">Choose a legal structure for your&nbsp;business</a><span>Guide</span></h2>
+  <ul class="guide">
+  <li><a href="https://www.gov.uk/starting-up-a-business/overview">Overview</a></li>
+  <li><a href="https://www.gov.uk/starting-up-a-business/sole-trader">Sole trader</a></li>
+  <li><a href="https://www.gov.uk/starting-up-a-business/limited-company">Limited company</a></li>
+  <li><a href="https://www.gov.uk/starting-up-a-business/ordinary-business-partnership">&lsquo;Ordinary&rsquo; business partnership</a></li>
+  <li><a href="https://www.gov.uk/starting-up-a-business/limited-partnership-and-limited-liability-partnership">Limited partnership and limited liability partnership</a></li>
+  <li><a href="https://www.gov.uk/starting-up-a-business/unincorporated-association">Unincorporated association</a></li>
+  </ul>
+</nav>
+
+<nav class="selected-links separate">
+  <h1>TBC</h1>
+  <section class="links">
+      <ul class="listed-links">
+        <li><a href="https://www.gov.uk/business-support-helpline">Business support helplines</a> <span>Quick answer</span></li>
+        <li><a href="https://www.gov.uk/business-legal-structures">Choose a legal structure for a new business</a> <span>Guide</span></li>
+        <li><a href="https://www.gov.uk/companies-house">Companies House</a> <span>Quick answer</span></li>
+        <li><a href="https://www.gov.uk/register-a-company-online">Register a private limited company online</a> <span>Service</span></li>
+        <li><a href="https://www.gov.uk/register-as-an-overseas-company">Register as an overseas company</a> <span>Quick answer</span></li>
+        <li><a href="https://www.gov.uk/new-business-register-for-tax">Register your new business with HMRC</a> <span>Service</span></li>
+        <li><a href="https://www.gov.uk/restart-a-non-trading-or-dormant-company">Restarting a non-trading or dormant company</a> <span>Quick answer</span></li>
+        <li><a href="https://www.gov.uk/set-up-business-uk">Set up a business in the UK</a> <span>Guide</span></li>
+        <li><a href="https://www.gov.uk/set-up-business-partnership">Set up a business partnership</a> <span>Quick answer</span></li>
+        <li><a href="https://www.gov.uk/limited-company-formation">Set up a private limited company</a> <span>Guide</span></li>
+        <li><a href="https://www.gov.uk/set-up-sole-trader">Set up as a sole trader</a> <span>Quick answer</span></li>
+        <li><a href="https://www.gov.uk/set-up-a-social-enterprise">Setting up a social enterprise</a> <span>Quick answer</span></li>
+        <li><a href="https://www.gov.uk/starting-up-a-business">Start your own business</a> <span>Guide</span></li>
+        <li><a href="https://www.gov.uk/write-business-plan">Write a business plan</a> <span>Quick answer</span></li>
+      </ul>
+  </section>
+</nav>
+
+<nav class="selected-links separate">
+  <h1>TBC</h1>
+  <section class="links">
+    <ul class="listed-links">
+      <li><a href="https://www.gov.uk/browse/employing-people">Employing people</a></li>
+      <li><a href="https://www.gov.uk/browse/business/finance-support">Financing your business</a></li>
+      <li><a href="https://www.gov.uk/growing-your-business">Growing your business</a></li>
+      <li><a href="https://www.gov.uk/licence-finder">Licences</a></li>
+      <li><a href="https://www.gov.uk/write-business-plan">Planning your business</a></li>
+      <li><a href="https://www.gov.uk/browse/business/premises-rates">Premises for business</a></li>
+      <li><a href="https://www.gov.uk/browse/business/limited-company">Running a business</a></li>
+      <li><a href="https://www.gov.uk/browse/business/business-tax">Tax for businesses</a></li>
+      <li><a href="https://www.gov.uk/training-study-work-your-rights">Training staff</a></li>
+    </ul>
+  </section>
+</nav>
+
+<!-- <nav class="selected-links separate">
+<h1>See also</h1>
+  <section class="links">
+    <ul>
+      <li><a href="https://www.gov.uk/starting-up-a-business">Start your own business</a><span>Guide</span></li>
+      <li><a href="https://www.gov.uk/starting-up-a-business">Start your own business</a><span>Guide</span></li>
+    </ul>
+  </section>
+</nav> -->
+
+
+<% else %>
+<!-- All other sub sections -->
+
+
+
+
 
     <ul class="content-list group">
     <% @results.each do |content| %>
@@ -35,6 +124,18 @@
       </ul>
     </div>
   <% end %>
+
+
+
+
+
+<!-- All other sub sections ends -->
+<% end %>
+
+
+
+
+
 
   </div>
 </main>
