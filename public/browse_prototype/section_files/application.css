@@ -1,0 +1,6572 @@
+/* govuk_frontend_toolkit includes */
+@-ms-viewport {
+  width: device-width;
+}
+
+@-o-viewport {
+  width: device-width;
+}
+
+/* CSS 3 Mixins
+
+  Add them as you need them. This should let us manage vendor prefixes in one place.
+ */
+@font-face {
+  font-family: GDS-Logo;
+  src: local("HelveticaNeue"), local("Helvetica Neue"), local("Arial"), local("Helvetica");
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+@-o-viewport {
+  width: device-width;
+}
+
+/* local styleguide includes */
+/* New Greys */
+/* Cross-browser shims
+
+  Ways of normalising properties across browsers.
+ */
+@-ms-viewport {
+  width: device-width;
+}
+
+@-o-viewport {
+  width: device-width;
+}
+
+/* Usage:
+   @include inline-block
+
+   or
+
+   @include inline-block("250px")
+
+   which gives a min-height to the inline-block elements.
+*/
+/* Contain floats usage:
+
+   .this-has-floated-children {
+     @extend %contain-floats;
+   }
+
+*/
+/* line 49, ../../../../lib/gems/1.9.1/gems/govuk_frontend_toolkit-0.32.2/app/assets/stylesheets/_shims.scss */
+article .info-notice:after, #global-header .header-wrapper:after, #global-header .header-wrapper .header-global:after, #global-header .header-wrapper .header-global .header-logo:after,
+#global-header .header-wrapper .header-global .site-search:after, #global-header form#search .content:after, #global-header .header-proposition #proposition-links:after, .smart_answer .article-container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* CSS 3 Mixins
+
+  Add them as you need them. This should let us manage vendor prefixes in one place.
+ */
+@-ms-viewport {
+  width: device-width;
+}
+
+@-o-viewport {
+  width: device-width;
+}
+
+/*
+
+Mixin and defaults for making buttons on GOV.UK services.
+
+For guidance, see: https://www.gov.uk/service-manual/design-and-content/resources/buttons.html
+
+Example usage:
+
+.button{
+  @include button;
+}
+.button-secondary{
+  @include button($grey-3);
+}
+.button-warning{
+  @include button($red);
+}
+
+*/
+/*
+ * Old green: 28a198
+ * New green: 008270
+ */
+/* buttons! */
+/* line 9, ../../app/assets/stylesheets/_buttons.scss */
+.button {
+  background-color: #00823b;
+  position: relative;
+  display: -moz-inline-stack;
+  display: inline-block;
+  padding: 0.35em 0.5em 0.15em 0.5em;
+  border: none;
+  -webkit-box-shadow: 0 2px 0 #003518;
+  -moz-box-shadow: 0 2px 0 #003518;
+  box-shadow: 0 2px 0 #003518;
+  font-size: 1em;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  color: white;
+}
+/* line 49, ../../../../lib/gems/1.9.1/gems/govuk_frontend_toolkit-0.32.2/app/assets/stylesheets/design-patterns/_buttons.scss */
+.button:visited {
+  background-color: #00823b;
+}
+/* line 53, ../../../../lib/gems/1.9.1/gems/govuk_frontend_toolkit-0.32.2/app/assets/stylesheets/design-patterns/_buttons.scss */
+.button:hover, .button:focus {
+  background: #00692f;
+}
+/* line 56, ../../../../lib/gems/1.9.1/gems/govuk_frontend_toolkit-0.32.2/app/assets/stylesheets/design-patterns/_buttons.scss */
+.button:active {
+  top: 2px;
+  -webkit-box-shadow: 0 0 0 #00823b;
+  -moz-box-shadow: 0 0 0 #00823b;
+  box-shadow: 0 0 0 #00823b;
+}
+/* line 64, ../../../../lib/gems/1.9.1/gems/govuk_frontend_toolkit-0.32.2/app/assets/stylesheets/design-patterns/_buttons.scss */
+.button.disabled, .button[disabled="disabled"], .button[disabled] {
+  zoom: 1;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+}
+/* line 66, ../../../../lib/gems/1.9.1/gems/govuk_frontend_toolkit-0.32.2/app/assets/stylesheets/design-patterns/_buttons.scss */
+.button.disabled:hover, .button[disabled="disabled"]:hover, .button[disabled]:hover {
+  cursor: default;
+  background-color: #00823b;
+}
+/* line 70, ../../../../lib/gems/1.9.1/gems/govuk_frontend_toolkit-0.32.2/app/assets/stylesheets/design-patterns/_buttons.scss */
+.button.disabled:active, .button[disabled="disabled"]:active, .button[disabled]:active {
+  top: 0;
+  -webkit-box-shadow: 0 2px 0 #003518;
+  -moz-box-shadow: 0 2px 0 #003518;
+  box-shadow: 0 2px 0 #003518;
+}
+/* line 84, ../../../../lib/gems/1.9.1/gems/govuk_frontend_toolkit-0.32.2/app/assets/stylesheets/design-patterns/_buttons.scss */
+.button:hover, .button:focus, .button:visited {
+  color: white;
+}
+/* line 98, ../../../../lib/gems/1.9.1/gems/govuk_frontend_toolkit-0.32.2/app/assets/stylesheets/design-patterns/_buttons.scss */
+.button:before {
+  content: "";
+  height: 110%;
+  width: 100%;
+  display: block;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 108, ../../../../lib/gems/1.9.1/gems/govuk_frontend_toolkit-0.32.2/app/assets/stylesheets/design-patterns/_buttons.scss */
+.button:active:before {
+  top: -10%;
+  height: 120%;
+}
+/* line 121, ../../../../lib/gems/1.9.1/gems/govuk_frontend_toolkit-0.32.2/app/assets/stylesheets/design-patterns/_buttons.scss */
+.button[rel="external"]:after {
+  display: none;
+  content: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* line 14, ../../app/assets/stylesheets/_buttons.scss */
+.button,
+.button.medium {
+  padding: 0.3em 0.6em 0.2em 0.6em;
+}
+
+/* line 18, ../../app/assets/stylesheets/_buttons.scss */
+.button.medium {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.36842;
+  font-weight: 400;
+  text-transform: none;
+}
+@media (max-width: 640px) {
+  /* line 18, ../../app/assets/stylesheets/_buttons.scss */
+  .button.medium {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+/* line 26, ../../app/assets/stylesheets/_buttons.scss */
+.get-started .button {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 24px;
+  line-height: 0.66667;
+  font-weight: 400;
+  text-transform: none;
+  font-weight: 700;
+  padding: 0.45em 0.5em 0.45em 0.5em;
+  display: inline-block;
+  /* IE6 adds its own side padding so requires no extra */
+}
+@media (max-width: 640px) {
+  /* line 26, ../../app/assets/stylesheets/_buttons.scss */
+  .get-started .button {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+
+/* line 41, ../../app/assets/stylesheets/_buttons.scss */
+.transaction .get-started .button,
+.local_transaction .get-started .button,
+.business_support .get-started .button,
+.licence .get-started .button,
+.next-steps-promo .get-started .button {
+  padding: 0.60em 1.7em 0.45em 0.67em;
+  background-image: url(http://static.dev.gov.uk/static/icon-pointer.png);
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+}
+@media (max-width: 640px) {
+  /* line 41, ../../app/assets/stylesheets/_buttons.scss */
+  .transaction .get-started .button,
+  .local_transaction .get-started .button,
+  .business_support .get-started .button,
+  .licence .get-started .button,
+  .next-steps-promo .get-started .button {
+    background-position: 110% 50%;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 41, ../../app/assets/stylesheets/_buttons.scss */
+  .transaction .get-started .button,
+  .local_transaction .get-started .button,
+  .business_support .get-started .button,
+  .licence .get-started .button,
+  .next-steps-promo .get-started .button {
+    background-image: url(http://static.dev.gov.uk/static/icon-pointer-2x.png);
+    background-size: 30px 19px;
+  }
+}
+
+/* IE6 adds its own side padding so requires no extra */
+/* get started buttons */
+/* line 76, ../../app/assets/stylesheets/_buttons.scss */
+.get-started {
+  margin: 1.5em 0 0 0;
+}
+/* line 79, ../../app/assets/stylesheets/_buttons.scss */
+.get-started .destination {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857;
+  font-weight: 400;
+  text-transform: none;
+  color: #2e3133;
+  display: block;
+  margin-top: 0.5em;
+  max-width: 13em;
+}
+@media (max-width: 640px) {
+  /* line 79, ../../app/assets/stylesheets/_buttons.scss */
+  .get-started .destination {
+    font-size: 12px;
+    line-height: 1.25;
+  }
+}
+
+/* line 89, ../../app/assets/stylesheets/_buttons.scss */
+input {
+  /* below fixes a bug where IE puts a nasty black border around these elements */
+}
+/* line 90, ../../app/assets/stylesheets/_buttons.scss */
+input[disabled="disabled"] {
+  opacity: 0.5;
+}
+/* line 95, ../../app/assets/stylesheets/_buttons.scss */
+input[type="text"], input[type="search"] {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  border: 1px solid #bbb;
+  min-width: 8em;
+  margin: 0 0.5em;
+  padding: 0.25em;
+}
+@media (max-width: 640px) {
+  /* line 95, ../../app/assets/stylesheets/_buttons.scss */
+  input[type="text"], input[type="search"] {
+    font-size: 14px;
+    line-height: 1.14286;
+  }
+}
+
+/* styles */
+/* normalize.css v1.0.0 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects `block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+/* line 22, ../../vendor/assets/stylesheets/normalize.css */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/*
+ * Corrects `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+/* line 32, ../../vendor/assets/stylesheets/normalize.css */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/*
+ * Prevents modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 43, ../../vendor/assets/stylesheets/normalize.css */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/*
+ * Addresses styling for `hidden` attribute not present in IE 7/8/9, Firefox 3,
+ * and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+/* line 54, ../../vendor/assets/stylesheets/normalize.css */
+[hidden] {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevents iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 69, ../../vendor/assets/stylesheets/normalize.css */
+html {
+  font-size: 100%;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/*
+ * Addresses `font-family` inconsistency between `textarea` and other form
+ * elements.
+ */
+/* line 84, ../../vendor/assets/stylesheets/normalize.css */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+
+/*
+ * Addresses margins handled incorrectly in IE 6/7.
+ */
+/* line 92, ../../vendor/assets/stylesheets/normalize.css */
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/*
+ * Addresses `outline` inconsistency between Chrome and other browsers.
+ */
+/* line 104, ../../vendor/assets/stylesheets/normalize.css */
+a:focus {
+  outline: thin dotted;
+}
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers.
+ */
+/* line 113, ../../vendor/assets/stylesheets/normalize.css */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Addresses font sizes and margins set differently in IE 6/7.
+ * Addresses font sizes within `section` and `article` in Firefox 4+, Safari 5,
+ * and Chrome.
+ */
+/* line 127, ../../vendor/assets/stylesheets/normalize.css */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 132, ../../vendor/assets/stylesheets/normalize.css */
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+/* line 137, ../../vendor/assets/stylesheets/normalize.css */
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+/* line 142, ../../vendor/assets/stylesheets/normalize.css */
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+/* line 147, ../../vendor/assets/stylesheets/normalize.css */
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+/* line 152, ../../vendor/assets/stylesheets/normalize.css */
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+
+/*
+ * Make abbr consistent across browsers. There is no border as users found it confusing as to whether it was a link or not.
+ */
+/* line 161, ../../vendor/assets/stylesheets/normalize.css */
+abbr[title] {
+  border-bottom: none;
+}
+
+/*
+ * Addresses style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
+ */
+/* line 170, ../../vendor/assets/stylesheets/normalize.css */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 174, ../../vendor/assets/stylesheets/normalize.css */
+blockquote {
+  margin: 1em 40px;
+}
+
+/*
+ * Addresses styling not present in Safari 5 and Chrome.
+ */
+/* line 182, ../../vendor/assets/stylesheets/normalize.css */
+dfn {
+  font-style: italic;
+}
+
+/*
+ * Addresses styling not present in IE 6/7/8/9.
+ */
+/* line 190, ../../vendor/assets/stylesheets/normalize.css */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/*
+ * Addresses margins set differently in IE 6/7.
+ */
+/* line 200, ../../vendor/assets/stylesheets/normalize.css */
+p,
+pre {
+  margin: 1em 0;
+}
+
+/*
+ * Corrects font family set oddly in IE 6, Safari 4/5, and Chrome.
+ */
+/* line 211, ../../vendor/assets/stylesheets/normalize.css */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+
+/*
+ * Improves readability of pre-formatted text in all browsers.
+ */
+/* line 221, ../../vendor/assets/stylesheets/normalize.css */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/*
+ * Addresses CSS quotes not supported in IE 6/7.
+ */
+/* line 231, ../../vendor/assets/stylesheets/normalize.css */
+q {
+  quotes: none;
+}
+
+/*
+ * Addresses `quotes` property not supported in Safari 4.
+ */
+/* line 240, ../../vendor/assets/stylesheets/normalize.css */
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/* line 245, ../../vendor/assets/stylesheets/normalize.css */
+small {
+  font-size: 75%;
+}
+
+/*
+ * Prevents `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 254, ../../vendor/assets/stylesheets/normalize.css */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 261, ../../vendor/assets/stylesheets/normalize.css */
+sup {
+  top: -0.5em;
+}
+
+/* line 265, ../../vendor/assets/stylesheets/normalize.css */
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+/*
+ * Addresses margins set differently in IE 6/7.
+ */
+/* line 280, ../../vendor/assets/stylesheets/normalize.css */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+
+/* line 284, ../../vendor/assets/stylesheets/normalize.css */
+dd {
+  margin: 0 0 0 40px;
+}
+
+/*
+ * Addresses paddings set differently in IE 6/7.
+ */
+/* line 294, ../../vendor/assets/stylesheets/normalize.css */
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+
+/*
+ * Corrects list images handled incorrectly in IE 7.
+ */
+/* line 303, ../../vendor/assets/stylesheets/normalize.css */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * 1. Removes border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improves image quality when scaled in IE 7.
+ */
+/* line 317, ../../vendor/assets/stylesheets/normalize.css */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+}
+
+/*
+ * Corrects overflow displayed oddly in IE 9.
+ */
+/* line 326, ../../vendor/assets/stylesheets/normalize.css */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/*
+ * Addresses margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+/* line 338, ../../vendor/assets/stylesheets/normalize.css */
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Corrects margin displayed oddly in IE 6/7.
+ */
+/* line 350, ../../vendor/assets/stylesheets/normalize.css */
+form {
+  margin: 0;
+}
+
+/*
+ * Define consistent border, margin, and padding.
+ */
+/* line 358, ../../vendor/assets/stylesheets/normalize.css */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/*
+ * 1. Corrects color not being inherited in IE 6/7/8/9.
+ * 2. Corrects text not wrapping in Firefox 3.
+ * 3. Corrects alignment displayed oddly in IE 6/7.
+ */
+/* line 370, ../../vendor/assets/stylesheets/normalize.css */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+
+/*
+ * 1. Corrects font size not being inherited in all browsers.
+ * 2. Addresses margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improves appearance and consistency in all browsers.
+ */
+/* line 387, ../../vendor/assets/stylesheets/normalize.css */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */
+}
+
+/*
+ * Addresses Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 400, ../../vendor/assets/stylesheets/normalize.css */
+button,
+input {
+  line-height: normal;
+}
+
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Corrects inability to style clickable `input` types in iOS.
+ * 3. Improves usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Removes inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+/* line 417, ../../vendor/assets/stylesheets/normalize.css */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */
+}
+
+/*
+ * Re-set default cursor for disabled elements.
+ */
+/* line 428, ../../vendor/assets/stylesheets/normalize.css */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+/*
+ * 1. Addresses box sizing set to content-box in IE 8/9.
+ * 2. Removes excess padding in IE 8/9.
+ * 3. Removes excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+/* line 440, ../../vendor/assets/stylesheets/normalize.css */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
+}
+
+/*
+ * 1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 453, ../../vendor/assets/stylesheets/normalize.css */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/*
+ * Removes inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+/* line 466, ../../vendor/assets/stylesheets/normalize.css */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+ * Removes inner padding and border in Firefox 3+.
+ */
+/* line 475, ../../vendor/assets/stylesheets/normalize.css */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/*
+ * 1. Removes default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improves readability and alignment in all browsers.
+ */
+/* line 485, ../../vendor/assets/stylesheets/normalize.css */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/*
+ * Remove most spacing between table cells.
+ */
+/* line 498, ../../vendor/assets/stylesheets/normalize.css */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 1, ../../app/assets/stylesheets/basic.scss */
+html, body, button, input, table, td, th {
+  font-family: "nta", Arial, sans-serif;
+}
+
+/* line 4, ../../app/assets/stylesheets/basic.scss */
+html, body, div, h1, h2, h3, h4, h5, h6, article, aside, footer, header, hgroup, nav, section {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+/* line 12, ../../app/assets/stylesheets/basic.scss */
+.group:before,
+.group:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+/* line 19, ../../app/assets/stylesheets/basic.scss */
+.group:after {
+  clear: both;
+}
+
+/* line 22, ../../app/assets/stylesheets/basic.scss */
+.group {
+  zoom: 1;
+}
+
+/* line 27, ../../app/assets/stylesheets/basic.scss */
+.content-fixed {
+  top: 0;
+  position: fixed;
+}
+
+/* line 31, ../../app/assets/stylesheets/basic.scss */
+.shim {
+  display: block;
+}
+
+/* line 35, ../../app/assets/stylesheets/basic.scss */
+html {
+  background: white;
+}
+
+/* line 39, ../../app/assets/stylesheets/basic.scss */
+body {
+  color: #0b0c0c;
+  line-height: 1.5;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 46, ../../app/assets/stylesheets/basic.scss */
+ol, ul, nav ol, nav ul {
+  list-style: inherit;
+}
+
+/* line 50, ../../app/assets/stylesheets/basic.scss */
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+/* line 56, ../../app/assets/stylesheets/basic.scss */
+a,
+a:visited {
+  color: #2e3191;
+}
+
+/* line 60, ../../app/assets/stylesheets/basic.scss */
+a:hover {
+  color: #2e8aca;
+}
+
+/* line 64, ../../app/assets/stylesheets/basic.scss */
+a:active {
+  color: #2e8aca;
+}
+
+/* line 347, ../../../../lib/gems/1.9.1/gems/govuk_frontend_toolkit-0.32.2/app/assets/stylesheets/_typography.scss */
+a[rel="external"]:after {
+  background-image: url(http://static.dev.gov.uk/static/external-link.png);
+  background-repeat: no-repeat;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 347, ../../../../lib/gems/1.9.1/gems/govuk_frontend_toolkit-0.32.2/app/assets/stylesheets/_typography.scss */
+  a[rel="external"]:after {
+    background-image: url(http://static.dev.gov.uk/static/external-link-24x24.png);
+    background-size: 12px 400px;
+  }
+}
+/* line 288, ../../../../lib/gems/1.9.1/gems/govuk_frontend_toolkit-0.32.2/app/assets/stylesheets/_typography.scss */
+a[rel="external"]:after {
+  content: "\A0\A0\A0\A0";
+  background-position: right 6px;
+}
+/* line 297, ../../../../lib/gems/1.9.1/gems/govuk_frontend_toolkit-0.32.2/app/assets/stylesheets/_typography.scss */
+a[rel="external"]:hover:after {
+  background-position: right -382px;
+}
+@media (max-width: 640px) {
+  /* line 288, ../../../../lib/gems/1.9.1/gems/govuk_frontend_toolkit-0.32.2/app/assets/stylesheets/_typography.scss */
+  a[rel="external"]:after {
+    content: "\A0\A0\A0\A0\A0";
+    background-position: right 3px;
+  }
+  /* line 297, ../../../../lib/gems/1.9.1/gems/govuk_frontend_toolkit-0.32.2/app/assets/stylesheets/_typography.scss */
+  a[rel="external"]:hover:after {
+    background-position: right -385px;
+  }
+}
+
+/* line 288, ../../../../lib/gems/1.9.1/gems/govuk_frontend_toolkit-0.32.2/app/assets/stylesheets/_typography.scss */
+.external-link:after {
+  content: "\A0\A0\A0\A0\A0\A0\A0\A0";
+  background-position: right 0px;
+}
+/* line 297, ../../../../lib/gems/1.9.1/gems/govuk_frontend_toolkit-0.32.2/app/assets/stylesheets/_typography.scss */
+.external-link:hover:after {
+  background-position: right 0px;
+}
+/* line 359, ../../../../lib/gems/1.9.1/gems/govuk_frontend_toolkit-0.32.2/app/assets/stylesheets/_typography.scss */
+.external-link:after {
+  background-image: url(http://static.dev.gov.uk/static/external-link-black-12x12.png);
+  background-repeat: no-repeat;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 359, ../../../../lib/gems/1.9.1/gems/govuk_frontend_toolkit-0.32.2/app/assets/stylesheets/_typography.scss */
+  .external-link:after {
+    background-image: url(http://static.dev.gov.uk/static/external-link-black-24x24.png);
+    background-size: 12px 400px;
+  }
+}
+
+/*
+ * 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
+ *    http://clagnut.com/blog/348/#c790
+ *    note - font-size reduced to 62.5% to allow simple rem/px font-sizing and fallback
+ *    http://snook.ca/archives/html_and_css/font-size-with-rem
+ * 2. Keeps page centred in all browsers regardless of content height
+ * 3. Removes Android and iOS tap highlight color to prevent entire container being highlighted
+ *    www.yuiblog.com/blog/2010/10/01/quick-tip-customizing-the-mobile-safari-tap-highlight-color/
+ */
+/* line 93, ../../app/assets/stylesheets/basic.scss */
+html {
+  font-size: 62.5%;
+  /* 1 */
+  overflow-y: scroll;
+  /* 2 */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* 3 */
+}
+
+/*
+ * 1. Font-size increased to compensate for change to html element font-size in
+ *    order to support beta typography which was set in ems
+ *    (62.5% * 160% = 100%)
+ * 2. Addresses margins handled incorrectly in IE6/7
+ */
+/* line 106, ../../app/assets/stylesheets/basic.scss */
+body {
+  font-size: 160%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/* line 112, ../../app/assets/stylesheets/basic.scss */
+b,
+strong {
+  font-weight: 600;
+}
+
+/* line 116, ../../app/assets/stylesheets/basic.scss */
+button {
+  *overflow: visible;
+}
+
+/* line 120, ../../app/assets/stylesheets/basic.scss */
+abbr[title] {
+  cursor: help;
+}
+
+/* line 124, ../../app/assets/stylesheets/basic.scss */
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: searchfield-cancel-button;
+  margin-right: 2px;
+}
+
+/* line 129, ../../app/assets/stylesheets/basic.scss */
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* Cross-browser shims
+
+  Ways of normalising properties across browsers.
+ */
+@-ms-viewport {
+  width: device-width;
+}
+
+@-o-viewport {
+  width: device-width;
+}
+
+/* Usage:
+   @include inline-block
+
+   or
+
+   @include inline-block("250px")
+
+   which gives a min-height to the inline-block elements.
+*/
+/* Contain floats usage:
+
+   .this-has-floated-children {
+     @extend %contain-floats;
+   }
+
+*/
+/* line 49, ../../../../lib/gems/1.9.1/gems/govuk_frontend_toolkit-0.32.2/app/assets/stylesheets/_shims.scss */
+article .info-notice:after, #global-header .header-wrapper:after, #global-header .header-wrapper .header-global:after, #global-header .header-wrapper .header-global .header-logo:after,
+#global-header .header-wrapper .header-global .site-search:after, #global-header form#search .content:after, #global-header .header-proposition #proposition-links:after, .smart_answer .article-container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/*
+ * Text styles for articles.
+ * It's kind of like typography innit.
+*/
+/* line 8, ../../app/assets/stylesheets/text.scss */
+article h1 {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  font-weight: 700;
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+}
+@media (max-width: 640px) {
+  /* line 8, ../../app/assets/stylesheets/text.scss */
+  article h1 {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+
+/* line 14, ../../app/assets/stylesheets/text.scss */
+article header h1 {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 27px;
+  line-height: 1.11111;
+  font-weight: 400;
+  text-transform: none;
+  padding-top: 8px;
+  padding-bottom: 7px;
+  font-weight: 700;
+  color: #0b0c0c;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+@media (max-width: 640px) {
+  /* line 14, ../../app/assets/stylesheets/text.scss */
+  article header h1 {
+    font-size: 18px;
+    line-height: 1.11111;
+  }
+}
+@media (min-width: 641px) {
+  /* line 14, ../../app/assets/stylesheets/text.scss */
+  article header h1 {
+    padding-top: 4px;
+    padding-bottom: 6px;
+  }
+}
+/* line 25, ../../app/assets/stylesheets/text.scss */
+article header h1 span {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  display: block;
+  margin-bottom: 0.4em;
+}
+@media (max-width: 640px) {
+  /* line 25, ../../app/assets/stylesheets/text.scss */
+  article header h1 span {
+    font-size: 14px;
+    line-height: 1.14286;
+  }
+}
+
+/* line 33, ../../app/assets/stylesheets/text.scss */
+.wf-nta-n4-active article header h1 span {
+  font-family: "NTA", "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+/* line 37, ../../app/assets/stylesheets/text.scss */
+article h1 + h2 {
+  margin-top: 0.75em;
+}
+
+/* line 41, ../../app/assets/stylesheets/text.scss */
+article h2 {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  font-weight: 700;
+  margin: 1.2em 0 0.4em 0;
+}
+@media (max-width: 640px) {
+  /* line 41, ../../app/assets/stylesheets/text.scss */
+  article h2 {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+
+/* line 46, ../../app/assets/stylesheets/text.scss */
+article h2 + h3 {
+  margin-top: 0.75em;
+}
+
+/* line 50, ../../app/assets/stylesheets/text.scss */
+article h3 {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  font-weight: 700;
+  margin-top: 1em;
+  margin-bottom: 0.75em;
+}
+@media (max-width: 640px) {
+  /* line 50, ../../app/assets/stylesheets/text.scss */
+  article h3 {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+/* line 56, ../../app/assets/stylesheets/text.scss */
+article h3 + h4 {
+  margin-top: 0.75em;
+}
+
+/* line 60, ../../app/assets/stylesheets/text.scss */
+article h4 {
+  margin-top: 1.5em;
+  margin-bottom: 0;
+}
+
+/* line 65, ../../app/assets/stylesheets/text.scss */
+article h3 + table {
+  margin-top: 0.652em;
+}
+
+/* line 69, ../../app/assets/stylesheets/text.scss */
+article h4 + table {
+  margin-top: 0.75em;
+}
+
+/* line 75, ../../app/assets/stylesheets/text.scss */
+article h2 + p, article h3 + p, article h4 + p,
+article h2 + ol, article h3 + ol, article h4 + ol,
+article h2 + ul, article h3 + ul, article h4 + ul {
+  margin-top: 0.2em;
+}
+
+/* line 82, ../../app/assets/stylesheets/text.scss */
+article h1,
+article h2,
+article h3,
+article h4 {
+  color: #0b0c0c;
+}
+
+/* line 86, ../../app/assets/stylesheets/text.scss */
+article p, article ul, article ol {
+  margin: 0.75em 0;
+}
+
+/* line 90, ../../app/assets/stylesheets/text.scss */
+article p {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+}
+@media (max-width: 640px) {
+  /* line 90, ../../app/assets/stylesheets/text.scss */
+  article p {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+/* line 94, ../../app/assets/stylesheets/text.scss */
+article p + .help-notice {
+  margin-top: 2em;
+}
+
+/* line 98, ../../app/assets/stylesheets/text.scss */
+article li {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  margin: 0.25em 0;
+  padding-left: 0.3em;
+}
+@media (max-width: 640px) {
+  /* line 98, ../../app/assets/stylesheets/text.scss */
+  article li {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+@media (max-width: 640px) {
+  /* line 98, ../../app/assets/stylesheets/text.scss */
+  article li {
+    margin-left: 16px;
+    padding-left: 0;
+  }
+}
+/* line 109, ../../app/assets/stylesheets/text.scss */
+article li ul,
+article li ol {
+  margin: 0;
+  list-style-position: inside;
+}
+/* line 114, ../../app/assets/stylesheets/text.scss */
+article li li {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  list-style-type: circle;
+}
+@media (max-width: 640px) {
+  /* line 114, ../../app/assets/stylesheets/text.scss */
+  article li li {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+/* line 119, ../../app/assets/stylesheets/text.scss */
+article li p {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  margin: 0;
+}
+@media (max-width: 640px) {
+  /* line 119, ../../app/assets/stylesheets/text.scss */
+  article li p {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+/* line 125, ../../app/assets/stylesheets/text.scss */
+article ul, article ol {
+  padding-left: 1em;
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+@media (max-width: 640px) {
+  /* line 125, ../../app/assets/stylesheets/text.scss */
+  article ul, article ol {
+    padding-left: 0;
+    margin-left: 0;
+  }
+}
+
+/*
+ * Example has a green background, so we need an additional indent to
+ * avoid the bullets hanging on the edge of the colour.
+*/
+/* line 141, ../../app/assets/stylesheets/text.scss */
+article .example ul,
+article .example ol {
+  margin-left: 0.5em;
+}
+
+/* line 145, ../../app/assets/stylesheets/text.scss */
+article ul {
+  list-style-type: circle;
+  list-style-image: url(http://static.dev.gov.uk/static/bullet-disc-5px.gif);
+}
+
+/* line 150, ../../app/assets/stylesheets/text.scss */
+article ol {
+  list-style-type: decimal;
+}
+
+/* line 154, ../../app/assets/stylesheets/text.scss */
+article table ul {
+  padding-left: 0.75em;
+  margin: 0;
+}
+
+/* line 159, ../../app/assets/stylesheets/text.scss */
+article table ul li:last-child {
+  margin-bottom: 0;
+}
+
+/* line 163, ../../app/assets/stylesheets/text.scss */
+article dl {
+  margin-top: 1.5em;
+  margin-bottom: 1.88em;
+}
+
+/* line 168, ../../app/assets/stylesheets/text.scss */
+article dt {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  margin-bottom: 0.25em;
+}
+@media (max-width: 640px) {
+  /* line 168, ../../app/assets/stylesheets/text.scss */
+  article dt {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+/* line 173, ../../app/assets/stylesheets/text.scss */
+article dd {
+  margin-bottom: 0.75em;
+}
+
+/* line 177, ../../app/assets/stylesheets/text.scss */
+article table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 1em -1em 2em -1em;
+  width: 105.95%;
+}
+/* line 183, ../../app/assets/stylesheets/text.scss */
+article table caption {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  font-weight: 700;
+  margin: 0.4em 0.5em 0.4em 0.7em;
+  text-align: left;
+}
+@media (max-width: 640px) {
+  /* line 183, ../../app/assets/stylesheets/text.scss */
+  article table caption {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+@media (max-width: 640px) {
+  /* line 177, ../../app/assets/stylesheets/text.scss */
+  article table {
+    margin: 1em 0 2em 0;
+    width: 100%;
+  }
+  /* line 193, ../../app/assets/stylesheets/text.scss */
+  article table caption {
+    padding-left: 0;
+  }
+}
+
+/* line 199, ../../app/assets/stylesheets/text.scss */
+article th, article td {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  vertical-align: top;
+  padding: 0.7em 0.5em 0.7em 1em;
+}
+@media (max-width: 640px) {
+  /* line 199, ../../app/assets/stylesheets/text.scss */
+  article th, article td {
+    font-size: 14px;
+    line-height: 1.14286;
+  }
+}
+/* line 288, ../../../../lib/gems/1.9.1/gems/govuk_frontend_toolkit-0.32.2/app/assets/stylesheets/_typography.scss */
+article th a[rel="external"]:after, article td a[rel="external"]:after {
+  content: "\A0\A0\A0\A0\A0";
+  background-position: right 3px;
+}
+/* line 297, ../../../../lib/gems/1.9.1/gems/govuk_frontend_toolkit-0.32.2/app/assets/stylesheets/_typography.scss */
+article th a[rel="external"]:hover:after, article td a[rel="external"]:hover:after {
+  background-position: right -385px;
+}
+@media (max-width: 640px) {
+  /* line 288, ../../../../lib/gems/1.9.1/gems/govuk_frontend_toolkit-0.32.2/app/assets/stylesheets/_typography.scss */
+  article th a[rel="external"]:after, article td a[rel="external"]:after {
+    content: "\A0\A0\A0\A0\A0";
+    background-position: right 1px;
+  }
+  /* line 297, ../../../../lib/gems/1.9.1/gems/govuk_frontend_toolkit-0.32.2/app/assets/stylesheets/_typography.scss */
+  article th a[rel="external"]:hover:after, article td a[rel="external"]:hover:after {
+    background-position: right -387px;
+  }
+}
+
+/* line 212, ../../app/assets/stylesheets/text.scss */
+article tr:nth-child(even) td {
+  background-color: #fff;
+}
+
+/* line 216, ../../app/assets/stylesheets/text.scss */
+article td {
+  background: #eaedef;
+  border: dotted 1px #b8c6cc;
+}
+/* line 220, ../../app/assets/stylesheets/text.scss */
+article td small {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+}
+@media (max-width: 640px) {
+  /* line 220, ../../app/assets/stylesheets/text.scss */
+  article td small {
+    font-size: 14px;
+    line-height: 1.14286;
+  }
+}
+
+/* reduce table font size on very small screens */
+@media screen and (max-width: 320px) {
+  /* line 227, ../../app/assets/stylesheets/text.scss */
+  article th, article td, article td small {
+    font-size: 10px;
+  }
+}
+/* line 232, ../../app/assets/stylesheets/text.scss */
+article th {
+  line-height: 1.25em;
+  text-align: left;
+  color: #0b0c0c;
+  font-weight: 700;
+  background-color: #dee0e2;
+  border: solid 1px #a1acb2;
+}
+
+/*
+ * More article formatting including markdown styles.
+ */
+/* line 245, ../../app/assets/stylesheets/text.scss */
+.mainstream article .summary {
+  margin: 0 0 2em 0;
+  padding: 0;
+  color: #0b0c0c;
+}
+/* line 254, ../../app/assets/stylesheets/text.scss */
+.mainstream article .summary p {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+}
+@media (max-width: 640px) {
+  /* line 254, ../../app/assets/stylesheets/text.scss */
+  .mainstream article .summary p {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+@media (max-width: 640px) {
+  /* line 245, ../../app/assets/stylesheets/text.scss */
+  .mainstream article .summary {
+    margin: 0 0 2em 0;
+    padding: 0;
+  }
+}
+
+/* line 264, ../../app/assets/stylesheets/text.scss */
+.mainstream .ancillary .summary {
+  margin-bottom: 2em;
+}
+
+/* line 271, ../../app/assets/stylesheets/text.scss */
+article .summary p,
+article .summary h2,
+.mainstream .ancillary .summary p,
+.mainstream .ancillary .summary h2 {
+  border: none;
+  margin: 0 0.75em 0 0;
+}
+
+/* line 277, ../../app/assets/stylesheets/text.scss */
+article .summary h2,
+.mainstream .ancillary .summary h2 {
+  line-height: 1.35em;
+}
+
+/* line 284, ../../app/assets/stylesheets/text.scss */
+.licence-finder article.outcome ul {
+  padding: 1em 1em;
+  margin: 0 -1em;
+}
+/* line 288, ../../app/assets/stylesheets/text.scss */
+.licence-finder article.outcome ul li {
+  list-style-type: none;
+  list-style-image: none;
+  margin: 0 0 0.75em 0;
+  padding: 0;
+}
+
+/* line 296, ../../app/assets/stylesheets/text.scss */
+article .advisory {
+  background: url(http://static.dev.gov.uk/static/icon-information.png) no-repeat scroll 98% 1em #d5e8f3;
+  line-height: 1.3em;
+  margin: 0 -1em 1em -1em;
+  padding: 1em;
+  text-align: left;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 296, ../../app/assets/stylesheets/text.scss */
+  article .advisory {
+    background-image: url(http://static.dev.gov.uk/static/icon-information-2x.png);
+    background-size: 27px 27px;
+  }
+}
+/* line 308, ../../app/assets/stylesheets/text.scss */
+article .advisory p {
+  margin: 0 0.75em 0 0;
+  min-height: 1.75em;
+  padding-right: 3em;
+}
+/* line 318, ../../app/assets/stylesheets/text.scss */
+article .advisory strong {
+  font-weight: 400;
+}
+/* line 322, ../../app/assets/stylesheets/text.scss */
+article .advisory.high-alert {
+  background-color: #eaedef;
+  border-color: #C00;
+}
+@media (max-width: 640px) {
+  /* line 296, ../../app/assets/stylesheets/text.scss */
+  article .advisory {
+    margin: 0 0 1em 0;
+  }
+}
+
+/* line 332, ../../app/assets/stylesheets/text.scss */
+article .intro {
+  background-color: transparent;
+  margin: 0 -1em 1.5em -1em;
+  padding: 1em 1em 1em 1em;
+}
+/* line 337, ../../app/assets/stylesheets/text.scss */
+article .intro p:first-child {
+  margin-top: 0;
+}
+@media (max-width: 640px) {
+  /* line 332, ../../app/assets/stylesheets/text.scss */
+  article .intro {
+    margin: 0 0 1.5em 0;
+    padding: 0;
+  }
+}
+
+/* line 347, ../../app/assets/stylesheets/text.scss */
+#wrapper.place article .intro {
+  margin-bottom: 0;
+}
+
+/* line 351, ../../app/assets/stylesheets/text.scss */
+article .example {
+  border-left: 10px solid #eaedef;
+  padding-left: 1.5em;
+  margin: 2.5em 0;
+}
+/* line 356, ../../app/assets/stylesheets/text.scss */
+article .example strong {
+  display: block;
+}
+@media (max-width: 640px) {
+  /* line 351, ../../app/assets/stylesheets/text.scss */
+  article .example {
+    margin: 0.75 0;
+  }
+}
+
+/* line 368, ../../app/assets/stylesheets/text.scss */
+article .application-notice,
+article .advisory.minor,
+article .form-download,
+article .subscribe {
+  padding: 0.25em 0 0.25em 3.5em;
+}
+@media (max-width: 640px) {
+  /* line 368, ../../app/assets/stylesheets/text.scss */
+  article .application-notice,
+  article .advisory.minor,
+  article .form-download,
+  article .subscribe {
+    margin: 1em 0 1.5em 0;
+  }
+}
+
+/* line 376, ../../app/assets/stylesheets/text.scss */
+article .application-notice {
+  padding: 0.1em 0 0.1em 1em;
+}
+
+/* line 380, ../../app/assets/stylesheets/text.scss */
+article .advisory.minor {
+  background-image: none;
+  padding: 0.75em 1em;
+}
+
+/* line 385, ../../app/assets/stylesheets/text.scss */
+article .help-notice {
+  background: none;
+  background: url(http://static.dev.gov.uk/static/icon-important.png) no-repeat scroll 0 0.5em;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 385, ../../app/assets/stylesheets/text.scss */
+  article .help-notice {
+    background-image: url(http://static.dev.gov.uk/static/icon-important-2x.png);
+    background-size: 34px 34px;
+  }
+}
+/* line 394, ../../app/assets/stylesheets/text.scss */
+article .help-notice p {
+  font-weight: 600;
+}
+/* line 397, ../../app/assets/stylesheets/text.scss */
+article .help-notice p a {
+  font-weight: 600;
+}
+
+/* line 403, ../../app/assets/stylesheets/text.scss */
+article a.important {
+  background: url(http://static.dev.gov.uk/static/icon-important.png) no-repeat scroll 100% 0 white;
+}
+
+/* line 407, ../../app/assets/stylesheets/text.scss */
+article .subscribe {
+  background: url(http://static.dev.gov.uk/static/icon-calendar.png) no-repeat scroll 98% 1em #d5e8f3;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 407, ../../app/assets/stylesheets/text.scss */
+  article .subscribe {
+    background-image: url(http://static.dev.gov.uk/static/icon-calendar-2x.png);
+    background-size: 27px 27px;
+  }
+}
+
+/* line 417, ../../app/assets/stylesheets/text.scss */
+article .info-notice {
+  background: none;
+  border-left: 10px #dee0e2 solid;
+  margin-bottom: 1em;
+}
+
+/* line 426, ../../app/assets/stylesheets/text.scss */
+article .help-notice p,
+article .info-notice p,
+article .subscribe p {
+  padding-right: 4em;
+}
+
+/* line 430, ../../app/assets/stylesheets/text.scss */
+article .info-notice p {
+  padding: 0 1em 0 0;
+}
+
+/* line 434, ../../app/assets/stylesheets/text.scss */
+article .help-notice p {
+  padding: 0 1em 0 2em;
+}
+
+/* line 440, ../../app/assets/stylesheets/text.scss */
+article p + .help-notice,
+article p + .info-notice {
+  margin-top: 2em;
+}
+
+/* line 444, ../../app/assets/stylesheets/text.scss */
+article .info-notice a[rel="external"] {
+  display: inline;
+}
+
+/* line 448, ../../app/assets/stylesheets/text.scss */
+article .form-download {
+  padding: 0.25em 0 0.25em 0;
+}
+/* line 451, ../../app/assets/stylesheets/text.scss */
+article .form-download p {
+  padding-right: 3em;
+}
+/* line 455, ../../app/assets/stylesheets/text.scss */
+article .form-download a {
+  display: block;
+  font-weight: 600;
+  background: url(http://static.dev.gov.uk/static/icon-file-download.png) no-repeat scroll 0 0;
+  min-height: 2.5em;
+  padding: 0 0 0 2.5em;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 455, ../../app/assets/stylesheets/text.scss */
+  article .form-download a {
+    background-image: url(http://static.dev.gov.uk/static/icon-file-download-2x.png);
+    background-size: 25px 25px;
+  }
+}
+/* line 468, ../../app/assets/stylesheets/text.scss */
+article .form-download a[rel="external"]:after {
+  content: none;
+}
+
+/* line 474, ../../app/assets/stylesheets/text.scss */
+.contact {
+  margin: 0.75em 0;
+  min-width: 60%;
+}
+/* line 479, ../../app/assets/stylesheets/text.scss */
+.contact dl dt {
+  font-weight: bold;
+  margin: 0 0 0.25em 0;
+}
+/* line 484, ../../app/assets/stylesheets/text.scss */
+.contact dl dd {
+  margin: 0 0 0.5em 0;
+}
+@media (max-width: 640px) {
+  /* line 474, ../../app/assets/stylesheets/text.scss */
+  .contact {
+    margin: 0.75em 0;
+  }
+}
+
+/* line 494, ../../app/assets/stylesheets/text.scss */
+.meta-data .contact {
+  width: auto;
+}
+
+/* line 499, ../../app/assets/stylesheets/text.scss */
+.contact dl dt,
+.meta-data .contact dt {
+  float: left;
+  clear: left;
+}
+
+/* line 505, ../../app/assets/stylesheets/text.scss */
+.contact dl dd,
+.meta-data .contact dd {
+  margin-left: 8.5em;
+}
+
+/* line 509, ../../app/assets/stylesheets/text.scss */
+article .address {
+  background: #eaedef;
+  margin: 0.75em 0 1.5em 0;
+  padding: 1em 0 1em 2em;
+  min-width: 35%;
+}
+
+/* line 516, ../../app/assets/stylesheets/text.scss */
+article ol.places {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+/* line 521, ../../app/assets/stylesheets/text.scss */
+article ol.places.answer_locations .information {
+  min-height: 3em;
+}
+/* line 525, ../../app/assets/stylesheets/text.scss */
+article ol.places li {
+  margin: 0;
+  padding-left: 0;
+}
+
+/* line 531, ../../app/assets/stylesheets/text.scss */
+section.places h3 {
+  margin-top: 0;
+}
+
+/* line 535, ../../app/assets/stylesheets/text.scss */
+article .place {
+  margin: 1.5em 0;
+  border-bottom: solid 1px #a1acb2;
+  padding-bottom: 1.5em;
+}
+/* line 540, ../../app/assets/stylesheets/text.scss */
+article .place .address {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  display: block;
+}
+/* line 549, ../../app/assets/stylesheets/text.scss */
+article .place .url {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* line 554, ../../app/assets/stylesheets/text.scss */
+article .place .additional-information {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+}
+@media (max-width: 640px) {
+  /* line 554, ../../app/assets/stylesheets/text.scss */
+  article .place .additional-information {
+    font-size: 14px;
+    line-height: 1.14286;
+  }
+}
+/* line 557, ../../app/assets/stylesheets/text.scss */
+article .place .additional-information a {
+  display: block;
+}
+@media (max-width: 640px) {
+  /* line 535, ../../app/assets/stylesheets/text.scss */
+  article .place {
+    margin: 0.75em 0;
+  }
+}
+
+/* line 567, ../../app/assets/stylesheets/text.scss */
+article ul.view-maps {
+  list-style: none;
+  padding: 0;
+  margin: 1em 0;
+}
+/* line 572, ../../app/assets/stylesheets/text.scss */
+article ul.view-maps li {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  display: inline-block;
+  margin-right: 1em;
+}
+@media (max-width: 640px) {
+  /* line 572, ../../app/assets/stylesheets/text.scss */
+  article ul.view-maps li {
+    font-size: 14px;
+    line-height: 1.14286;
+  }
+}
+
+/* line 585, ../../app/assets/stylesheets/text.scss */
+article ol.steps {
+  padding-left: 0;
+  margin-left: 0;
+  overflow: hidden;
+}
+/* line 590, ../../app/assets/stylesheets/text.scss */
+article ol.steps > li {
+  background-position: 0 0.87em;
+  background-repeat: no-repeat;
+  list-style-type: decimal;
+  margin-left: 0;
+  padding: 0.75em 0 0.75em 2.2em;
+}
+/* line 598, ../../app/assets/stylesheets/text.scss */
+article ol.steps > li:nth-child(1) {
+  background-image: url(http://static.dev.gov.uk/static/icon-step-1.png);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 598, ../../app/assets/stylesheets/text.scss */
+  article ol.steps > li:nth-child(1) {
+    background-image: url(http://static.dev.gov.uk/static/icon-step-1-2x.png);
+    background-size: 24px 24px;
+  }
+}
+/* line 598, ../../app/assets/stylesheets/text.scss */
+article ol.steps > li:nth-child(2) {
+  background-image: url(http://static.dev.gov.uk/static/icon-step-2.png);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 598, ../../app/assets/stylesheets/text.scss */
+  article ol.steps > li:nth-child(2) {
+    background-image: url(http://static.dev.gov.uk/static/icon-step-2-2x.png);
+    background-size: 24px 24px;
+  }
+}
+/* line 598, ../../app/assets/stylesheets/text.scss */
+article ol.steps > li:nth-child(3) {
+  background-image: url(http://static.dev.gov.uk/static/icon-step-3.png);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 598, ../../app/assets/stylesheets/text.scss */
+  article ol.steps > li:nth-child(3) {
+    background-image: url(http://static.dev.gov.uk/static/icon-step-3-2x.png);
+    background-size: 24px 24px;
+  }
+}
+/* line 598, ../../app/assets/stylesheets/text.scss */
+article ol.steps > li:nth-child(4) {
+  background-image: url(http://static.dev.gov.uk/static/icon-step-4.png);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 598, ../../app/assets/stylesheets/text.scss */
+  article ol.steps > li:nth-child(4) {
+    background-image: url(http://static.dev.gov.uk/static/icon-step-4-2x.png);
+    background-size: 24px 24px;
+  }
+}
+/* line 598, ../../app/assets/stylesheets/text.scss */
+article ol.steps > li:nth-child(5) {
+  background-image: url(http://static.dev.gov.uk/static/icon-step-5.png);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 598, ../../app/assets/stylesheets/text.scss */
+  article ol.steps > li:nth-child(5) {
+    background-image: url(http://static.dev.gov.uk/static/icon-step-5-2x.png);
+    background-size: 24px 24px;
+  }
+}
+/* line 598, ../../app/assets/stylesheets/text.scss */
+article ol.steps > li:nth-child(6) {
+  background-image: url(http://static.dev.gov.uk/static/icon-step-6.png);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 598, ../../app/assets/stylesheets/text.scss */
+  article ol.steps > li:nth-child(6) {
+    background-image: url(http://static.dev.gov.uk/static/icon-step-6-2x.png);
+    background-size: 24px 24px;
+  }
+}
+/* line 598, ../../app/assets/stylesheets/text.scss */
+article ol.steps > li:nth-child(7) {
+  background-image: url(http://static.dev.gov.uk/static/icon-step-7.png);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 598, ../../app/assets/stylesheets/text.scss */
+  article ol.steps > li:nth-child(7) {
+    background-image: url(http://static.dev.gov.uk/static/icon-step-7-2x.png);
+    background-size: 24px 24px;
+  }
+}
+/* line 598, ../../app/assets/stylesheets/text.scss */
+article ol.steps > li:nth-child(8) {
+  background-image: url(http://static.dev.gov.uk/static/icon-step-8.png);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 598, ../../app/assets/stylesheets/text.scss */
+  article ol.steps > li:nth-child(8) {
+    background-image: url(http://static.dev.gov.uk/static/icon-step-8-2x.png);
+    background-size: 24px 24px;
+  }
+}
+/* line 598, ../../app/assets/stylesheets/text.scss */
+article ol.steps > li:nth-child(9) {
+  background-image: url(http://static.dev.gov.uk/static/icon-step-9.png);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 598, ../../app/assets/stylesheets/text.scss */
+  article ol.steps > li:nth-child(9) {
+    background-image: url(http://static.dev.gov.uk/static/icon-step-9-2x.png);
+    background-size: 24px 24px;
+  }
+}
+/* line 598, ../../app/assets/stylesheets/text.scss */
+article ol.steps > li:nth-child(10) {
+  background-image: url(http://static.dev.gov.uk/static/icon-step-10.png);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 598, ../../app/assets/stylesheets/text.scss */
+  article ol.steps > li:nth-child(10) {
+    background-image: url(http://static.dev.gov.uk/static/icon-step-10-2x.png);
+    background-size: 24px 24px;
+  }
+}
+/* line 598, ../../app/assets/stylesheets/text.scss */
+article ol.steps > li:nth-child(11) {
+  background-image: url(http://static.dev.gov.uk/static/icon-step-11.png);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 598, ../../app/assets/stylesheets/text.scss */
+  article ol.steps > li:nth-child(11) {
+    background-image: url(http://static.dev.gov.uk/static/icon-step-11-2x.png);
+    background-size: 24px 24px;
+  }
+}
+/* line 598, ../../app/assets/stylesheets/text.scss */
+article ol.steps > li:nth-child(12) {
+  background-image: url(http://static.dev.gov.uk/static/icon-step-12.png);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 598, ../../app/assets/stylesheets/text.scss */
+  article ol.steps > li:nth-child(12) {
+    background-image: url(http://static.dev.gov.uk/static/icon-step-12-2x.png);
+    background-size: 24px 24px;
+  }
+}
+/* line 598, ../../app/assets/stylesheets/text.scss */
+article ol.steps > li:nth-child(13) {
+  background-image: url(http://static.dev.gov.uk/static/icon-step-13.png);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 598, ../../app/assets/stylesheets/text.scss */
+  article ol.steps > li:nth-child(13) {
+    background-image: url(http://static.dev.gov.uk/static/icon-step-13-2x.png);
+    background-size: 24px 24px;
+  }
+}
+/* line 598, ../../app/assets/stylesheets/text.scss */
+article ol.steps > li:nth-child(14) {
+  background-image: url(http://static.dev.gov.uk/static/icon-step-14.png);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 598, ../../app/assets/stylesheets/text.scss */
+  article ol.steps > li:nth-child(14) {
+    background-image: url(http://static.dev.gov.uk/static/icon-step-14-2x.png);
+    background-size: 24px 24px;
+  }
+}
+
+/* line 616, ../../app/assets/stylesheets/text.scss */
+.highlight-answer,
+.highlighted-event {
+  background-color: #28a197;
+  color: #fff;
+  text-align: center;
+  padding: 0.1em 2em 0.2em 2em;
+  margin: 0 -1em 1em -1em;
+}
+/* line 623, ../../app/assets/stylesheets/text.scss */
+.highlight-answer p,
+.highlighted-event p {
+  line-height: 2.3em;
+  color: #fff;
+}
+/* line 627, ../../app/assets/stylesheets/text.scss */
+.highlight-answer p em,
+.highlighted-event p em {
+  font-size: 2.45em;
+  font-style: normal;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.5em;
+  color: #fff;
+}
+@media (max-width: 640px) {
+  /* line 616, ../../app/assets/stylesheets/text.scss */
+  .highlight-answer,
+  .highlighted-event {
+    margin: 0 0 1em 0;
+    font-family: "nta", Arial, sans-serif;
+    font-size: 48px;
+    line-height: 1.04167;
+    font-weight: 400;
+    text-transform: none;
+  }
+  /* line 642, ../../app/assets/stylesheets/text.scss */
+  .highlight-answer p,
+  .highlighted-event p {
+    font-size: 1em;
+    line-height: inherit;
+  }
+  /* line 646, ../../app/assets/stylesheets/text.scss */
+  .highlight-answer p em,
+  .highlighted-event p em {
+    font-size: 1em;
+    display: inline;
+  }
+}
+@media (max-width: 640px) and (max-width: 640px) {
+  /* line 616, ../../app/assets/stylesheets/text.scss */
+  .highlight-answer,
+  .highlighted-event {
+    font-size: 32px;
+    line-height: 1.09375;
+  }
+}
+
+/*
+ * Core global styles
+ */
+/* line 5, ../../app/assets/stylesheets/core.scss */
+#wrapper {
+  background-color: white;
+  border-bottom: 10px solid #2b8cc4;
+}
+
+/* line 14, ../../app/assets/stylesheets/core.scss */
+.inner {
+  margin: 0 auto;
+  padding: 1em;
+  position: relative;
+}
+
+/* line 21, ../../app/assets/stylesheets/core.scss */
+main#content,
+section#content {
+  margin: 0 auto;
+  max-width: 1020px;
+  position: relative;
+  display: block;
+}
+@media (max-width: 640px) {
+  /* line 21, ../../app/assets/stylesheets/core.scss */
+  main#content,
+  section#content {
+    max-width: auto;
+  }
+}
+
+/* line 36, ../../app/assets/stylesheets/core.scss */
+p {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+}
+@media (max-width: 640px) {
+  /* line 36, ../../app/assets/stylesheets/core.scss */
+  p {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+/* line 40, ../../app/assets/stylesheets/core.scss */
+h2, h3, h4 {
+  font-weight: 400;
+}
+
+/* line 44, ../../app/assets/stylesheets/core.scss */
+h2 {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  margin-top: 0.5em;
+  margin-bottom: 0.25em;
+}
+@media (max-width: 640px) {
+  /* line 44, ../../app/assets/stylesheets/core.scss */
+  h2 {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+
+/* line 50, ../../app/assets/stylesheets/core.scss */
+h3 {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  margin-top: 0.5em;
+  margin-bottom: 0.25em;
+}
+@media (max-width: 640px) {
+  /* line 50, ../../app/assets/stylesheets/core.scss */
+  h3 {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+/* line 56, ../../app/assets/stylesheets/core.scss */
+h4 {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  margin-top: 0.5em;
+  margin-bottom: 0.25em;
+}
+@media (max-width: 640px) {
+  /* line 56, ../../app/assets/stylesheets/core.scss */
+  h4 {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+/*
+ * Locate me styles
+ */
+/* line 68, ../../app/assets/stylesheets/core.scss */
+#global-locator-form label,
+#global-locator-form .ask_location {
+  display: inline;
+}
+/* line 71, ../../app/assets/stylesheets/core.scss */
+#global-locator-form label.hidden,
+#global-locator-form .ask_location.hidden {
+  display: none;
+}
+/* line 75, ../../app/assets/stylesheets/core.scss */
+#global-locator-form .found_location p,
+#global-locator-form .finding_location p {
+  margin: 0em;
+}
+
+/*
+ * Related box
+ * this related stuff needs re-examining - might be a bit over the top
+ */
+/* line 84, ../../app/assets/stylesheets/core.scss */
+.related-positioning {
+  height: 0;
+  left: 0;
+  position: fixed;
+  position: absolute;
+  top: 9.5em;
+  width: 100%;
+  z-index: 0;
+}
+@media (max-width: 800px) {
+  /* line 84, ../../app/assets/stylesheets/core.scss */
+  .related-positioning {
+    position: static;
+    top: auto;
+    height: auto;
+  }
+}
+
+/* line 108, ../../app/assets/stylesheets/core.scss */
+.js-enabled .related-positioning {
+  top: 7em;
+}
+
+/* line 112, ../../app/assets/stylesheets/core.scss */
+.beta .related-positioning {
+  top: 12em;
+}
+
+/* line 117, ../../app/assets/stylesheets/core.scss */
+.js-enabled .related-with-cookie,
+.js-enabled .related-beta {
+  top: 9.5em;
+}
+
+/* line 121, ../../app/assets/stylesheets/core.scss */
+.related-container {
+  position: relative;
+  height: 0;
+  margin: 0 auto;
+  max-width: 1020px;
+  position: relative;
+  z-index: 50;
+}
+@media (max-width: 800px) {
+  /* line 121, ../../app/assets/stylesheets/core.scss */
+  .related-container {
+    max-width: auto;
+    height: auto;
+  }
+}
+
+/* line 143, ../../app/assets/stylesheets/core.scss */
+.related {
+  position: absolute;
+  right: 1.75em;
+  margin: 3em 0 0 0;
+  width: 15em;
+  width: 18.75em;
+  border-top: 10px solid #2b8cc4;
+}
+@media (max-width: 800px) {
+  /* line 143, ../../app/assets/stylesheets/core.scss */
+  .related {
+    position: static;
+    right: auto;
+    width: auto;
+  }
+}
+/* line 157, ../../app/assets/stylesheets/core.scss */
+.related .inner {
+  background-color: white;
+  padding: 0.5em 1em 0 0;
+  width: auto;
+}
+@media (max-width: 800px) {
+  /* line 157, ../../app/assets/stylesheets/core.scss */
+  .related .inner {
+    padding-left: 2em;
+  }
+}
+@media (max-width: 640px) {
+  /* line 157, ../../app/assets/stylesheets/core.scss */
+  .related .inner {
+    padding-left: 1em;
+  }
+}
+/* line 171, ../../app/assets/stylesheets/core.scss */
+.related nav {
+  margin-bottom: 1.25em;
+}
+/* line 175, ../../app/assets/stylesheets/core.scss */
+.related h2 {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  font-weight: 600;
+  color: #0b0c0c;
+  margin-top: 0.3em;
+  margin-bottom: 0.5em;
+  position: relative;
+}
+@media (max-width: 640px) {
+  /* line 175, ../../app/assets/stylesheets/core.scss */
+  .related h2 {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+@media (max-width: 640px) {
+  /* line 175, ../../app/assets/stylesheets/core.scss */
+  .related h2 {
+    font-size: 17px;
+    margin-bottom: 0.625em;
+  }
+}
+/* line 189, ../../app/assets/stylesheets/core.scss */
+.related ul {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+@media (max-width: 640px) {
+  /* line 189, ../../app/assets/stylesheets/core.scss */
+  .related ul {
+    font-size: 14px;
+    line-height: 1.14286;
+  }
+}
+/* line 197, ../../app/assets/stylesheets/core.scss */
+.related li {
+  margin-bottom: 0.75em;
+  padding-left: 0;
+}
+/* line 201, ../../app/assets/stylesheets/core.scss */
+.related li.related-topic {
+  list-style: none outside none;
+}
+/* line 204, ../../app/assets/stylesheets/core.scss */
+.related li.related-topic a {
+  display: inline;
+  font-weight: bold;
+}
+/* line 210, ../../app/assets/stylesheets/core.scss */
+.related li a {
+  background-position: 0 -287px;
+  background-repeat: no-repeat;
+  display: block;
+  line-height: 1.25em;
+  orphans: 2;
+}
+/* line 217, ../../app/assets/stylesheets/core.scss */
+.related li a:hover {
+  background-position: 0 10px;
+}
+/* line 226, ../../app/assets/stylesheets/core.scss */
+.related li a[href*="#"] {
+  /* grey out stub links */
+  background: none;
+  color: #888;
+  cursor: default;
+  text-decoration: none;
+}
+/* line 234, ../../app/assets/stylesheets/core.scss */
+.related li a.view-all {
+  margin: 10px 0 10px;
+}
+/* line 238, ../../app/assets/stylesheets/core.scss */
+.related li a[rel="external"]:after {
+  content: "\A0\A0\A0\A0\A0\A0";
+  background-position: 5px 0px;
+}
+/* line 243, ../../app/assets/stylesheets/core.scss */
+.related li a[rel="external"]:hover:after {
+  background-position: 5px -388px;
+}
+/* line 249, ../../app/assets/stylesheets/core.scss */
+.related .return-to-top {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  margin-bottom: 0.5em;
+  position: absolute;
+  left: -9999em;
+}
+@media (max-width: 640px) {
+  /* line 249, ../../app/assets/stylesheets/core.scss */
+  .related .return-to-top {
+    font-size: 14px;
+    line-height: 1.14286;
+  }
+}
+@media (max-width: 640px) {
+  /* line 249, ../../app/assets/stylesheets/core.scss */
+  .related .return-to-top {
+    position: static;
+    margin: 0.25em 0 0;
+    padding: 0.75em 0;
+  }
+}
+
+/* line 263, ../../app/assets/stylesheets/core.scss */
+#wrapper .related.sections-list li a {
+  padding: 0.1em 0em;
+}
+
+/*
+ * Legacy sources thang
+ */
+/* line 271, ../../app/assets/stylesheets/core.scss */
+#legacy-sources {
+  margin-top: 1em;
+  display: none;
+}
+@media (max-width: 800px) {
+  /* line 271, ../../app/assets/stylesheets/core.scss */
+  #legacy-sources {
+    margin: 1em 2em 0em;
+  }
+}
+@media (max-width: 640px) {
+  /* line 271, ../../app/assets/stylesheets/core.scss */
+  #legacy-sources {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+}
+/* line 284, ../../app/assets/stylesheets/core.scss */
+#legacy-sources p {
+  font-size: 1em;
+  margin-bottom: 0;
+  padding: 0;
+  color: black;
+}
+/* line 291, ../../app/assets/stylesheets/core.scss */
+#legacy-sources ul {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+/* line 297, ../../app/assets/stylesheets/core.scss */
+#legacy-sources li {
+  text-indent: -5000px;
+  float: left;
+  background-repeat: no-repeat;
+  display: none;
+}
+
+/* line 306, ../../app/assets/stylesheets/core.scss */
+#wrapper.businesslink #legacy-sources,
+#wrapper.directgov #legacy-sources {
+  display: block;
+}
+
+/* line 310, ../../app/assets/stylesheets/core.scss */
+#wrapper.businesslink #legacy-sources li.businesslink {
+  background-image: url(http://static.dev.gov.uk/static/businesslink-logo.png);
+  width: 84px;
+  height: 33px;
+  margin-top: 0.5em;
+  display: block;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 310, ../../app/assets/stylesheets/core.scss */
+  #wrapper.businesslink #legacy-sources li.businesslink {
+    background-image: url(http://static.dev.gov.uk/static/businesslink-logo-2x.png);
+    background-size: 84px 33px;
+  }
+}
+
+/* line 323, ../../app/assets/stylesheets/core.scss */
+#wrapper.directgov #legacy-sources li.directgov {
+  background-image: url(http://static.dev.gov.uk/static/directgov-logo.png);
+  width: 74px;
+  height: 14px;
+  margin-right: 1em;
+  margin-top: 1.2em;
+  display: block;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 323, ../../app/assets/stylesheets/core.scss */
+  #wrapper.directgov #legacy-sources li.directgov {
+    background-image: url(http://static.dev.gov.uk/static/directgov-logo-2x.png);
+    background-size: 74px 14px;
+  }
+}
+
+/*
+ * Page headers
+ */
+/* line 342, ../../app/assets/stylesheets/core.scss */
+header.page-header .skip-to-related {
+  position: absolute;
+  left: -9999em;
+}
+/* line 346, ../../app/assets/stylesheets/core.scss */
+header.page-header .skip-to-related:focus {
+  position: relative;
+  display: -moz-inline-stack;
+  display: inline-block;
+  left: 32px;
+  top: -2em;
+}
+@media (max-width: 640px) {
+  /* line 342, ../../app/assets/stylesheets/core.scss */
+  header.page-header .skip-to-related {
+    position: relative;
+    display: -moz-inline-stack;
+    display: inline-block;
+    left: 1em;
+    top: -1em;
+  }
+}
+/* line 361, ../../app/assets/stylesheets/core.scss */
+header.page-header div {
+  background-color: #fff;
+  display: block;
+  margin: 0 24em 0 0;
+  padding: 1em 2em 2em 2em;
+}
+@media (max-width: 800px) {
+  /* line 361, ../../app/assets/stylesheets/core.scss */
+  header.page-header div {
+    margin: 0;
+    padding-bottom: 0;
+  }
+}
+/* line 372, ../../app/assets/stylesheets/core.scss */
+header.page-header div h1 {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 48px;
+  line-height: 1.04167;
+  font-weight: 400;
+  text-transform: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-repeat: no-repeat;
+  color: #0b0c0c;
+  font-weight: 600;
+}
+@media (max-width: 640px) {
+  /* line 372, ../../app/assets/stylesheets/core.scss */
+  header.page-header div h1 {
+    font-size: 32px;
+    line-height: 1.09375;
+  }
+}
+@media (min-width: 641px) {
+  /* line 372, ../../app/assets/stylesheets/core.scss */
+  header.page-header div h1 {
+    padding-top: 7px;
+    padding-bottom: 13px;
+  }
+}
+/* line 378, ../../app/assets/stylesheets/core.scss */
+header.page-header div h1 span {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 27px;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: none;
+  display: block;
+  margin-bottom: 0.25em;
+  text-shadow: none;
+  color: #6f777b;
+}
+@media (max-width: 640px) {
+  /* line 378, ../../app/assets/stylesheets/core.scss */
+  header.page-header div h1 span {
+    font-size: 18px;
+    line-height: 1.11111;
+  }
+}
+
+/* line 396, ../../app/assets/stylesheets/core.scss */
+body.full-width header.page-header div,
+body.full-width .article-container,
+body.full-width article {
+  margin-right: 0;
+}
+/* line 400, ../../app/assets/stylesheets/core.scss */
+body.full-width header.page-header div {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+@media (max-width: 640px) {
+  /* line 400, ../../app/assets/stylesheets/core.scss */
+  body.full-width header.page-header div {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* line 415, ../../app/assets/stylesheets/core.scss */
+#wrapper.service header.page-header div,
+#wrapper.licence header.page-header div,
+#wrapper.video header.page-header div,
+#wrapper.answer header.page-header div,
+#wrapper.guide header.page-header div {
+  padding-left: 2em;
+}
+/* line 418, ../../app/assets/stylesheets/core.scss */
+#wrapper.service header.page-header div h1,
+#wrapper.licence header.page-header div h1,
+#wrapper.video header.page-header div h1,
+#wrapper.answer header.page-header div h1,
+#wrapper.guide header.page-header div h1 {
+  margin-left: 0;
+}
+@media (max-width: 640px) {
+  /* line 415, ../../app/assets/stylesheets/core.scss */
+  #wrapper.service header.page-header div,
+  #wrapper.licence header.page-header div,
+  #wrapper.video header.page-header div,
+  #wrapper.answer header.page-header div,
+  #wrapper.guide header.page-header div {
+    padding-left: 1em;
+  }
+  /* line 432, ../../app/assets/stylesheets/core.scss */
+  #wrapper.service header.page-header div h1,
+  #wrapper.licence header.page-header div h1,
+  #wrapper.video header.page-header div h1,
+  #wrapper.answer header.page-header div h1,
+  #wrapper.guide header.page-header div h1 {
+    min-height: 2.44em;
+  }
+}
+
+@media (max-width: 640px) {
+  /* line 439, ../../app/assets/stylesheets/core.scss */
+  #wrapper.programme header.page-header div,
+  #wrapper.service header.page-header div {
+    padding-left: 1em;
+  }
+  /* line 445, ../../app/assets/stylesheets/core.scss */
+  #wrapper.programme header.page-header div h1,
+  #wrapper.service header.page-header div h1 {
+    min-height: 2.44em;
+  }
+}
+
+@media (min-width: 1182px) {
+  /* line 454, ../../app/assets/stylesheets/core.scss */
+  #wrapper.programme header.page-header div,
+  #wrapper.service header.page-header div,
+  #wrapper.licence header.page-header div,
+  #wrapper.video header.page-header div {
+    padding-left: 0;
+  }
+  /* line 458, ../../app/assets/stylesheets/core.scss */
+  #wrapper.programme header.page-header div h1,
+  #wrapper.service header.page-header div h1,
+  #wrapper.licence header.page-header div h1,
+  #wrapper.video header.page-header div h1 {
+    padding-left: 32px;
+  }
+}
+
+@media (min-width: 1132px) {
+  /* line 465, ../../app/assets/stylesheets/core.scss */
+  #wrapper.answer header.page-header div,
+  #wrapper.guide header.page-header div {
+    padding-left: 0;
+  }
+  /* line 469, ../../app/assets/stylesheets/core.scss */
+  #wrapper.answer header.page-header div h1,
+  #wrapper.guide header.page-header div h1 {
+    padding-left: 32px;
+  }
+}
+
+/* Business support format */
+/* line 476, ../../app/assets/stylesheets/core.scss */
+.business_support article.tab-pane {
+  width: auto;
+}
+
+/* line 479, ../../app/assets/stylesheets/core.scss */
+.business_support .support-info {
+  background: #E1E8E8;
+  border-left: 1px solid #BBB;
+}
+
+/* line 483, ../../app/assets/stylesheets/core.scss */
+.business_support section.support-info:last-child {
+  border-bottom: 1px dotted #BBB;
+}
+
+/* line 486, ../../app/assets/stylesheets/core.scss */
+.business_support .support-info h2 {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  margin: 0;
+  text-align: left;
+  color: black;
+  background-color: #E1E8E8;
+  border-top: solid 1px #BBB;
+  float: left;
+  width: 30%;
+  padding: 0.25em;
+}
+@media (max-width: 640px) {
+  /* line 486, ../../app/assets/stylesheets/core.scss */
+  .business_support .support-info h2 {
+    font-size: 14px;
+    line-height: 1.14286;
+  }
+}
+
+/* line 501, ../../app/assets/stylesheets/core.scss */
+.business_support .faux-cell,
+.business_support .faux-cell p,
+.business_support .faux-cell li,
+.business_support .long-description p,
+.business_support .long-description li {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+}
+@media (max-width: 640px) {
+  /* line 501, ../../app/assets/stylesheets/core.scss */
+  .business_support .faux-cell,
+  .business_support .faux-cell p,
+  .business_support .faux-cell li,
+  .business_support .long-description p,
+  .business_support .long-description li {
+    font-size: 14px;
+    line-height: 1.14286;
+  }
+}
+
+/* line 504, ../../app/assets/stylesheets/core.scss */
+.business_support .faux-cell {
+  background: #FFF;
+  overflow: hidden;
+  border-left: 1px solid #BBB;
+  border-top: 1px dotted #BBB;
+  border-right: 1px dotted #BBB;
+  margin: 0;
+  padding: 0.25em;
+}
+
+/* Licence Application */
+/* line 516, ../../app/assets/stylesheets/core.scss */
+.relevant-authority {
+  margin: 0 0 20px 84px;
+}
+/* line 519, ../../app/assets/stylesheets/core.scss */
+.relevant-authority h2 {
+  margin: 0;
+}
+
+/* line 525, ../../app/assets/stylesheets/core.scss */
+.licence .intro form ul {
+  padding-left: 12px;
+}
+/* line 528, ../../app/assets/stylesheets/core.scss */
+.licence .intro form li {
+  list-style: none;
+}
+/* line 529, ../../app/assets/stylesheets/core.scss */
+.licence .intro form li label {
+  padding-left: 5px;
+}
+
+/*
+  ============================== Stuff (mainly) used in publications =============================
+*/
+/* articles */
+/* line 540, ../../app/assets/stylesheets/core.scss */
+article {
+  margin-right: 22.25em;
+  min-height: 30em;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+/* line 560, ../../app/assets/stylesheets/core.scss */
+article .inner {
+  padding: 0 0 2em 2em;
+  width: auto;
+}
+@media (max-width: 800px) {
+  /* line 540, ../../app/assets/stylesheets/core.scss */
+  article {
+    min-height: 0;
+  }
+  /* line 568, ../../app/assets/stylesheets/core.scss */
+  article .inner {
+    padding: 0 2em 1em 2em;
+  }
+}
+@media (max-width: 640px) {
+  /* line 574, ../../app/assets/stylesheets/core.scss */
+  article .inner {
+    padding: 0 1em 1em 1em;
+  }
+}
+
+/* line 584, ../../app/assets/stylesheets/core.scss */
+#wrapper.answer article .inner,
+#wrapper.transaction article .inner,
+#wrapper.local_transaction article .inner {
+  padding-right: 10em;
+  padding-right: 0;
+}
+@media (max-width: 640px) {
+  /* line 584, ../../app/assets/stylesheets/core.scss */
+  #wrapper.answer article .inner,
+  #wrapper.transaction article .inner,
+  #wrapper.local_transaction article .inner {
+    padding-right: 1em;
+  }
+}
+
+/* line 598, ../../app/assets/stylesheets/core.scss */
+#wrapper.guide article .inner,
+#wrapper.programme article .inner {
+  padding-right: 3em;
+  padding-right: 0;
+}
+@media (max-width: 640px) {
+  /* line 598, ../../app/assets/stylesheets/core.scss */
+  #wrapper.guide article .inner,
+  #wrapper.programme article .inner {
+    padding-right: 1em;
+  }
+}
+
+/* line 609, ../../app/assets/stylesheets/core.scss */
+#wrapper.travel-advice p img {
+  display: block;
+  margin: 0 -1em;
+  padding-left: 1em;
+}
+@media (max-width: 800px) {
+  /* line 609, ../../app/assets/stylesheets/core.scss */
+  #wrapper.travel-advice p img {
+    max-width: 100%;
+  }
+}
+
+/* line 619, ../../app/assets/stylesheets/core.scss */
+.article-container {
+  background-color: #fff;
+  margin-right: 22.25em;
+  min-height: 35em;
+  max-width: 38em;
+  /* Make webkit browsers contain the margin-bottom of report-a-problem */
+}
+/* line 626, ../../app/assets/stylesheets/core.scss */
+.travel-advice .article-container {
+  padding-bottom: 0.01em;
+}
+/* line 630, ../../app/assets/stylesheets/core.scss */
+.article-container article {
+  margin-right: 0;
+}
+@media (max-width: 800px) {
+  /* line 619, ../../app/assets/stylesheets/core.scss */
+  .article-container {
+    margin-right: 0;
+    min-height: 0;
+  }
+}
+
+/* Meta-data */
+/* line 641, ../../app/assets/stylesheets/core.scss */
+.meta-data {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  color: #454a4c;
+  margin-left: 2em;
+  background-color: transparent;
+}
+@media (max-width: 640px) {
+  /* line 641, ../../app/assets/stylesheets/core.scss */
+  .meta-data {
+    font-size: 14px;
+    line-height: 1.14286;
+  }
+}
+/* line 647, ../../app/assets/stylesheets/core.scss */
+.meta-data .inner {
+  padding: 0 2em 0 0;
+}
+/* line 659, ../../app/assets/stylesheets/core.scss */
+.meta-data p {
+  text-align: left;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+}
+/* line 666, ../../app/assets/stylesheets/core.scss */
+.meta-data p a {
+  color: #454a4c;
+}
+@media (max-width: 640px) {
+  /* line 659, ../../app/assets/stylesheets/core.scss */
+  .meta-data p {
+    font-size: 14px;
+    line-height: 1.14286;
+  }
+}
+@media (max-width: 640px) {
+  /* line 641, ../../app/assets/stylesheets/core.scss */
+  .meta-data {
+    margin-left: 1em;
+  }
+  /* line 675, ../../app/assets/stylesheets/core.scss */
+  .meta-data .inner {
+    padding: 0 1em;
+  }
+  /* line 679, ../../app/assets/stylesheets/core.scss */
+  .meta-data p {
+    margin-top: 0;
+  }
+  /* line 682, ../../app/assets/stylesheets/core.scss */
+  .meta-data p.print-link a {
+    padding-left: 0;
+  }
+}
+
+/* line 689, ../../app/assets/stylesheets/core.scss */
+.print-link {
+  text-align: left;
+  margin: 2em 0 0 0;
+}
+/* line 693, ../../app/assets/stylesheets/core.scss */
+.print-link a, .print-link a:link, .print-link a:visited {
+  background: url(http://static.dev.gov.uk/static/icon-print.png) no-repeat 0% 50%;
+  padding: 0.5em 0 0.5em 28px;
+  zoom: 1;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 693, ../../app/assets/stylesheets/core.scss */
+  .print-link a, .print-link a:link, .print-link a:visited {
+    background-image: url(http://static.dev.gov.uk/static/icon-print-2x.png);
+    background-size: 16px 18px;
+  }
+}
+@media (max-width: 640px) {
+  /* line 689, ../../app/assets/stylesheets/core.scss */
+  .print-link {
+    width: 60%;
+  }
+  /* line 708, ../../app/assets/stylesheets/core.scss */
+  .print-link a, .print-link a:link, .print-link a:visited {
+    padding-bottom: 4px;
+  }
+}
+
+@media (max-width: 640px) {
+  /* line 714, ../../app/assets/stylesheets/core.scss */
+  .modified-date {
+    width: 40%;
+  }
+}
+
+/* Error messages */
+/* line 722, ../../app/assets/stylesheets/core.scss */
+.error-notification,
+.error-area {
+  border: 1px solid #ffc946;
+  background-color: #fbedcd;
+  padding: 0 1em;
+  margin-bottom: 1em;
+}
+/* line 728, ../../app/assets/stylesheets/core.scss */
+.error-notification p,
+.error-area p {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+}
+@media (max-width: 640px) {
+  /* line 728, ../../app/assets/stylesheets/core.scss */
+  .error-notification p,
+  .error-area p {
+    font-size: 14px;
+    line-height: 1.14286;
+  }
+}
+
+/* line 733, ../../app/assets/stylesheets/core.scss */
+.error-area span {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857;
+  font-weight: 400;
+  text-transform: none;
+  font-weight: bold;
+  display: block;
+}
+@media (max-width: 640px) {
+  /* line 733, ../../app/assets/stylesheets/core.scss */
+  .error-area span {
+    font-size: 12px;
+    line-height: 1.25;
+  }
+}
+
+/* Feedback mechanism styles */
+/* line 740, ../../app/assets/stylesheets/core.scss */
+.popover-mask {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 60;
+}
+
+/* line 761, ../../app/assets/stylesheets/core.scss */
+#popup {
+  display: none;
+  overflow: visible;
+  clear: both;
+  position: absolute;
+  top: 2em;
+  left: 0;
+  width: 60%;
+  z-index: 999999;
+  padding: 0;
+  padding-bottom: 0.5em;
+}
+/* line 778, ../../app/assets/stylesheets/core.scss */
+#popup h2 {
+  outline: none;
+}
+/* line 782, ../../app/assets/stylesheets/core.scss */
+#popup h3 {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  margin: 0.75em 0;
+}
+@media (max-width: 640px) {
+  /* line 782, ../../app/assets/stylesheets/core.scss */
+  #popup h3 {
+    font-size: 14px;
+    line-height: 1.14286;
+  }
+}
+/* line 787, ../../app/assets/stylesheets/core.scss */
+#popup ul {
+  margin: 0 0 0 5em;
+  padding: 0;
+}
+/* line 792, ../../app/assets/stylesheets/core.scss */
+#popup .error-notification {
+  margin-bottom: 0.8em;
+  padding: 0 0.5em;
+}
+/* line 797, ../../app/assets/stylesheets/core.scss */
+#popup .inner {
+  background-color: #fff;
+}
+
+/* line 802, ../../app/assets/stylesheets/core.scss */
+.close {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* line 808, ../../app/assets/stylesheets/core.scss */
+.close a {
+  background-color: transparent;
+  background-image: url(http://static.dev.gov.uk/static/close.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  display: block;
+  margin: 0;
+  height: 2em;
+  width: 2em;
+  text-indent: -9999px;
+}
+/* line 819, ../../app/assets/stylesheets/core.scss */
+.close a:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+/* line 825, ../../app/assets/stylesheets/core.scss */
+.sets-cookie {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857;
+  font-weight: 400;
+  text-transform: none;
+}
+@media (max-width: 640px) {
+  /* line 825, ../../app/assets/stylesheets/core.scss */
+  .sets-cookie {
+    font-size: 12px;
+    line-height: 1.25;
+  }
+}
+
+/* line 829, ../../app/assets/stylesheets/core.scss */
+.cookie-container {
+  margin: 0;
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+}
+
+/* line 843, ../../app/assets/stylesheets/core.scss */
+.find-location-for-service .cookie-container {
+  bottom: 1em;
+  right: 0.75em;
+}
+@media (max-width: 640px) {
+  /* line 843, ../../app/assets/stylesheets/core.scss */
+  .find-location-for-service .cookie-container {
+    bottom: 20px;
+    right: 16px;
+  }
+}
+
+/*  ============================================================================
+    Tabs
+    ========================================================================  */
+/* line 857, ../../app/assets/stylesheets/core.scss */
+.nav-tabs {
+  zoom: 1;
+  background: #fff;
+  padding: 0;
+  position: relative;
+}
+/* line 863, ../../app/assets/stylesheets/core.scss */
+.nav-tabs:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* line 872, ../../app/assets/stylesheets/core.scss */
+.nav-tabs ol,
+.nav-tabs ul {
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 5;
+}
+@media (max-width: 640px) {
+  /* line 872, ../../app/assets/stylesheets/core.scss */
+  .nav-tabs ol,
+  .nav-tabs ul {
+    float: none;
+    margin: 0 -16px;
+  }
+}
+/* line 891, ../../app/assets/stylesheets/core.scss */
+.nav-tabs li {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  padding: 0;
+  margin: 0;
+  float: left;
+}
+@media (max-width: 640px) {
+  /* line 891, ../../app/assets/stylesheets/core.scss */
+  .nav-tabs li {
+    font-size: 14px;
+    line-height: 1.14286;
+  }
+}
+@media (max-width: 640px) {
+  /* line 891, ../../app/assets/stylesheets/core.scss */
+  .nav-tabs li {
+    float: none;
+  }
+}
+/* line 901, ../../app/assets/stylesheets/core.scss */
+.nav-tabs li a {
+  border: solid 1px #fff;
+  border-bottom: none;
+  float: left;
+  height: 2.25em;
+  line-height: 2.25em;
+  margin-bottom: -1px;
+  padding: 0 1em 0 1em;
+  position: relative;
+  text-align: center;
+  top: 0;
+}
+@media (max-width: 640px) {
+  /* line 901, ../../app/assets/stylesheets/core.scss */
+  .nav-tabs li a {
+    display: block;
+    position: static;
+    float: none;
+    height: auto;
+    line-height: 3.5em;
+    padding: 0 16px;
+    text-align: left;
+    margin-bottom: 0;
+    border-bottom: 1px solid #a1acb2;
+  }
+}
+/* line 930, ../../app/assets/stylesheets/core.scss */
+.nav-tabs li a:hover {
+  background-color: #eaedef;
+}
+/* line 935, ../../app/assets/stylesheets/core.scss */
+.nav-tabs li.active a {
+  background-color: #fff;
+  border: solid 1px #a1acb2;
+  border-bottom: solid 1px #fff;
+  color: #0b0c0c;
+  position: relative;
+  text-decoration: none;
+  z-index: 5;
+}
+@media (max-width: 640px) {
+  /* line 935, ../../app/assets/stylesheets/core.scss */
+  .nav-tabs li.active a {
+    border: none;
+    border-bottom: 1px solid #a1acb2;
+  }
+}
+/* line 953, ../../app/assets/stylesheets/core.scss */
+.nav-tabs li.active a:hover {
+  color: inherit;
+}
+/* line 958, ../../app/assets/stylesheets/core.scss */
+.nav-tabs li:first-child a {
+  margin-left: 0;
+}
+@media (max-width: 640px) {
+  /* line 958, ../../app/assets/stylesheets/core.scss */
+  .nav-tabs li:first-child a {
+    border-left: none;
+    border-top: 1px solid #dee0e2;
+  }
+}
+
+/* give tabs the whole width of the central column in 2-column grids */
+@media (max-width: 640px) {
+  /* line 975, ../../app/assets/stylesheets/core.scss */
+  .tab-content {
+    margin: 0 -1em;
+  }
+}
+/* line 980, ../../app/assets/stylesheets/core.scss */
+.tab-content .tab-pane {
+  padding: 1em 1em 0 1em;
+  border-top: solid 1px #a1acb2;
+  clear: both;
+  width: auto;
+}
+@media (max-width: 640px) {
+  /* line 980, ../../app/assets/stylesheets/core.scss */
+  .tab-content .tab-pane {
+    border-top: none;
+    padding: 0;
+  }
+}
+/* line 992, ../../app/assets/stylesheets/core.scss */
+.tab-content .inner {
+  padding: 0em 2.5em 1em;
+}
+@media (max-width: 640px) {
+  /* line 992, ../../app/assets/stylesheets/core.scss */
+  .tab-content .inner {
+    padding: 0 1em 1em;
+    border-bottom: solid 1px #C9D0D0;
+  }
+}
+/* line 1001, ../../app/assets/stylesheets/core.scss */
+.tab-content h1.visuallyhidden + h2 {
+  margin-top: 2em;
+}
+/* line 1005, ../../app/assets/stylesheets/core.scss */
+.tab-content p {
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+/* line 1011, ../../app/assets/stylesheets/core.scss */
+.tab-content em {
+  font-style: normal;
+  font-weight: bold;
+}
+/* line 1016, ../../app/assets/stylesheets/core.scss */
+.tab-content nav {
+  margin: 1em -1.375em 0;
+}
+
+/* line 1023, ../../app/assets/stylesheets/core.scss */
+.js-tab-content .programme-progression li,
+.js-tab-content .js-heading-tab {
+  border-bottom: solid 1px #a1acb2;
+  list-style: none;
+}
+/* line 1028, ../../app/assets/stylesheets/core.scss */
+.js-tab-content .programme-progression li a,
+.js-tab-content .programme-progression li h1,
+.js-tab-content .js-heading-tab a,
+.js-tab-content .js-heading-tab h1 {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 24px;
+  line-height: 1.875;
+  font-weight: 400;
+  text-transform: none;
+  background: white url(http://static.dev.gov.uk/static/accordian-arrow.png) no-repeat 100% -2px;
+  display: block;
+  padding: 0 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: underline;
+  top: 0;
+}
+@media (max-width: 640px) {
+  /* line 1028, ../../app/assets/stylesheets/core.scss */
+  .js-tab-content .programme-progression li a,
+  .js-tab-content .programme-progression li h1,
+  .js-tab-content .js-heading-tab a,
+  .js-tab-content .js-heading-tab h1 {
+    font-size: 20px;
+    line-height: 2.64706;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 1028, ../../app/assets/stylesheets/core.scss */
+  .js-tab-content .programme-progression li a,
+  .js-tab-content .programme-progression li h1,
+  .js-tab-content .js-heading-tab a,
+  .js-tab-content .js-heading-tab h1 {
+    background-image: url(http://static.dev.gov.uk/static/accordian-arrow-2x.png);
+    background-size: 45px 90px;
+  }
+}
+/* line 1043, ../../app/assets/stylesheets/core.scss */
+.js-tab-content .programme-progression li a:hover,
+.js-tab-content .programme-progression li h1:hover,
+.js-tab-content .js-heading-tab a:hover,
+.js-tab-content .js-heading-tab h1:hover {
+  background-color: #eaedef;
+}
+/* line 1048, ../../app/assets/stylesheets/core.scss */
+.js-tab-content .programme-progression li.active,
+.js-tab-content .js-heading-tab.active {
+  text-decoration: none;
+}
+/* line 1051, ../../app/assets/stylesheets/core.scss */
+.js-tab-content .programme-progression li.active a, .js-tab-content .programme-progression li.active h1,
+.js-tab-content .js-heading-tab.active a,
+.js-tab-content .js-heading-tab.active h1 {
+  background-position: 100% -48px;
+  background-color: #eaedef;
+  color: #0b0c0c;
+  text-decoration: none;
+}
+/* line 1060, ../../app/assets/stylesheets/core.scss */
+.js-tab-content .js-heading-tab {
+  margin: 0;
+  clear: both;
+}
+/* line 1064, ../../app/assets/stylesheets/core.scss */
+.js-tab-content .js-heading-tab h1 {
+  padding: 0;
+}
+/* line 1070, ../../app/assets/stylesheets/core.scss */
+.js-tab-content .tab-shiftlink {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  position: absolute;
+  left: -9999em;
+}
+@media (max-width: 640px) {
+  /* line 1070, ../../app/assets/stylesheets/core.scss */
+  .js-tab-content .tab-shiftlink {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+@media (max-width: 640px) {
+  /* line 1070, ../../app/assets/stylesheets/core.scss */
+  .js-tab-content .tab-shiftlink {
+    position: static;
+    left: auto;
+  }
+}
+@media (max-width: 640px) {
+  /* line 1082, ../../app/assets/stylesheets/core.scss */
+  .js-tab-content .js-tab-container {
+    min-height: 0;
+  }
+  /* line 1086, ../../app/assets/stylesheets/core.scss */
+  .js-tab-content .js-tab-pane {
+    border-bottom: solid 1px #a1acb2;
+  }
+  /* line 1090, ../../app/assets/stylesheets/core.scss */
+  .js-tab-content .js-tab-container:first-child {
+    border-top: solid 1px #a1acb2;
+  }
+}
+
+/* line 1096, ../../app/assets/stylesheets/core.scss */
+.transaction .js-tab-content {
+  overflow: hidden;
+}
+
+/* report a problem */
+/* line 1102, ../../app/assets/stylesheets/core.scss */
+.report-a-problem-toggle {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  margin: 1em 2em 1em 2em;
+}
+@media (max-width: 640px) {
+  /* line 1102, ../../app/assets/stylesheets/core.scss */
+  .report-a-problem-toggle {
+    font-size: 14px;
+    line-height: 1.14286;
+  }
+}
+/* line 1105, ../../app/assets/stylesheets/core.scss */
+.report-a-problem-toggle a {
+  color: #454a4c;
+}
+@media (max-width: 640px) {
+  /* line 1102, ../../app/assets/stylesheets/core.scss */
+  .report-a-problem-toggle {
+    margin: 0em 1em 1em 1em;
+  }
+}
+
+@media (max-width: 640px) {
+  /* line 1118, ../../app/assets/stylesheets/core.scss */
+  .js-tab-content .report-a-problem-toggle {
+    margin-top: 2em;
+  }
+}
+
+/* bunting lol */
+/* line 1125, ../../app/assets/stylesheets/core.scss */
+.epic-bunting {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 6.1em;
+  overflow: visible;
+}
+@media (max-width: 800px) {
+  /* line 1125, ../../app/assets/stylesheets/core.scss */
+  .epic-bunting {
+    display: none;
+  }
+}
+/* line 1136, ../../app/assets/stylesheets/core.scss */
+.epic-bunting span {
+  background-image: url(http://static.dev.gov.uk/static/bunting.png);
+  background-color: transparent;
+  background-repeat: repeat-x;
+  background-position: center top;
+  width: 99.9%;
+  position: absolute;
+  height: 107px;
+}
+
+/* line 1147, ../../app/assets/stylesheets/core.scss */
+.next-steps-promo {
+  border-top: solid 5px #ffbf47;
+  border-bottom: solid 5px #ffbf47;
+  position: relative;
+  margin-top: 3em;
+  padding: 1em 200px 1em 0;
+}
+@media (max-width: 640px) {
+  /* line 1147, ../../app/assets/stylesheets/core.scss */
+  .next-steps-promo {
+    padding-right: 0;
+  }
+}
+/* line 1162, ../../app/assets/stylesheets/core.scss */
+.next-steps-promo h2 {
+  margin-top: 0;
+}
+/* line 1166, ../../app/assets/stylesheets/core.scss */
+.next-steps-promo img {
+  position: absolute;
+  top: 1em;
+  right: 0;
+}
+@media (max-width: 640px) {
+  /* line 1166, ../../app/assets/stylesheets/core.scss */
+  .next-steps-promo img {
+    position: static;
+    display: block;
+  }
+}
+/* line 1177, ../../app/assets/stylesheets/core.scss */
+.next-steps-promo .get-started .button {
+  background-color: #FFBF47;
+  background-image: url(http://static.dev.gov.uk/static/icon-pointer-black.png);
+  color: #333;
+}
+/* line 1183, ../../app/assets/stylesheets/core.scss */
+.next-steps-promo .get-started .button:hover, .next-steps-promo .get-started .button:focus {
+  background-color: #ffdf94;
+  color: #333;
+}
+
+/* line 1190, ../../app/assets/stylesheets/core.scss */
+.linear-promo {
+  position: static;
+  padding-right: 0;
+}
+
+/* extra images for variant testing on driving done pages */
+/* line 1198, ../../app/assets/stylesheets/core.scss */
+.organ-donor-photo,
+.organ-donor-logo {
+  background-image: url(http://static.dev.gov.uk/static/campaigns/organ-donation-photo.jpg);
+  background-position: top right;
+  background-repeat: no-repeat;
+  height: 200px;
+  padding-right: 300px;
+}
+
+/* line 1205, ../../app/assets/stylesheets/core.scss */
+.organ-donor-logo {
+  background-image: url(http://static.dev.gov.uk/static/campaigns/organ-donation-logo.jpg);
+}
+
+/* For image replacement */
+/* line 2, ../../app/assets/stylesheets/accessibility.scss */
+.ir {
+  display: block;
+  text-indent: -999em;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+}
+/* line 10, ../../app/assets/stylesheets/accessibility.scss */
+.ir br {
+  display: none;
+}
+
+/* Hide for both screenreaders and browsers */
+/* line 16, ../../app/assets/stylesheets/accessibility.scss */
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+/* Hide only visually, but have it available for screenreaders */
+/* line 22, ../../app/assets/stylesheets/accessibility.scss */
+.visuallyhidden {
+  position: absolute;
+  left: -9999em;
+  /*
+   * Extends the .visuallyhidden class to allow the element to be
+   * focusable when navigated to via the keyboard
+   */
+}
+/* line 31, ../../app/assets/stylesheets/accessibility.scss */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/* Hide visually and from screenreaders, but maintain layout */
+/* line 42, ../../app/assets/stylesheets/accessibility.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/* Give a strong clear visual idea as to what is currently in focus */
+/* line 47, ../../app/assets/stylesheets/accessibility.scss */
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
+}
+
+/* line 51, ../../app/assets/stylesheets/accessibility.scss */
+a:focus {
+  background-color: #ffbf47;
+  outline: 3px solid #ffbf47;
+}
+
+/* Make skiplinks visible when they are tabbed to */
+/* line 58, ../../app/assets/stylesheets/accessibility.scss */
+.skiplink {
+  position: absolute;
+  left: -9999em;
+}
+
+/* line 63, ../../app/assets/stylesheets/accessibility.scss */
+.skiplink:focus {
+  position: static;
+}
+
+/* line 67, ../../app/assets/stylesheets/accessibility.scss */
+#skiplink-container {
+  text-align: center;
+  background: #0b0c0c;
+}
+/* line 71, ../../app/assets/stylesheets/accessibility.scss */
+#skiplink-container div {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 1020px;
+}
+/* line 77, ../../app/assets/stylesheets/accessibility.scss */
+#skiplink-container .skiplink {
+  display: -moz-inline-stack;
+  display: inline-block;
+  margin: 0.75em 0 0 30px;
+}
+
+/* line 86, ../../app/assets/stylesheets/accessibility.scss */
+input:focus,
+textarea:focus,
+select:focus,
+#global-header input:focus {
+  outline: 3px solid #ffbf47;
+}
+
+/* line 91, ../../app/assets/stylesheets/accessibility.scss */
+#global-header h1 a:focus {
+  background-color: transparent;
+  outline: none;
+}
+/* line 96, ../../app/assets/stylesheets/accessibility.scss */
+#global-header a:focus {
+  color: #0b0c0c;
+}
+
+/* line 3, ../../app/assets/stylesheets/ancillary-pages.scss */
+#wrapper .ancillary header div h1 {
+  padding: 0;
+}
+/* line 7, ../../app/assets/stylesheets/ancillary-pages.scss */
+#wrapper .ancillary header.page-header div {
+  background-color: transparent;
+  margin: 0;
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-top: 3em;
+}
+@media (max-width: 640px) {
+  /* line 7, ../../app/assets/stylesheets/ancillary-pages.scss */
+  #wrapper .ancillary header.page-header div {
+    padding: 1em;
+  }
+  /* line 17, ../../app/assets/stylesheets/ancillary-pages.scss */
+  #wrapper .ancillary header.page-header div h1 {
+    min-height: 0;
+  }
+}
+/* line 25, ../../app/assets/stylesheets/ancillary-pages.scss */
+#wrapper .ancillary.section-page header {
+  margin: 0;
+}
+/* line 28, ../../app/assets/stylesheets/ancillary-pages.scss */
+#wrapper .ancillary.section-page header.page-header div {
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+}
+
+/* static pages like platform and help */
+/* line 44, ../../app/assets/stylesheets/ancillary-pages.scss */
+.ancillary .menu {
+  background-color: #E5E5E5;
+  position: absolute;
+  right: 0;
+  margin: -3em 0 0 0;
+  padding: 1em;
+  width: 13em;
+}
+@media (max-width: 640px) {
+  /* line 44, ../../app/assets/stylesheets/ancillary-pages.scss */
+  .ancillary .menu {
+    position: static;
+    margin: 0;
+    width: auto;
+  }
+}
+/* line 58, ../../app/assets/stylesheets/ancillary-pages.scss */
+.ancillary .menu ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 63, ../../app/assets/stylesheets/ancillary-pages.scss */
+.ancillary .menu li {
+  list-style: none;
+  margin: 0 0 0.5em 0;
+}
+/* line 67, ../../app/assets/stylesheets/ancillary-pages.scss */
+.ancillary .menu li.active {
+  font-weight: bold;
+}
+
+@media (max-width: 640px) {
+  /* line 73, ../../app/assets/stylesheets/ancillary-pages.scss */
+  .ancillary article {
+    padding-top: 1em;
+  }
+}
+/* line 77, ../../app/assets/stylesheets/ancillary-pages.scss */
+.ancillary article section {
+  margin: 0 0 2.5em 0;
+}
+/* line 82, ../../app/assets/stylesheets/ancillary-pages.scss */
+.ancillary article h1:first-child,
+.ancillary article h2:first-child {
+  margin-top: 0;
+}
+/* line 86, ../../app/assets/stylesheets/ancillary-pages.scss */
+.ancillary article dt {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+}
+@media (max-width: 640px) {
+  /* line 86, ../../app/assets/stylesheets/ancillary-pages.scss */
+  .ancillary article dt {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+/* line 90, ../../app/assets/stylesheets/ancillary-pages.scss */
+.ancillary article dd {
+  margin-left: 0;
+}
+
+/* feedback page */
+/* line 98, ../../app/assets/stylesheets/ancillary-pages.scss */
+.ancillary.feedback .pullout {
+  background-color: #D9E0E0;
+  margin: 1.5em 0;
+  padding: 1em;
+}
+/* line 104, ../../app/assets/stylesheets/ancillary-pages.scss */
+.ancillary.feedback .image-in-text {
+  float: right;
+  margin-left: 2em;
+}
+/* line 108, ../../app/assets/stylesheets/ancillary-pages.scss */
+.ancillary.feedback .image-in-text a[rel="external"]:after {
+  content: none;
+  margin: 0;
+}
+
+/* Cross-browser shims
+
+  Ways of normalising properties across browsers.
+ */
+@-ms-viewport {
+  width: device-width;
+}
+
+@-o-viewport {
+  width: device-width;
+}
+
+/* Usage:
+   @include inline-block
+
+   or
+
+   @include inline-block("250px")
+
+   which gives a min-height to the inline-block elements.
+*/
+/* Contain floats usage:
+
+   .this-has-floated-children {
+     @extend %contain-floats;
+   }
+
+*/
+/* line 49, ../../../../lib/gems/1.9.1/gems/govuk_frontend_toolkit-0.32.2/app/assets/stylesheets/_shims.scss */
+article .info-notice:after, #global-header .header-wrapper:after, #global-header .header-wrapper .header-global:after, #global-header .header-wrapper .header-global .header-logo:after,
+#global-header .header-wrapper .header-global .site-search:after, #global-header form#search .content:after, #global-header .header-proposition #proposition-links:after, .smart_answer .article-container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* line 2, ../../app/assets/stylesheets/_header.scss */
+#global-header {
+  background-color: #0b0c0c;
+  width: 100%;
+}
+/* line 6, ../../app/assets/stylesheets/_header.scss */
+#global-header .header-wrapper {
+  max-width: 990px;
+  margin: 0 auto;
+  padding: 0.5em 15px;
+}
+@media (max-width: 640px) {
+  /* line 6, ../../app/assets/stylesheets/_header.scss */
+  #global-header .header-wrapper {
+    padding: 0.5em 0;
+  }
+}
+/* line 22, ../../app/assets/stylesheets/_header.scss */
+#global-header .header-wrapper .header-global .header-logo,
+#global-header .header-wrapper .header-global .site-search {
+  width: 49%;
+  float: left;
+}
+@media (min-width: 769px) {
+  /* line 22, ../../app/assets/stylesheets/_header.scss */
+  #global-header .header-wrapper .header-global .header-logo,
+  #global-header .header-wrapper .header-global .site-search {
+    width: 33.33%;
+  }
+}
+@media screen and (max-width: 379px) {
+  /* line 22, ../../app/assets/stylesheets/_header.scss */
+  #global-header .header-wrapper .header-global .header-logo,
+  #global-header .header-wrapper .header-global .site-search {
+    width: auto;
+    float: none;
+  }
+}
+/* line 35, ../../app/assets/stylesheets/_header.scss */
+#global-header .header-wrapper .header-global .header-logo .content,
+#global-header .header-wrapper .header-global .site-search .content {
+  margin: 0 15px;
+}
+/* line 39, ../../app/assets/stylesheets/_header.scss */
+#global-header .header-wrapper .header-global .header-logo {
+  margin: 5px 0 2px;
+}
+/* line 42, ../../app/assets/stylesheets/_header.scss */
+#global-header .header-wrapper .header-global .site-search {
+  float: right;
+}
+@media (min-width: 769px) {
+  /* line 49, ../../app/assets/stylesheets/_header.scss */
+  #global-header.with-proposition .header-wrapper .header-global {
+    float: left;
+    width: 33.33%;
+  }
+  /* line 55, ../../app/assets/stylesheets/_header.scss */
+  #global-header.with-proposition .header-wrapper .header-global .header-logo,
+  #global-header.with-proposition .header-wrapper .header-global .site-search {
+    width: 100%;
+  }
+}
+@media (min-width: 769px) {
+  /* line 60, ../../app/assets/stylesheets/_header.scss */
+  #global-header.with-proposition .header-wrapper .header-proposition {
+    width: 66.66%;
+    float: left;
+  }
+}
+/* line 65, ../../app/assets/stylesheets/_header.scss */
+#global-header.with-proposition .header-wrapper .header-proposition .content {
+  margin: 0 15px;
+}
+/* line 71, ../../app/assets/stylesheets/_header.scss */
+#global-header.with-proposition #search {
+  margin-top: 4px;
+}
+/* line 76, ../../app/assets/stylesheets/_header.scss */
+#global-header #logo {
+  float: left;
+  position: relative;
+  width: 166px;
+  height: 30px;
+  overflow: hidden;
+}
+/* line 83, ../../app/assets/stylesheets/_header.scss */
+#global-header #logo img {
+  position: absolute;
+  left: -166px;
+  top: 0;
+  border: none;
+  /* scale oversized image to container bounds */
+  width: 200%;
+  height: 300%;
+}
+/* line 97, ../../app/assets/stylesheets/_header.scss */
+#global-header #logo:hover img {
+  top: -30px;
+}
+/* line 102, ../../app/assets/stylesheets/_header.scss */
+#global-header .search-toggle {
+  display: none;
+}
+@media screen and (max-width: 379px) {
+  /* line 102, ../../app/assets/stylesheets/_header.scss */
+  #global-header .search-toggle {
+    display: block;
+    float: right;
+    top: 0;
+    height: 30px;
+    width: 36px;
+    padding: 0;
+    margin: 0 15px;
+    overflow: hidden;
+    text-indent: -5000px;
+    background-color: #2b8cc4;
+    background-image: url("search-button.png");
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+  /* line 131, ../../app/assets/stylesheets/_header.scss */
+  #global-header .search-toggle:active {
+    top: 0;
+  }
+}
+@media only screen and (max-width: 379px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 379px) and (min--moz-device-pixel-ratio: 2), only screen and (max-width: 379px) and (-o-min-device-pixel-ratio: 20 / 10), only screen and (max-width: 379px) and (min-device-pixel-ratio: 2), only screen and (max-width: 379px) and (min-resolution: 192dpi), only screen and (max-width: 379px) and (min-resolution: 2dppx) {
+  /* line 102, ../../app/assets/stylesheets/_header.scss */
+  #global-header .search-toggle {
+    background-size: 52.5px 35px;
+    background-position: 100% 50%;
+  }
+}
+/* line 136, ../../app/assets/stylesheets/_header.scss */
+#global-header .search-toggle.js-hidden {
+  display: none;
+}
+/* line 140, ../../app/assets/stylesheets/_header.scss */
+#global-header form#search .content {
+  position: relative;
+  background: #fff;
+}
+/* line 145, ../../app/assets/stylesheets/_header.scss */
+#global-header form#search label {
+  float: left;
+  height: 35px;
+  line-height: 35px;
+  text-indent: 15px;
+  overflow: hidden;
+  display: block;
+  margin-right: 10px;
+}
+/* line 154, ../../app/assets/stylesheets/_header.scss */
+.js-enabled #global-header form#search label {
+  float: none;
+  position: absolute;
+  left: 0;
+  top: 1px;
+  z-index: 1;
+  width: 100%;
+  margin-right: 0;
+}
+/* line 164, ../../app/assets/stylesheets/_header.scss */
+#global-header form#search input {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  min-width: 0;
+  display: block;
+  margin: 0;
+  border: 0;
+  height: 35px;
+  padding: 6px 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+/* line 180, ../../app/assets/stylesheets/_header.scss */
+#global-header form#search input#site-search-text {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.4375;
+  font-weight: 300;
+  text-transform: none;
+  position: relative;
+  padding: 6px;
+  z-index: 3;
+  background: transparent;
+}
+@media (max-width: 640px) {
+  /* line 180, ../../app/assets/stylesheets/_header.scss */
+  #global-header form#search input#site-search-text {
+    font-size: 14px;
+    line-height: 1.76923;
+  }
+}
+/* line 188, ../../app/assets/stylesheets/_header.scss */
+#global-header form#search input#site-search-text.focus, #global-header form#search input#site-search-text:focus {
+  background: #fff;
+}
+/* line 195, ../../app/assets/stylesheets/_header.scss */
+.js-enabled #global-header form#search input#site-search-text {
+  width: 86%;
+  width: -webkit-calc(100% - 37px);
+  width: calc(100% - 37px);
+}
+/* line 201, ../../app/assets/stylesheets/_header.scss */
+#global-header form#search input.submit {
+  position: absolute;
+  z-index: 4;
+  right: 0;
+  top: 0;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #2b8cc4;
+  border-width: 0 0 0 1px;
+  border-left-color: #222;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  overflow: hidden;
+  text-indent: -5000px;
+  color: white;
+  background-color: #2b8cc4;
+  background-image: url("search-button.png");
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 201, ../../app/assets/stylesheets/_header.scss */
+  #global-header form#search input.submit {
+    background-size: 52.5px 35px;
+    background-position: 100% 50%;
+  }
+}
+/* line 236, ../../app/assets/stylesheets/_header.scss */
+#global-header form#search input.submit:hover {
+  background-color: #267daf;
+}
+@media screen and (max-width: 379px) {
+  /* line 139, ../../app/assets/stylesheets/_header.scss */
+  #global-header form#search {
+    display: none;
+    width: 100%;
+  }
+  /* line 257, ../../app/assets/stylesheets/_header.scss */
+  #global-header form#search #site-search-text {
+    width: 80%;
+  }
+}
+/* line 261, ../../app/assets/stylesheets/_header.scss */
+#global-header form#search.js-visible {
+  display: block;
+}
+/* line 264, ../../app/assets/stylesheets/_header.scss */
+#global-header .header-proposition {
+  padding-top: 10px;
+}
+@media (min-width: 769px) {
+  /* line 264, ../../app/assets/stylesheets/_header.scss */
+  #global-header .header-proposition {
+    padding-top: 0;
+  }
+}
+/* line 269, ../../app/assets/stylesheets/_header.scss */
+#global-header .header-proposition #proposition-name {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+@media (max-width: 640px) {
+  /* line 269, ../../app/assets/stylesheets/_header.scss */
+  #global-header .header-proposition #proposition-name {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+/* line 275, ../../app/assets/stylesheets/_header.scss */
+#global-header .header-proposition a.menu {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  color: white;
+  display: block;
+  float: right;
+  text-decoration: none;
+  padding-top: 6px;
+}
+@media (max-width: 640px) {
+  /* line 275, ../../app/assets/stylesheets/_header.scss */
+  #global-header .header-proposition a.menu {
+    font-size: 14px;
+    line-height: 1.14286;
+  }
+}
+@media (min-width: 769px) {
+  /* line 275, ../../app/assets/stylesheets/_header.scss */
+  #global-header .header-proposition a.menu {
+    display: none;
+  }
+}
+/* line 285, ../../app/assets/stylesheets/_header.scss */
+#global-header .header-proposition a.menu:hover {
+  text-decoration: underline;
+}
+/* line 288, ../../app/assets/stylesheets/_header.scss */
+#global-header .header-proposition a.menu:after {
+  display: inline-block;
+  font-size: 8px;
+  height: 8px;
+  padding-left: 5px;
+  vertical-align: middle;
+  content: " \25BC";
+}
+/* line 296, ../../app/assets/stylesheets/_header.scss */
+#global-header .header-proposition a.menu.js-hidden:after {
+  content: " \25B2";
+}
+/* line 300, ../../app/assets/stylesheets/_header.scss */
+#global-header .header-proposition #proposition-menu {
+  margin-top: 5px;
+}
+/* line 303, ../../app/assets/stylesheets/_header.scss */
+#global-header .header-proposition #proposition-links {
+  clear: both;
+  margin: 2px 0 0 0;
+  padding: 0;
+}
+/* line 309, ../../app/assets/stylesheets/_header.scss */
+.js-enabled #global-header .header-proposition #proposition-links {
+  display: none;
+}
+@media (min-width: 769px) {
+  /* line 309, ../../app/assets/stylesheets/_header.scss */
+  .js-enabled #global-header .header-proposition #proposition-links {
+    display: block;
+  }
+}
+/* line 314, ../../app/assets/stylesheets/_header.scss */
+.js-enabled #global-header .header-proposition #proposition-links.js-visible {
+  display: block;
+}
+/* line 319, ../../app/assets/stylesheets/_header.scss */
+#global-header .header-proposition #proposition-links li {
+  float: left;
+  width: 50%;
+  padding: 3px 0;
+  border-bottom: 1px solid #2e3133;
+}
+@media (min-width: 769px) {
+  /* line 319, ../../app/assets/stylesheets/_header.scss */
+  #global-header .header-proposition #proposition-links li {
+    display: block;
+    width: auto;
+    padding: 0 15px 0 0;
+    border-bottom: 0;
+  }
+  /* line 331, ../../app/assets/stylesheets/_header.scss */
+  #global-header .header-proposition #proposition-links li.clear-child {
+    clear: left;
+  }
+}
+/* line 336, ../../app/assets/stylesheets/_header.scss */
+#global-header .header-proposition #proposition-links li a {
+  color: white;
+  text-decoration: none;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857;
+  font-weight: 400;
+  text-transform: none;
+  font-weight: 700;
+}
+@media (max-width: 640px) {
+  /* line 336, ../../app/assets/stylesheets/_header.scss */
+  #global-header .header-proposition #proposition-links li a {
+    font-size: 12px;
+    line-height: 1.25;
+  }
+}
+@media (min-width: 769px) {
+  /* line 336, ../../app/assets/stylesheets/_header.scss */
+  #global-header .header-proposition #proposition-links li a {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 300;
+    text-transform: none;
+    font-weight: 700;
+    line-height: 23px;
+  }
+}
+@media (min-width: 769px) and (max-width: 640px) {
+  /* line 336, ../../app/assets/stylesheets/_header.scss */
+  #global-header .header-proposition #proposition-links li a {
+    font-size: 14px;
+    line-height: 1.14286;
+  }
+}
+/* line 346, ../../app/assets/stylesheets/_header.scss */
+#global-header .header-proposition #proposition-links li a:hover {
+  text-decoration: underline;
+}
+/* line 349, ../../app/assets/stylesheets/_header.scss */
+#global-header .header-proposition #proposition-links li a.active {
+  color: #28a197;
+}
+
+/* Global cookie message
+   Global browser prompt message */
+/* line 361, ../../app/assets/stylesheets/_header.scss */
+.js-enabled #global-cookie-message {
+  display: none;
+  /* shown with JS, always on for non-JS */
+}
+
+/* line 365, ../../app/assets/stylesheets/_header.scss */
+#global-browser-prompt {
+  display: none;
+  /* shown with JS, always hidden for non-JS */
+}
+
+/* line 371, ../../app/assets/stylesheets/_header.scss */
+#global-cookie-message,
+.beta-notice,
+#global-browser-prompt {
+  padding: 0.5em 2em;
+}
+/* line 374, ../../app/assets/stylesheets/_header.scss */
+#global-cookie-message p,
+.beta-notice p,
+#global-browser-prompt p {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  margin: 0 auto;
+  max-width: 960px;
+}
+@media (max-width: 640px) {
+  /* line 374, ../../app/assets/stylesheets/_header.scss */
+  #global-cookie-message p,
+  .beta-notice p,
+  #global-browser-prompt p {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+@media (max-width: 640px) {
+  /* line 371, ../../app/assets/stylesheets/_header.scss */
+  #global-cookie-message,
+  .beta-notice,
+  #global-browser-prompt {
+    padding: 0.5em 1em;
+  }
+}
+
+/* line 390, ../../app/assets/stylesheets/_header.scss */
+#global-cookie-message,
+#global-browser-prompt {
+  background-color: #d5e8f3;
+}
+
+/* line 394, ../../app/assets/stylesheets/_header.scss */
+#global-browser-prompt p {
+  position: relative;
+  padding-right: 20px;
+  max-width: 940px;
+}
+
+/* line 404, ../../app/assets/stylesheets/_header.scss */
+#global-browser-prompt .dismiss {
+  background-image: url(http://static.dev.gov.uk/static/close.png);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center right;
+  text-decoration: none;
+  height: 22px;
+  width: 10px;
+  text-indent: -9999px;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+}
+
+/* line 419, ../../app/assets/stylesheets/_header.scss */
+.beta-notice {
+  background-color: #f47738;
+  color: #fff;
+}
+
+/* line 424, ../../app/assets/stylesheets/_header.scss */
+#global-breadcrumb {
+  background-color: #fff;
+  max-width: 1020px;
+  margin: 0 auto;
+  z-index: 50;
+}
+@media (max-width: 640px) {
+  /* line 424, ../../app/assets/stylesheets/_header.scss */
+  #global-breadcrumb {
+    padding: 0 1em 0.75em;
+  }
+}
+/* line 438, ../../app/assets/stylesheets/_header.scss */
+#global-breadcrumb ol {
+  border-top: 10px solid #2b8cc4;
+  max-width: 960px;
+  margin: 0 30px;
+  padding: 0.75em 0;
+}
+@media (max-width: 640px) {
+  /* line 438, ../../app/assets/stylesheets/_header.scss */
+  #global-breadcrumb ol {
+    margin: 0;
+  }
+}
+/* line 453, ../../app/assets/stylesheets/_header.scss */
+#global-breadcrumb ol li {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  background-image: url(http://static.dev.gov.uk/static/separator.png);
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  float: left;
+  list-style: none;
+  margin-left: 0;
+  margin-right: 0.5em;
+  padding-right: 1em;
+}
+@media (max-width: 640px) {
+  /* line 453, ../../app/assets/stylesheets/_header.scss */
+  #global-breadcrumb ol li {
+    font-size: 14px;
+    line-height: 1.14286;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 453, ../../app/assets/stylesheets/_header.scss */
+  #global-breadcrumb ol li {
+    background-image: url(http://static.dev.gov.uk/static/separator-2x.png);
+    background-size: 6px 11px;
+  }
+}
+/* line 469, ../../app/assets/stylesheets/_header.scss */
+#global-breadcrumb ol li a {
+  color: #0b0c0c;
+}
+/* line 473, ../../app/assets/stylesheets/_header.scss */
+#global-breadcrumb ol li strong {
+  font-weight: normal;
+}
+/* line 477, ../../app/assets/stylesheets/_header.scss */
+#global-breadcrumb ol li:last-child {
+  background-image: none;
+  margin-right: 0;
+}
+
+/* line 485, ../../app/assets/stylesheets/_header.scss */
+#user-satisfaction-survey {
+  /**
+   * Hidden by default as we only want to show it to users who have
+   * JavaScript enabled.
+   */
+  display: none;
+  background-color: #2B358B;
+  padding: 0.5em 0;
+  color: #fff;
+}
+@media (min-width: 769px) {
+  /* line 495, ../../app/assets/stylesheets/_header.scss */
+  #user-satisfaction-survey.visible {
+    display: block;
+  }
+}
+/* line 501, ../../app/assets/stylesheets/_header.scss */
+#user-satisfaction-survey .wrapper {
+  margin: 0 auto;
+  max-width: 990px;
+  clear: both;
+  padding: 0 15px;
+}
+/* line 507, ../../app/assets/stylesheets/_header.scss */
+#user-satisfaction-survey .wrapper h1 {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  font-weight: 700;
+  margin-left: 20px;
+}
+@media (max-width: 640px) {
+  /* line 507, ../../app/assets/stylesheets/_header.scss */
+  #user-satisfaction-survey .wrapper h1 {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+/* line 513, ../../app/assets/stylesheets/_header.scss */
+#user-satisfaction-survey .wrapper p {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857;
+  font-weight: 400;
+  text-transform: none;
+  margin: 0 0 0 20px;
+}
+@media (max-width: 640px) {
+  /* line 513, ../../app/assets/stylesheets/_header.scss */
+  #user-satisfaction-survey .wrapper p {
+    font-size: 12px;
+    line-height: 1.25;
+  }
+}
+/* line 521, ../../app/assets/stylesheets/_header.scss */
+#user-satisfaction-survey .wrapper p a:link, #user-satisfaction-survey .wrapper p a:active, #user-satisfaction-survey .wrapper p a:visited {
+  color: #fff;
+}
+/* line 525, ../../app/assets/stylesheets/_header.scss */
+#user-satisfaction-survey .wrapper p a:hover {
+  color: #fff;
+}
+/* line 529, ../../app/assets/stylesheets/_header.scss */
+#user-satisfaction-survey .wrapper p a#take-survey {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  padding-right: 5px;
+}
+@media (max-width: 640px) {
+  /* line 529, ../../app/assets/stylesheets/_header.scss */
+  #user-satisfaction-survey .wrapper p a#take-survey {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+/* line 536, ../../app/assets/stylesheets/_header.scss */
+#user-satisfaction-survey .wrapper p.right {
+  float: right;
+  margin: -20px 20px 0 0;
+}
+
+/* Global footer */
+/* line 3, ../../app/assets/stylesheets/_footer.scss */
+#footer {
+  background-color: #dee0e2;
+  border-top: 1px solid #a1acb2;
+}
+/* line 7, ../../app/assets/stylesheets/_footer.scss */
+#footer .footer-wrapper {
+  max-width: 60em;
+  margin: 0 auto;
+  padding: 60px 1em 0 1em;
+}
+@media (max-width: 640px) {
+  /* line 7, ../../app/assets/stylesheets/_footer.scss */
+  #footer .footer-wrapper {
+    padding-top: 20px;
+  }
+}
+/* line 21, ../../app/assets/stylesheets/_footer.scss */
+#footer a {
+  color: #454a4c;
+}
+/* line 24, ../../app/assets/stylesheets/_footer.scss */
+#footer a:hover {
+  color: #171819;
+}
+/* line 29, ../../app/assets/stylesheets/_footer.scss */
+#footer h2 {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  font-weight: bold;
+  color: #171819;
+  margin: 0;
+}
+@media (max-width: 640px) {
+  /* line 29, ../../app/assets/stylesheets/_footer.scss */
+  #footer h2 {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+/* line 35, ../../app/assets/stylesheets/_footer.scss */
+#footer h2 a {
+  color: inherit;
+}
+/* line 40, ../../app/assets/stylesheets/_footer.scss */
+#footer .footer-categories {
+  font-size: 0;
+  float: left;
+  padding: 0 0 60px 0;
+  width: 100%;
+}
+@media (max-width: 640px) {
+  /* line 40, ../../app/assets/stylesheets/_footer.scss */
+  #footer .footer-categories {
+    padding: 20px 0;
+  }
+}
+/* line 52, ../../app/assets/stylesheets/_footer.scss */
+#footer .footer-categories .footer-explore {
+  float: left;
+  margin-right: 7%;
+  width: 62%;
+}
+@media (max-width: 640px) {
+  /* line 52, ../../app/assets/stylesheets/_footer.scss */
+  #footer .footer-categories .footer-explore {
+    display: block;
+    margin: 0 0 30px 0;
+    width: 100%;
+  }
+}
+/* line 67, ../../app/assets/stylesheets/_footer.scss */
+#footer .footer-categories ul {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  list-style: none;
+  border: 1px solid #a1acb2;
+  border-width: 1px 0 0 0;
+  margin: 20px 0 0 0;
+  padding: 20px 0 0 0;
+  min-height: 210px;
+  vertical-align: top;
+}
+@media (max-width: 640px) {
+  /* line 67, ../../app/assets/stylesheets/_footer.scss */
+  #footer .footer-categories ul {
+    font-size: 14px;
+    line-height: 1.14286;
+  }
+}
+@media (max-width: 640px) {
+  /* line 67, ../../app/assets/stylesheets/_footer.scss */
+  #footer .footer-categories ul {
+    border-width: 0;
+    min-height: 0;
+  }
+}
+/* line 87, ../../app/assets/stylesheets/_footer.scss */
+#footer .footer-categories ul li {
+  display: block;
+  float: left;
+  clear: left;
+  margin: 0 0 15px 0;
+  width: 45.5%;
+}
+/* line 97, ../../app/assets/stylesheets/_footer.scss */
+#footer .footer-categories ul li:nth-child(even) {
+  float: right;
+  clear: none;
+}
+@media (max-width: 640px) {
+  /* line 87, ../../app/assets/stylesheets/_footer.scss */
+  #footer .footer-categories ul li {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+  }
+  /* line 117, ../../app/assets/stylesheets/_footer.scss */
+  #footer .footer-categories ul li:nth-child(even) {
+    float: none;
+  }
+  /* line 122, ../../app/assets/stylesheets/_footer.scss */
+  #footer .footer-categories ul li:first-child, #footer .footer-categories ul li:nth-child(2) {
+    border-top: none;
+    padding-top: 0;
+  }
+}
+/* line 135, ../../app/assets/stylesheets/_footer.scss */
+#footer .footer-categories .footer-inside-government {
+  float: left;
+  width: 31%;
+}
+/* line 139, ../../app/assets/stylesheets/_footer.scss */
+#footer .footer-categories .footer-inside-government ul {
+  margin-right: 0;
+}
+@media (max-width: 640px) {
+  /* line 139, ../../app/assets/stylesheets/_footer.scss */
+  #footer .footer-categories .footer-inside-government ul {
+    margin: 20px 0 0 0;
+    width: 100%;
+  }
+}
+/* line 148, ../../app/assets/stylesheets/_footer.scss */
+#footer .footer-categories .footer-inside-government ul li {
+  margin-right: 0;
+  width: 100%;
+}
+/* line 152, ../../app/assets/stylesheets/_footer.scss */
+#footer .footer-categories .footer-inside-government ul li:nth-child(even) {
+  float: none;
+  clear: none;
+}
+@media (max-width: 640px) {
+  /* line 135, ../../app/assets/stylesheets/_footer.scss */
+  #footer .footer-categories .footer-inside-government {
+    width: 100%;
+    display: block;
+    padding: 0;
+    margin: 0;
+    border: none;
+    min-height: 0;
+  }
+}
+/* line 170, ../../app/assets/stylesheets/_footer.scss */
+#footer .footer-meta {
+  clear: both;
+  font-size: 0;
+  color: #454a4c;
+  border: 1px solid #a1acb2;
+  border-width: 1px 0 0 0;
+  margin: 60px 0 0 0;
+  padding: 30px 0 60px;
+}
+@media (max-width: 640px) {
+  /* line 170, ../../app/assets/stylesheets/_footer.scss */
+  #footer .footer-meta {
+    margin: 0;
+  }
+}
+/* line 186, ../../app/assets/stylesheets/_footer.scss */
+#footer .footer-meta .footer-meta-inner {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 75%;
+}
+@media (max-width: 640px) {
+  /* line 186, ../../app/assets/stylesheets/_footer.scss */
+  #footer .footer-meta .footer-meta-inner {
+    display: block;
+    width: 100%;
+  }
+}
+/* line 196, ../../app/assets/stylesheets/_footer.scss */
+#footer .footer-meta .footer-meta-inner ul {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+  text-transform: none;
+  display: inline-block;
+  list-style: none;
+  margin: 0 0 1em;
+  padding: 0;
+}
+@media (max-width: 640px) {
+  /* line 196, ../../app/assets/stylesheets/_footer.scss */
+  #footer .footer-meta .footer-meta-inner ul {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+/* line 203, ../../app/assets/stylesheets/_footer.scss */
+#footer .footer-meta .footer-meta-inner ul li {
+  display: inline-block;
+  margin: 0 15px 0 0;
+}
+@media (max-width: 640px) {
+  /* line 196, ../../app/assets/stylesheets/_footer.scss */
+  #footer .footer-meta .footer-meta-inner ul {
+    width: auto;
+    margin: 0 0 1.5em 0;
+  }
+}
+/* line 220, ../../app/assets/stylesheets/_footer.scss */
+#footer .footer-meta .footer-meta-inner .open-government-licence {
+  clear: left;
+  position: relative;
+  padding-left: 53px;
+}
+@media (max-width: 640px) {
+  /* line 220, ../../app/assets/stylesheets/_footer.scss */
+  #footer .footer-meta .footer-meta-inner .open-government-licence {
+    padding-left: 0;
+  }
+}
+/* line 233, ../../app/assets/stylesheets/_footer.scss */
+#footer .footer-meta .footer-meta-inner .open-government-licence h2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 41px;
+  height: 100%;
+}
+@media (max-width: 640px) {
+  /* line 233, ../../app/assets/stylesheets/_footer.scss */
+  #footer .footer-meta .footer-meta-inner .open-government-licence h2 {
+    position: static;
+    width: auto;
+    margin-bottom: 1em;
+  }
+}
+/* line 246, ../../app/assets/stylesheets/_footer.scss */
+#footer .footer-meta .footer-meta-inner .open-government-licence h2 a, #footer .footer-meta .footer-meta-inner .open-government-licence h2 img {
+  display: block;
+  width: 43px;
+  height: 17px;
+}
+/* line 253, ../../app/assets/stylesheets/_footer.scss */
+#footer .footer-meta .footer-meta-inner .open-government-licence p {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  margin: 0;
+  padding-top: 0.1em;
+}
+@media (max-width: 640px) {
+  /* line 253, ../../app/assets/stylesheets/_footer.scss */
+  #footer .footer-meta .footer-meta-inner .open-government-licence p {
+    font-size: 14px;
+    line-height: 1.14286;
+  }
+}
+/* line 258, ../../app/assets/stylesheets/_footer.scss */
+#footer .footer-meta .footer-meta-inner .open-government-licence p a {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857;
+  font-weight: 400;
+  text-transform: none;
+}
+@media (max-width: 640px) {
+  /* line 258, ../../app/assets/stylesheets/_footer.scss */
+  #footer .footer-meta .footer-meta-inner .open-government-licence p a {
+    font-size: 12px;
+    line-height: 1.25;
+  }
+}
+@media (max-width: 640px) {
+  /* line 258, ../../app/assets/stylesheets/_footer.scss */
+  #footer .footer-meta .footer-meta-inner .open-government-licence p a {
+    font-size: 1em;
+  }
+}
+/* line 275, ../../app/assets/stylesheets/_footer.scss */
+#footer .footer-meta .copyright {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  display: inline-block;
+  float: none;
+  text-align: inherit;
+  width: 25%;
+  padding-top: 15px;
+}
+@media (max-width: 640px) {
+  /* line 275, ../../app/assets/stylesheets/_footer.scss */
+  #footer .footer-meta .copyright {
+    font-size: 14px;
+    line-height: 1.14286;
+  }
+}
+/* line 291, ../../app/assets/stylesheets/_footer.scss */
+#footer .footer-meta .copyright a {
+  display: block;
+  padding: 115px 0 0 0;
+  background: transparent url(http://static.dev.gov.uk/static/govuk-crest.png) no-repeat 100% 0;
+  text-align: right;
+  text-decoration: none;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 291, ../../app/assets/stylesheets/_footer.scss */
+  #footer .footer-meta .copyright a {
+    background-image: url(http://static.dev.gov.uk/static/govuk-crest-2x.png);
+    background-size: 125px 102px;
+  }
+}
+@media (max-width: 640px) {
+  /* line 275, ../../app/assets/stylesheets/_footer.scss */
+  #footer .footer-meta .copyright {
+    width: 100%;
+    display: block;
+    padding: 0;
+    margin: 30px 0 0 0;
+  }
+  /* line 317, ../../app/assets/stylesheets/_footer.scss */
+  #footer .footer-meta .copyright a {
+    text-align: center;
+    background-position: 50% 0%;
+  }
+}
+
+/* line 1, ../../app/assets/stylesheets/notifications.scss */
+#banner-notification {
+  background-color: #a1acb2;
+  border-top: 2px solid white;
+}
+/* line 5, ../../app/assets/stylesheets/notifications.scss */
+#banner-notification div {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  color: #fff;
+  margin: 0 auto;
+  padding: 0.5em 0;
+  max-width: 1020px;
+  overflow: hidden;
+}
+@media (max-width: 640px) {
+  /* line 5, ../../app/assets/stylesheets/notifications.scss */
+  #banner-notification div {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+/* line 18, ../../app/assets/stylesheets/notifications.scss */
+#banner-notification p {
+  padding: 0 22% 0 1.68421em;
+  margin: 0;
+}
+/* line 23, ../../app/assets/stylesheets/notifications.scss */
+#banner-notification a {
+  color: #fff;
+}
+/* line 26, ../../app/assets/stylesheets/notifications.scss */
+#banner-notification a.right {
+  display: block;
+  padding: 0 0 0 80%;
+  margin-top: -1.31579em;
+  text-align: right;
+}
+@media (max-width: 640px) {
+  /* line 1, ../../app/assets/stylesheets/notifications.scss */
+  #banner-notification {
+    padding: 0.5em 1em;
+  }
+}
+/* line 38, ../../app/assets/stylesheets/notifications.scss */
+#banner-notification.green {
+  background: #28a197;
+}
+/* line 42, ../../app/assets/stylesheets/notifications.scss */
+#banner-notification.red {
+  background: #b10e1e;
+}
+
+/* line 47, ../../app/assets/stylesheets/notifications.scss */
+#campaign-notification {
+  clear: both;
+  background-color: #a1acb2;
+  color: #fff;
+  padding: 2em;
+}
+/* line 53, ../../app/assets/stylesheets/notifications.scss */
+#campaign-notification h1 {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 80px;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: none;
+}
+@media (max-width: 640px) {
+  /* line 53, ../../app/assets/stylesheets/notifications.scss */
+  #campaign-notification h1 {
+    font-size: 53px;
+    line-height: 1.03774;
+  }
+}
+/* line 57, ../../app/assets/stylesheets/notifications.scss */
+#campaign-notification p {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  padding-right: 25%;
+  margin-bottom: 0;
+}
+@media (max-width: 640px) {
+  /* line 57, ../../app/assets/stylesheets/notifications.scss */
+  #campaign-notification p {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+/* line 63, ../../app/assets/stylesheets/notifications.scss */
+#campaign-notification a {
+  color: #fff;
+}
+/* line 66, ../../app/assets/stylesheets/notifications.scss */
+#campaign-notification a.right {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  text-align: right;
+  padding: 0 0 0 75%;
+  margin-top: -1.31579em;
+  display: block;
+}
+@media (max-width: 640px) {
+  /* line 66, ../../app/assets/stylesheets/notifications.scss */
+  #campaign-notification a.right {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+/* line 79, ../../app/assets/stylesheets/notifications.scss */
+#campaign-notification.green {
+  background: #fff;
+  border: 10px solid #28a197;
+  color: #28a197;
+}
+/* line 84, ../../app/assets/stylesheets/notifications.scss */
+#campaign-notification.green a {
+  color: #28a197;
+}
+/* line 89, ../../app/assets/stylesheets/notifications.scss */
+#campaign-notification.red {
+  background: #b10e1e;
+}
+/* line 93, ../../app/assets/stylesheets/notifications.scss */
+#campaign-notification.black {
+  background: #fff;
+  border: 10px solid #0b0c0c;
+  color: #0b0c0c;
+}
+/* line 98, ../../app/assets/stylesheets/notifications.scss */
+#campaign-notification.black a {
+  color: #0b0c0c;
+}
+
+/* line 50, ../../app/assets/stylesheets/organisations.scss */
+.organisation-logo {
+  font-family: "GDS-Logo", sans-serif;
+  font-size: 19px;
+  line-height: 1.05263;
+  /* 20px */
+  font-weight: 400;
+  text-transform: none;
+  text-decoration: none;
+  color: #0b0c0c;
+  display: block;
+  border-left: 2px solid #bbb;
+  background: url(http://static.dev.gov.uk/static/coa-default-24.gif) no-repeat 8px 0;
+  height: auto;
+  width: auto;
+}
+@media (max-width: 640px) {
+  /* line 50, ../../app/assets/stylesheets/organisations.scss */
+  .organisation-logo {
+    font-size: 13px;
+    line-height: 1.15385;
+    background-image: url(http://static.dev.gov.uk/static/coa-default-18.gif);
+  }
+}
+/* line 21, ../../app/assets/stylesheets/organisations.scss */
+.organisation-logo span {
+  padding-top: 30px;
+  margin-left: 10px;
+  display: block;
+}
+@media (max-width: 640px) {
+  /* line 21, ../../app/assets/stylesheets/organisations.scss */
+  .organisation-logo span {
+    padding-top: 23px;
+  }
+}
+/* line 31, ../../app/assets/stylesheets/organisations.scss */
+.organisation-logo.single-line {
+  padding: 5px 0 5px 45px;
+  background-position: 8px 50%;
+}
+/* line 35, ../../app/assets/stylesheets/organisations.scss */
+.organisation-logo.single-line span {
+  top: 0;
+  position: static;
+}
+@media (max-width: 640px) {
+  /* line 31, ../../app/assets/stylesheets/organisations.scss */
+  .organisation-logo.single-line {
+    padding: 1px 0 1px 31px;
+    background-position: 5px 50%;
+  }
+}
+/* line 45, ../../app/assets/stylesheets/organisations.scss */
+.organisation-logo:visited {
+  color: #0b0c0c;
+}
+
+/* line 58, ../../app/assets/stylesheets/organisations.scss */
+.cabinet-office {
+  border-color: #005abb;
+}
+
+/* line 62, ../../app/assets/stylesheets/organisations.scss */
+.department-for-business-innovation-and-skills {
+  border-color: #003479;
+}
+
+/* line 66, ../../app/assets/stylesheets/organisations.scss */
+.department-for-communities-and-local-government {
+  border-color: #00857e;
+}
+
+/* line 70, ../../app/assets/stylesheets/organisations.scss */
+.department-for-culture-media-and-sport {
+  border-color: #d40072;
+}
+
+/* line 74, ../../app/assets/stylesheets/organisations.scss */
+.department-for-education {
+  border-color: #003a69;
+}
+
+/* line 78, ../../app/assets/stylesheets/organisations.scss */
+.department-for-energy-and-climate-change {
+  border-color: #009ddb;
+}
+
+/* line 82, ../../app/assets/stylesheets/organisations.scss */
+.department-for-environment-food-and-rural-affairs {
+  border-color: #898700;
+}
+
+/* line 86, ../../app/assets/stylesheets/organisations.scss */
+.department-of-health {
+  border-color: #00ad93;
+}
+
+/* line 90, ../../app/assets/stylesheets/organisations.scss */
+.department-for-international-development {
+  border-color: #002878;
+}
+
+/* line 94, ../../app/assets/stylesheets/organisations.scss */
+.department-for-work-and-pensions {
+  border-color: #00beb7;
+}
+
+/* line 98, ../../app/assets/stylesheets/organisations.scss */
+.department-for-transport {
+  border-color: #006c56;
+}
+
+/* line 102, ../../app/assets/stylesheets/organisations.scss */
+.home-office {
+  border-color: #9325b2;
+}
+
+/* line 106, ../../app/assets/stylesheets/organisations.scss */
+.foreign-and-commonwealth-office {
+  border-color: #003e74;
+}
+
+/* line 110, ../../app/assets/stylesheets/organisations.scss */
+.ministry-of-defence {
+  border-color: #4d2942;
+}
+
+/* line 114, ../../app/assets/stylesheets/organisations.scss */
+.ministry-of-justice {
+  border-color: #231f20;
+}
+
+/* line 118, ../../app/assets/stylesheets/organisations.scss */
+.treasury {
+  border-color: #af292e;
+}
+
+/* Agencies */
+/* line 124, ../../app/assets/stylesheets/organisations.scss */
+.hm-revenue-customs {
+  border-color: #009390;
+}
+
+/* visited link colour overrides */
+/* line 4, ../../app/assets/stylesheets/publisher.scss */
+#content.multi-page li a:visited,
+#content.multi-page .pagination li a:visited,
+#wrapper.programme .article-container nav a:visited {
+  color: #2E3191;
+}
+
+/* line 9, ../../app/assets/stylesheets/publisher.scss */
+#content.multi-page header {
+  position: relative;
+}
+@media (max-width: 640px) {
+  /* line 13, ../../app/assets/stylesheets/publisher.scss */
+  #content.multi-page article {
+    width: auto;
+    min-height: 0;
+  }
+}
+/* line 24, ../../app/assets/stylesheets/publisher.scss */
+#content.multi-page aside {
+  margin-bottom: 3em;
+  z-index: 10;
+  border-bottom: 1px solid #bbb;
+  margin: 0 0 2.5em 2em;
+  padding-bottom: 1em;
+  overflow: hidden;
+}
+/* line 36, ../../app/assets/stylesheets/publisher.scss */
+#content.multi-page aside .inner {
+  padding: 0;
+}
+@media (max-width: 640px) {
+  /* line 24, ../../app/assets/stylesheets/publisher.scss */
+  #content.multi-page aside {
+    width: auto;
+    overflow: hidden;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-left: 0;
+  }
+}
+
+/* line 52, ../../app/assets/stylesheets/publisher.scss */
+#content.single-page header div,
+#content.single-page article {
+  width: auto;
+}
+/* line 56, ../../app/assets/stylesheets/publisher.scss */
+#content.single-page header div {
+  padding-bottom: 1em;
+}
+/* line 60, ../../app/assets/stylesheets/publisher.scss */
+#content.single-page article {
+  margin: 0;
+}
+/* line 63, ../../app/assets/stylesheets/publisher.scss */
+#content.single-page article .inner {
+  margin-left: 0;
+  padding: 0 10em 0 2em;
+}
+
+/* line 70, ../../app/assets/stylesheets/publisher.scss */
+.alternative-guide {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  margin: 0 auto 0.5em;
+  overflow: hidden;
+  width: 9.5em;
+}
+@media (max-width: 640px) {
+  /* line 70, ../../app/assets/stylesheets/publisher.scss */
+  .alternative-guide {
+    font-size: 14px;
+    line-height: 1.14286;
+  }
+}
+@media (max-width: 640px) {
+  /* line 70, ../../app/assets/stylesheets/publisher.scss */
+  .alternative-guide {
+    margin: 1em;
+    width: auto;
+    text-align: left;
+  }
+}
+/* line 83, ../../app/assets/stylesheets/publisher.scss */
+.alternative-guide.video .video-wrapper {
+  background: url(http://static.dev.gov.uk/static/play-video-cta.png) no-repeat scroll 0 -80px #eaedef;
+  height: 5em;
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+  width: 8.5em;
+}
+/* line 91, ../../app/assets/stylesheets/publisher.scss */
+.alternative-guide.video .video-wrapper:hover {
+  background: url(http://static.dev.gov.uk/static/play-video-cta.png) no-repeat scroll 0 0 #eaedef;
+}
+/* line 95, ../../app/assets/stylesheets/publisher.scss */
+.alternative-guide.video .video-wrapper a span {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 2;
+  font-weight: 300;
+  text-transform: none;
+  display: block;
+  padding-left: 0.5em;
+}
+@media (max-width: 640px) {
+  /* line 95, ../../app/assets/stylesheets/publisher.scss */
+  .alternative-guide.video .video-wrapper a span {
+    font-size: 14px;
+    line-height: 1.14286;
+  }
+}
+@media (max-width: 640px) {
+  /* line 83, ../../app/assets/stylesheets/publisher.scss */
+  .alternative-guide.video .video-wrapper {
+    width: 68px;
+    height: 40px;
+    float: left;
+    margin-right: 1em;
+    background-position: -34px -100px;
+  }
+  /* line 108, ../../app/assets/stylesheets/publisher.scss */
+  .alternative-guide.video .video-wrapper:hover {
+    background-position: -34px -20px;
+  }
+}
+/* line 113, ../../app/assets/stylesheets/publisher.scss */
+.alternative-guide.video .video-wrapper img {
+  display: none;
+  margin-top: -0.5em;
+}
+@media (max-width: 640px) {
+  /* line 120, ../../app/assets/stylesheets/publisher.scss */
+  .alternative-guide.video a span {
+    line-height: 40px;
+  }
+}
+
+/* line 128, ../../app/assets/stylesheets/publisher.scss */
+.video-guide article .inner {
+  padding-bottom: 2em;
+}
+/* line 132, ../../app/assets/stylesheets/publisher.scss */
+.video-guide .meta-data {
+  border-top: none;
+  margin: 1em 0 2em 2em;
+}
+
+/* line 138, ../../app/assets/stylesheets/publisher.scss */
+#wrapper.video-guide article {
+  /* get rid of border on video guide pages */
+  border-left: none;
+  margin-left: 0;
+  width: 100%;
+}
+
+/* line 145, ../../app/assets/stylesheets/publisher.scss */
+.multi-page article .inner {
+  padding: 0 2em 0 2em;
+}
+@media (max-width: 640px) {
+  /* line 145, ../../app/assets/stylesheets/publisher.scss */
+  .multi-page article .inner {
+    padding: 0 1em 1em;
+  }
+}
+
+/* line 152, ../../app/assets/stylesheets/publisher.scss */
+.licence article .inner {
+  padding-top: 0;
+}
+
+/* line 156, ../../app/assets/stylesheets/publisher.scss */
+aside .show-all-parts {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 2.36842;
+  font-weight: 400;
+  text-transform: none;
+  border: solid 1px #a1acb2;
+  border-width: 1px 0;
+  padding: 0 16px;
+  display: none;
+}
+@media (max-width: 640px) {
+  /* line 156, ../../app/assets/stylesheets/publisher.scss */
+  aside .show-all-parts {
+    font-size: 16px;
+    line-height: 3.46154;
+  }
+}
+@media (max-width: 640px) {
+  /* line 156, ../../app/assets/stylesheets/publisher.scss */
+  aside .show-all-parts {
+    display: block;
+    background: transparent url(http://static.dev.gov.uk/static/accordian-arrow.png) 100% 6px no-repeat;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 156, ../../app/assets/stylesheets/publisher.scss */
+  aside .show-all-parts {
+    background-image: url(http://static.dev.gov.uk/static/accordian-arrow-2x.png);
+    background-size: 45px 90px;
+  }
+}
+/* line 176, ../../app/assets/stylesheets/publisher.scss */
+aside .show-all-parts, aside .show-all-parts:hover, aside .show-all-parts:focus {
+  text-decoration: none;
+}
+/* line 180, ../../app/assets/stylesheets/publisher.scss */
+aside .show-all-parts.show-all-parts-open {
+  background-position: 100% -40px;
+  border-bottom: none;
+}
+
+@media (max-width: 640px) {
+  /* line 186, ../../app/assets/stylesheets/publisher.scss */
+  aside .page-navigation {
+    margin-top: 0;
+  }
+}
+/* line 192, ../../app/assets/stylesheets/publisher.scss */
+aside .page-navigation ol {
+  margin: 0;
+  padding: 0;
+  float: left;
+  display: inline;
+  overflow: hidden;
+  width: 50%;
+}
+@media (max-width: 640px) {
+  /* line 192, ../../app/assets/stylesheets/publisher.scss */
+  aside .page-navigation ol {
+    float: none;
+    display: block;
+    width: auto;
+  }
+}
+/* line 211, ../../app/assets/stylesheets/publisher.scss */
+aside .page-navigation li {
+  list-style: decimal;
+  list-style-position: outside;
+  margin-right: 0.75em;
+  margin-left: 1.5em;
+  clear: left;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+}
+@media (max-width: 640px) {
+  /* line 211, ../../app/assets/stylesheets/publisher.scss */
+  aside .page-navigation li {
+    font-size: 14px;
+    line-height: 1.14286;
+  }
+}
+@media (max-width: 640px) {
+  /* line 211, ../../app/assets/stylesheets/publisher.scss */
+  aside .page-navigation li {
+    float: none;
+    margin: 0 1em 0 2.25em;
+  }
+}
+/* line 231, ../../app/assets/stylesheets/publisher.scss */
+aside .page-navigation li a {
+  display: block;
+  padding: 0.25em 1em 0.25em 0;
+}
+/* line 240, ../../app/assets/stylesheets/publisher.scss */
+aside .page-navigation li a span {
+  cursor: pointer;
+}
+/* line 247, ../../app/assets/stylesheets/publisher.scss */
+aside .page-navigation li a:hover span.part-title, aside .page-navigation li a:focus span.part-title, aside .page-navigation li a:hover span.part-description, aside .page-navigation li a:focus span.part-description {
+  color: #2e8aca;
+}
+/* line 257, ../../app/assets/stylesheets/publisher.scss */
+aside .page-navigation li span.part-number {
+  display: none;
+  width: 1.75em;
+}
+/* line 268, ../../app/assets/stylesheets/publisher.scss */
+aside .page-navigation li span.part-label, aside .page-navigation li span.part-title {
+  line-height: 1.5;
+  display: inline;
+}
+/* line 273, ../../app/assets/stylesheets/publisher.scss */
+aside .page-navigation li span.part-label {
+  color: #0b0c0c;
+  padding: 0 0.5em 0 0;
+}
+/* line 278, ../../app/assets/stylesheets/publisher.scss */
+aside .page-navigation li span.part-description {
+  line-height: 1.25;
+  display: block;
+  clear: left;
+}
+/* line 284, ../../app/assets/stylesheets/publisher.scss */
+aside .page-navigation li span.part-title {
+  color: #2E3191;
+  text-decoration: underline;
+  line-height: 1.5;
+}
+/* line 291, ../../app/assets/stylesheets/publisher.scss */
+aside .page-navigation li.active {
+  padding: 0.25em 0.25em 0.25em 0;
+}
+/* line 294, ../../app/assets/stylesheets/publisher.scss */
+aside .page-navigation li.active span.part-number {
+  padding: 0;
+}
+/* line 298, ../../app/assets/stylesheets/publisher.scss */
+aside .page-navigation li.active span.part-title {
+  color: #0b0c0c;
+  text-decoration: none;
+}
+@media (max-width: 640px) {
+  /* line 211, ../../app/assets/stylesheets/publisher.scss */
+  aside .page-navigation li {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 19px;
+    line-height: 2.36842;
+    font-weight: 400;
+    text-transform: none;
+  }
+  /* line 305, ../../app/assets/stylesheets/publisher.scss */
+  aside .page-navigation li.active {
+    padding: 0;
+  }
+  /* line 311, ../../app/assets/stylesheets/publisher.scss */
+  aside .page-navigation li span, aside .page-navigation li a {
+    border-top: solid 1px #a1acb2;
+    margin: 0 -1em 0 -2.25em;
+    padding: 1em 1em 1em 2.75em;
+  }
+  /* line 317, ../../app/assets/stylesheets/publisher.scss */
+  aside .page-navigation li span {
+    display: block;
+  }
+  /* line 321, ../../app/assets/stylesheets/publisher.scss */
+  aside .page-navigation li span.part-title, aside .page-navigation li span.part-label {
+    display: inline;
+  }
+  /* line 325, ../../app/assets/stylesheets/publisher.scss */
+  aside .page-navigation li span.part-label {
+    padding-right: 1em;
+  }
+}
+@media (max-width: 640px) and (max-width: 640px) {
+  /* line 211, ../../app/assets/stylesheets/publisher.scss */
+  aside .page-navigation li {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+/* line 332, ../../app/assets/stylesheets/publisher.scss */
+aside .page-navigation ol[start] li {
+  margin-left: 1.8em;
+}
+@media (max-width: 640px) {
+  /* line 332, ../../app/assets/stylesheets/publisher.scss */
+  aside .page-navigation ol[start] li {
+    margin-left: 2.25em;
+  }
+}
+
+/* line 341, ../../app/assets/stylesheets/publisher.scss */
+aside .page-navigation-open {
+  border-bottom: solid 1px #a1acb2;
+}
+/* line 344, ../../app/assets/stylesheets/publisher.scss */
+aside .page-navigation-open ol {
+  position: static;
+  left: auto;
+}
+
+/* line 350, ../../app/assets/stylesheets/publisher.scss */
+aside .page-navigation-closed {
+  border-bottom: none;
+}
+@media (max-width: 640px) {
+  /* line 354, ../../app/assets/stylesheets/publisher.scss */
+  aside .page-navigation-closed ol {
+    position: absolute;
+    left: -9999em;
+  }
+}
+
+/* guides pagination */
+/* line 362, ../../app/assets/stylesheets/publisher.scss */
+.pagination {
+  display: block;
+  margin: 4em 0 0 0;
+  border-bottom: 1px solid #bfc1c3;
+}
+@media (max-width: 640px) {
+  /* line 362, ../../app/assets/stylesheets/publisher.scss */
+  .pagination {
+    margin: 2em 0 0 0;
+  }
+}
+/* line 371, ../../app/assets/stylesheets/publisher.scss */
+.pagination ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 376, ../../app/assets/stylesheets/publisher.scss */
+.pagination li {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  float: left;
+  list-style: none;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+  width: 49%;
+}
+@media (max-width: 640px) {
+  /* line 376, ../../app/assets/stylesheets/publisher.scss */
+  .pagination li {
+    font-size: 14px;
+    line-height: 1.14286;
+  }
+}
+/* line 385, ../../app/assets/stylesheets/publisher.scss */
+.pagination li a {
+  background-color: transparent;
+  display: block;
+  color: #2e3191;
+  text-decoration: none;
+}
+/* line 396, ../../app/assets/stylesheets/publisher.scss */
+.pagination li a:hover, .pagination li a:active {
+  background-color: #f8f8f8;
+}
+/* line 400, ../../app/assets/stylesheets/publisher.scss */
+.pagination li a .pagination-label {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 27px;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  margin-bottom: 0.1em;
+  display: block;
+}
+@media (max-width: 640px) {
+  /* line 400, ../../app/assets/stylesheets/publisher.scss */
+  .pagination li a .pagination-label {
+    font-size: 18px;
+    line-height: 1.11111;
+  }
+}
+/* line 406, ../../app/assets/stylesheets/publisher.scss */
+.pagination li a .pagination-part-title {
+  text-decoration: underline;
+}
+/* line 411, ../../app/assets/stylesheets/publisher.scss */
+.pagination li.next {
+  float: right;
+  text-align: right;
+}
+/* line 416, ../../app/assets/stylesheets/publisher.scss */
+.pagination li.next a:before {
+  background: transparent url(http://static.dev.gov.uk/static/arrow-sprite.png) no-repeat -102px -11px;
+  margin: -4px -32px 0 0;
+  display: block;
+  float: right;
+  width: 30px;
+  height: 38px;
+  content: " ";
+}
+/* line 426, ../../app/assets/stylesheets/publisher.scss */
+.pagination li.previous a:before {
+  background: transparent url(http://static.dev.gov.uk/static/arrow-sprite.png) no-repeat -20px -11px;
+  margin: -4px 0 0 -32px;
+  display: block;
+  float: left;
+  width: 30px;
+  height: 38px;
+  content: " ";
+}
+/* line 436, ../../app/assets/stylesheets/publisher.scss */
+.pagination li.previous {
+  float: left;
+  text-align: left;
+}
+/* line 441, ../../app/assets/stylesheets/publisher.scss */
+.pagination li.previous a {
+  padding: 0.75em 0 0.75em 3em;
+}
+/* line 445, ../../app/assets/stylesheets/publisher.scss */
+.pagination li.next a {
+  padding: 0.75em 3em 0.75em 0;
+}
+@media (max-width: 640px) {
+  /* line 451, ../../app/assets/stylesheets/publisher.scss */
+  .pagination li.previous, .pagination li.next {
+    float: none;
+    width: 100%;
+  }
+  /* line 456, ../../app/assets/stylesheets/publisher.scss */
+  .pagination li.next a {
+    text-align: right;
+  }
+}
+/* line 463, ../../app/assets/stylesheets/publisher.scss */
+.pagination .first,
+.pagination .last {
+  min-height: 4.5em;
+}
+/* line 470, ../../app/assets/stylesheets/publisher.scss */
+.pagination .first span,
+.pagination .last span {
+  display: block;
+  min-height: 4.5em;
+  padding: 0.75em 5%;
+  width: 90%;
+}
+/* line 481, ../../app/assets/stylesheets/publisher.scss */
+.pagination .first .pagination-label,
+.pagination .last .pagination-label {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+/*
+ * Transactions and local transactions styles
+ */
+/* line 502, ../../app/assets/stylesheets/publisher.scss */
+.local_transaction .contact-container .contact {
+  margin: 0 -1em;
+}
+/* line 505, ../../app/assets/stylesheets/publisher.scss */
+.local_transaction .contact-container .contact p:first-child {
+  margin-top: 0;
+}
+
+/* line 512, ../../app/assets/stylesheets/publisher.scss */
+.find-location-for-service, .find-location-for-licence {
+  background: #eaedef url(http://static.dev.gov.uk/static/locator-icon.png) no-repeat 1em 1em;
+  min-height: 2em;
+  line-height: 2;
+  margin: 2em -1em 0 -1em;
+  padding: 1em 0.75em 1em 3.5em;
+  position: relative;
+}
+@media (max-width: 640px) {
+  /* line 512, ../../app/assets/stylesheets/publisher.scss */
+  .find-location-for-service, .find-location-for-licence {
+    margin: 1.2em -1em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+/* line 526, ../../app/assets/stylesheets/publisher.scss */
+.find-location-for-service p.geolocate-me, .find-location-for-licence p.geolocate-me {
+  border-top: 1px solid #a1acb2;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  margin-bottom: 0;
+  padding-top: 1em;
+}
+@media (max-width: 640px) {
+  /* line 526, ../../app/assets/stylesheets/publisher.scss */
+  .find-location-for-service p.geolocate-me, .find-location-for-licence p.geolocate-me {
+    font-size: 14px;
+    line-height: 1.14286;
+  }
+}
+@media (max-width: 640px) {
+  /* line 526, ../../app/assets/stylesheets/publisher.scss */
+  .find-location-for-service p.geolocate-me, .find-location-for-licence p.geolocate-me {
+    margin-left: -2.5em;
+    padding-right: 2.5em;
+  }
+}
+/* line 538, ../../app/assets/stylesheets/publisher.scss */
+.find-location-for-service input[type="submit"], .find-location-for-licence input[type="submit"] {
+  border-color: #eaedef;
+}
+
+/* once we have added a class to external links generated by govspeak we can ditch this */
+/* line 544, ../../app/assets/stylesheets/publisher.scss */
+#wrapper .get-started a[rel="external"]:after {
+  content: "";
+}
+
+/* line 548, ../../app/assets/stylesheets/publisher.scss */
+#wrapper.transaction .get-started .button .indicator:after {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 27px;
+  line-height: 1.11111;
+  font-weight: 400;
+  text-transform: none;
+  margin-top: -0.5em;
+  position: absolute;
+  right: 0.5em;
+  top: 50%;
+}
+@media (max-width: 640px) {
+  /* line 548, ../../app/assets/stylesheets/publisher.scss */
+  #wrapper.transaction .get-started .button .indicator:after {
+    font-size: 18px;
+    line-height: 1.11111;
+  }
+}
+
+/* line 556, ../../app/assets/stylesheets/publisher.scss */
+h1#what-you-need-to-know {
+  font-weight: 400;
+}
+
+/*
+ * Helper icons
+ */
+/* line 565, ../../app/assets/stylesheets/publisher.scss */
+ul.helpers li.active,
+ul.helpers li.active h3 a {
+  color: #fff;
+}
+
+/* line 572, ../../app/assets/stylesheets/publisher.scss */
+.js-enabled #wrapper.programme .part-pagination.return-to-top,
+.js-enabled #wrapper.programme article.tabs-panel {
+  display: none;
+}
+/* line 576, ../../app/assets/stylesheets/publisher.scss */
+.js-enabled #wrapper.programme article {
+  min-height: 20em;
+}
+@media (max-width: 640px) {
+  /* line 576, ../../app/assets/stylesheets/publisher.scss */
+  .js-enabled #wrapper.programme article {
+    min-height: 0;
+  }
+}
+
+/* line 590, ../../app/assets/stylesheets/publisher.scss */
+#wrapper.programme article.tabs-panel-selected,
+.js-enabled #wrapper.programme article.tabs-panel-selected {
+  display: block;
+}
+
+/* line 594, ../../app/assets/stylesheets/publisher.scss */
+div.further-information {
+  margin: 0;
+  clear: both;
+  padding-top: 2em;
+}
+@media (max-width: 640px) {
+  /* line 594, ../../app/assets/stylesheets/publisher.scss */
+  div.further-information {
+    padding: 1em 0;
+  }
+}
+/* line 603, ../../app/assets/stylesheets/publisher.scss */
+div.further-information a {
+  padding: 0 0 0 0.8em;
+}
+
+/* contacts popup */
+/* line 609, ../../app/assets/stylesheets/publisher.scss */
+#popup.contact-popup {
+  background-color: #F4F4F4;
+  padding: 1em 2em;
+  width: 50%;
+}
+
+/* line 615, ../../app/assets/stylesheets/publisher.scss */
+.contact-popup .contact {
+  width: auto;
+}
+
+/* line 1, ../../app/assets/stylesheets/_report-a-problem.scss */
+.js-enabled .report-a-problem-container {
+  display: none;
+}
+
+/* line 5, ../../app/assets/stylesheets/_report-a-problem.scss */
+.report-a-problem-container {
+  clear: both;
+  margin: 3em 0 2em 2em;
+}
+/* line 10, ../../app/assets/stylesheets/_report-a-problem.scss */
+.report-a-problem-container h2 {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  font-weight: 600;
+  margin: 1em 0;
+}
+@media (max-width: 640px) {
+  /* line 10, ../../app/assets/stylesheets/_report-a-problem.scss */
+  .report-a-problem-container h2 {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+/* line 15, ../../app/assets/stylesheets/_report-a-problem.scss */
+.report-a-problem-container div {
+  padding-top: 0.5em;
+}
+/* line 18, ../../app/assets/stylesheets/_report-a-problem.scss */
+.report-a-problem-container div .button {
+  background-color: #00823b;
+  position: relative;
+  display: -moz-inline-stack;
+  display: inline-block;
+  padding: 0.35em 0.5em 0.15em 0.5em;
+  border: none;
+  -webkit-box-shadow: 0 2px 0 #003518;
+  -moz-box-shadow: 0 2px 0 #003518;
+  box-shadow: 0 2px 0 #003518;
+  font-size: 1em;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  color: white;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+}
+/* line 49, ../../../../lib/gems/1.9.1/gems/govuk_frontend_toolkit-0.32.2/app/assets/stylesheets/design-patterns/_buttons.scss */
+.report-a-problem-container div .button:visited {
+  background-color: #00823b;
+}
+/* line 53, ../../../../lib/gems/1.9.1/gems/govuk_frontend_toolkit-0.32.2/app/assets/stylesheets/design-patterns/_buttons.scss */
+.report-a-problem-container div .button:hover, .report-a-problem-container div .button:focus {
+  background: #00692f;
+}
+/* line 56, ../../../../lib/gems/1.9.1/gems/govuk_frontend_toolkit-0.32.2/app/assets/stylesheets/design-patterns/_buttons.scss */
+.report-a-problem-container div .button:active {
+  top: 2px;
+  -webkit-box-shadow: 0 0 0 #00823b;
+  -moz-box-shadow: 0 0 0 #00823b;
+  box-shadow: 0 0 0 #00823b;
+}
+/* line 64, ../../../../lib/gems/1.9.1/gems/govuk_frontend_toolkit-0.32.2/app/assets/stylesheets/design-patterns/_buttons.scss */
+.report-a-problem-container div .button.disabled, .report-a-problem-container div .button[disabled="disabled"], .report-a-problem-container div .button[disabled] {
+  zoom: 1;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+}
+/* line 66, ../../../../lib/gems/1.9.1/gems/govuk_frontend_toolkit-0.32.2/app/assets/stylesheets/design-patterns/_buttons.scss */
+.report-a-problem-container div .button.disabled:hover, .report-a-problem-container div .button[disabled="disabled"]:hover, .report-a-problem-container div .button[disabled]:hover {
+  cursor: default;
+  background-color: #00823b;
+}
+/* line 70, ../../../../lib/gems/1.9.1/gems/govuk_frontend_toolkit-0.32.2/app/assets/stylesheets/design-patterns/_buttons.scss */
+.report-a-problem-container div .button.disabled:active, .report-a-problem-container div .button[disabled="disabled"]:active, .report-a-problem-container div .button[disabled]:active {
+  top: 0;
+  -webkit-box-shadow: 0 2px 0 #003518;
+  -moz-box-shadow: 0 2px 0 #003518;
+  box-shadow: 0 2px 0 #003518;
+}
+/* line 84, ../../../../lib/gems/1.9.1/gems/govuk_frontend_toolkit-0.32.2/app/assets/stylesheets/design-patterns/_buttons.scss */
+.report-a-problem-container div .button:hover, .report-a-problem-container div .button:focus, .report-a-problem-container div .button:visited {
+  color: white;
+}
+/* line 98, ../../../../lib/gems/1.9.1/gems/govuk_frontend_toolkit-0.32.2/app/assets/stylesheets/design-patterns/_buttons.scss */
+.report-a-problem-container div .button:before {
+  content: "";
+  height: 110%;
+  width: 100%;
+  display: block;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 108, ../../../../lib/gems/1.9.1/gems/govuk_frontend_toolkit-0.32.2/app/assets/stylesheets/design-patterns/_buttons.scss */
+.report-a-problem-container div .button:active:before {
+  top: -10%;
+  height: 120%;
+}
+/* line 121, ../../../../lib/gems/1.9.1/gems/govuk_frontend_toolkit-0.32.2/app/assets/stylesheets/design-patterns/_buttons.scss */
+.report-a-problem-container div .button[rel="external"]:after {
+  display: none;
+  content: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (max-width: 640px) {
+  /* line 18, ../../app/assets/stylesheets/_report-a-problem.scss */
+  .report-a-problem-container div .button {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+/* line 23, ../../app/assets/stylesheets/_report-a-problem.scss */
+.report-a-problem-container label {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  padding: 0;
+  margin: 0 0 0.22em 0;
+  display: block;
+}
+@media (max-width: 640px) {
+  /* line 23, ../../app/assets/stylesheets/_report-a-problem.scss */
+  .report-a-problem-container label {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+@media (max-width: 640px) {
+  /* line 5, ../../app/assets/stylesheets/_report-a-problem.scss */
+  .report-a-problem-container {
+    margin: 0 1em 2em 1em;
+  }
+}
+/* line 36, ../../app/assets/stylesheets/_report-a-problem.scss */
+.report-a-problem-container input[type="text"] {
+  display: block;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  margin: 0 0 1em 0;
+  background-color: #f8f8f8;
+  border: 1px inset #bfc1c3;
+  padding: 0.3em 0 0.1em 0.4em;
+  width: 95%;
+}
+@media (max-width: 640px) {
+  /* line 36, ../../app/assets/stylesheets/_report-a-problem.scss */
+  .report-a-problem-container input[type="text"] {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+@-o-viewport {
+  width: device-width;
+}
+
+@font-face {
+  font-family: GDS-Logo;
+  src: local("HelveticaNeue"), local("Helvetica Neue"), local("Arial"), local("Helvetica");
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+@-o-viewport {
+  width: device-width;
+}
+
+/* line 5, ../../app/assets/stylesheets/static-pages/error-pages.scss */
+.error .intro {
+  background-color: #D5E8F3;
+  color: #0b0c0c;
+}
+/* line 11, ../../app/assets/stylesheets/static-pages/error-pages.scss */
+.error form input[type="text"] {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  padding: 0.3em 0 0.1em 0.4em;
+  margin-left: 0;
+}
+@media (max-width: 640px) {
+  /* line 11, ../../app/assets/stylesheets/static-pages/error-pages.scss */
+  .error form input[type="text"] {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+/* line 20, ../../app/assets/stylesheets/static-pages/error-pages.scss */
+.error .search-box label {
+  display: block;
+}
+/* line 24, ../../app/assets/stylesheets/static-pages/error-pages.scss */
+.error .search-box input[type="text"], .error .search-box input[type="search"] {
+  background-color: #eaedef;
+  border: 2px inset;
+}
+/* line 30, ../../app/assets/stylesheets/static-pages/error-pages.scss */
+.error .report-a-problem {
+  margin-top: 60px;
+}
+/* line 33, ../../app/assets/stylesheets/static-pages/error-pages.scss */
+.error .report-a-problem form {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  padding-top: 10px;
+}
+@media (max-width: 640px) {
+  /* line 33, ../../app/assets/stylesheets/static-pages/error-pages.scss */
+  .error .report-a-problem form {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+/* line 38, ../../app/assets/stylesheets/static-pages/error-pages.scss */
+.error .report-a-problem form label {
+  display: block;
+}
+/* line 46, ../../app/assets/stylesheets/static-pages/error-pages.scss */
+.error .report-a-problem form input {
+  display: block;
+  margin-bottom: 20px;
+  width: 400px;
+}
+@media (max-width: 640px) {
+  /* line 46, ../../app/assets/stylesheets/static-pages/error-pages.scss */
+  .error .report-a-problem form input {
+    width: 300px;
+  }
+}
+/* line 56, ../../app/assets/stylesheets/static-pages/error-pages.scss */
+.error .report-a-problem form button {
+  margin-top: 10px;
+}
+@media (max-width: 640px) {
+  /* line 63, ../../app/assets/stylesheets/static-pages/error-pages.scss */
+  .error .page-header div {
+    padding-left: 1em;
+  }
+}
+
+/* This is basically Smart Answers & Licence Finder & Finance Finder */
+/* Cross-browser shims
+
+  Ways of normalising properties across browsers.
+ */
+@-ms-viewport {
+  width: device-width;
+}
+
+@-o-viewport {
+  width: device-width;
+}
+
+/* Usage:
+   @include inline-block
+
+   or
+
+   @include inline-block("250px")
+
+   which gives a min-height to the inline-block elements.
+*/
+/* Contain floats usage:
+
+   .this-has-floated-children {
+     @extend %contain-floats;
+   }
+
+*/
+/* line 49, ../../../../lib/gems/1.9.1/gems/govuk_frontend_toolkit-0.32.2/app/assets/stylesheets/_shims.scss */
+article .info-notice:after, #global-header .header-wrapper:after, #global-header .header-wrapper .header-global:after, #global-header .header-wrapper .header-global .header-logo:after,
+#global-header .header-wrapper .header-global .site-search:after, #global-header form#search .content:after, #global-header .header-proposition #proposition-links:after, .smart_answer .article-container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/*
+ * questions
+ */
+/* line 7, ../../app/assets/stylesheets/multi-step.scss */
+.hint {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  display: block;
+}
+@media (max-width: 640px) {
+  /* line 7, ../../app/assets/stylesheets/multi-step.scss */
+  .hint {
+    font-size: 14px;
+    line-height: 1.14286;
+  }
+}
+
+/* line 12, ../../app/assets/stylesheets/multi-step.scss */
+.done-questions {
+  position: relative;
+}
+
+/* line 16, ../../app/assets/stylesheets/multi-step.scss */
+.start-again {
+  background: #fff;
+  position: absolute;
+  right: 0;
+  top: -2.5em;
+  height: 2.5em;
+  width: 11em;
+}
+/* line 24, ../../app/assets/stylesheets/multi-step.scss */
+.start-again a {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 2.10526;
+  font-weight: 400;
+  text-transform: none;
+  display: block;
+  text-align: center;
+  text-decoration: underline;
+}
+@media (max-width: 640px) {
+  /* line 24, ../../app/assets/stylesheets/multi-step.scss */
+  .start-again a {
+    font-size: 16px;
+    line-height: 3.07692;
+  }
+}
+/* line 30, ../../app/assets/stylesheets/multi-step.scss */
+.start-again a:hover {
+  text-decoration: none;
+}
+@media (max-width: 640px) {
+  /* line 16, ../../app/assets/stylesheets/multi-step.scss */
+  .start-again {
+    position: static;
+    width: auto;
+    padding: 0 1em;
+  }
+  /* line 40, ../../app/assets/stylesheets/multi-step.scss */
+  .start-again a {
+    text-align: right;
+  }
+}
+
+/* line 46, ../../app/assets/stylesheets/multi-step.scss */
+.question-number {
+  padding-right: 0.5em;
+}
+
+/* line 51, ../../app/assets/stylesheets/multi-step.scss */
+.done-questions ol,
+.upcoming-questions ol {
+  background-color: #fff;
+  margin: 0;
+  padding: 0 0 0 1em;
+  position: relative;
+  z-index: 1;
+}
+/* line 58, ../../app/assets/stylesheets/multi-step.scss */
+.done-questions ol li,
+.upcoming-questions ol li {
+  list-style: none;
+  position: relative;
+  padding: 0.75em 1.5em 0.75em 1em;
+}
+@media (max-width: 640px) {
+  /* line 58, ../../app/assets/stylesheets/multi-step.scss */
+  .done-questions ol li,
+  .upcoming-questions ol li {
+    padding: 0.5em 1em;
+  }
+}
+/* line 67, ../../app/assets/stylesheets/multi-step.scss */
+.done-questions ol li h3,
+.upcoming-questions ol li h3 {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+}
+@media (max-width: 640px) {
+  /* line 67, ../../app/assets/stylesheets/multi-step.scss */
+  .done-questions ol li h3,
+  .upcoming-questions ol li h3 {
+    font-size: 14px;
+    line-height: 1.14286;
+  }
+}
+/* line 71, ../../app/assets/stylesheets/multi-step.scss */
+.done-questions ol li.done,
+.upcoming-questions ol li.done {
+  background: #D5ECEA;
+  border-bottom: solid 1px #b6d6d2;
+  overflow: hidden;
+  padding-right: 9.5em;
+}
+/* line 77, ../../app/assets/stylesheets/multi-step.scss */
+.done-questions ol li.done .answer,
+.upcoming-questions ol li.done .answer {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  font-weight: 700;
+  color: #315843;
+  display: block;
+  margin: 0 0.5em 0 1em;
+}
+@media (max-width: 640px) {
+  /* line 77, ../../app/assets/stylesheets/multi-step.scss */
+  .done-questions ol li.done .answer,
+  .upcoming-questions ol li.done .answer {
+    font-size: 14px;
+    line-height: 1.14286;
+  }
+}
+/* line 83, ../../app/assets/stylesheets/multi-step.scss */
+.done-questions ol li.done .answer.multiple,
+.upcoming-questions ol li.done .answer.multiple {
+  display: block;
+}
+/* line 86, ../../app/assets/stylesheets/multi-step.scss */
+.done-questions ol li.done .answer.multiple ul,
+.upcoming-questions ol li.done .answer.multiple ul {
+  margin-top: 0;
+}
+/* line 89, ../../app/assets/stylesheets/multi-step.scss */
+.done-questions ol li.done .answer.multiple ul li,
+.upcoming-questions ol li.done .answer.multiple ul li {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 108, ../../app/assets/stylesheets/multi-step.scss */
+.upcoming-questions ol li {
+  background-color: #f0e7d7;
+  border-bottom: solid 1px #dac39c;
+}
+
+/* line 114, ../../app/assets/stylesheets/multi-step.scss */
+.question .question-number {
+  font-weight: normal;
+}
+
+/* line 118, ../../app/assets/stylesheets/multi-step.scss */
+li.done .undo {
+  position: absolute;
+  top: 0.83333em;
+  right: 1.66667em;
+  margin: 0;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857;
+  font-weight: 400;
+  text-transform: none;
+}
+@media (max-width: 640px) {
+  /* line 118, ../../app/assets/stylesheets/multi-step.scss */
+  li.done .undo {
+    font-size: 12px;
+    line-height: 1.25;
+  }
+}
+/* line 134, ../../app/assets/stylesheets/multi-step.scss */
+li.done .undo a {
+  color: #2e3133;
+  display: block;
+}
+
+/* line 140, ../../app/assets/stylesheets/multi-step.scss */
+li.done .answer ul {
+  margin: 0.5em 0 0 -2.1em;
+  padding-left: 2.1em;
+}
+
+/* line 145, ../../app/assets/stylesheets/multi-step.scss */
+li.done:hover .undo a {
+  color: inherit;
+}
+
+/* line 149, ../../app/assets/stylesheets/multi-step.scss */
+.step.current {
+  background-color: #fff;
+  margin-right: 15em;
+  padding: 0 10em 1em 2em;
+  position: relative;
+}
+@media (max-width: 800px) {
+  /* line 149, ../../app/assets/stylesheets/multi-step.scss */
+  .step.current {
+    margin-right: 0;
+    padding: 0 1em 1em 1em;
+  }
+}
+
+/* line 171, ../../app/assets/stylesheets/multi-step.scss */
+.question-body + p input.button {
+  margin-top: 0.5em;
+}
+
+/* line 175, ../../app/assets/stylesheets/multi-step.scss */
+.current-question {
+  padding: 1.5em 0 1em 0;
+}
+/* line 178, ../../app/assets/stylesheets/multi-step.scss */
+.current-question h2 {
+  border: none;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 1em;
+  position: relative;
+}
+@media (max-width: 640px) {
+  /* line 178, ../../app/assets/stylesheets/multi-step.scss */
+  .current-question h2 {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+/* line 185, ../../app/assets/stylesheets/multi-step.scss */
+.current-question h2 .question-number {
+  padding-right: 0.25em;
+  font-weight: 400;
+}
+/* line 195, ../../app/assets/stylesheets/multi-step.scss */
+.current-question ul {
+  padding: 0;
+  /* this is so the bullets hang */
+  /* this is the multiple choice selector */
+}
+/* line 198, ../../app/assets/stylesheets/multi-step.scss */
+.current-question ul label {
+  margin-left: 0.25em;
+}
+/* line 202, ../../app/assets/stylesheets/multi-step.scss */
+.current-question ul select {
+  margin-right: 0.25em;
+}
+/* line 207, ../../app/assets/stylesheets/multi-step.scss */
+.current-question ul.options {
+  list-style: none;
+}
+/* line 210, ../../app/assets/stylesheets/multi-step.scss */
+.current-question ul.options li {
+  line-height: 1.5em;
+  margin: 0.5em 0;
+}
+/* line 218, ../../app/assets/stylesheets/multi-step.scss */
+.current-question ul.optional-date li fieldset {
+  display: inline;
+}
+
+/* line 224, ../../app/assets/stylesheets/multi-step.scss */
+.next-question {
+  margin: 1.5em 0 0.5em 0;
+}
+
+/*
+ * results / outcome
+ */
+/* line 232, ../../app/assets/stylesheets/multi-step.scss */
+.outcome {
+  background-color: #fff;
+  float: none;
+  margin-right: 0;
+  min-height: 480px;
+}
+/* line 238, ../../app/assets/stylesheets/multi-step.scss */
+.outcome .inner {
+  padding-top: 2em;
+}
+
+/* line 244, ../../app/assets/stylesheets/multi-step.scss */
+#wrapper.smart_answer .next-steps {
+  right: -24em;
+  top: 0;
+  margin-top: 2em;
+}
+/* line 249, ../../app/assets/stylesheets/multi-step.scss */
+#wrapper.smart_answer .next-steps .inner {
+  padding-top: 0.5em;
+  padding-bottom: 1em;
+  padding-right: 1em;
+}
+/* line 254, ../../app/assets/stylesheets/multi-step.scss */
+#wrapper.smart_answer .next-steps .inner ul {
+  padding: 0;
+  list-style: none;
+  list-style-image: none;
+}
+/* line 259, ../../app/assets/stylesheets/multi-step.scss */
+#wrapper.smart_answer .next-steps .inner ul li {
+  font-size: 1em;
+  margin-top: 0;
+  margin-left: 0;
+}
+@media (max-width: 800px) {
+  /* line 249, ../../app/assets/stylesheets/multi-step.scss */
+  #wrapper.smart_answer .next-steps .inner {
+    margin: 1em -1em 1.5em -1em;
+    padding: 0.25em 1em 0.25em 1em;
+  }
+}
+
+/*
+ * errors messages
+ */
+/* line 282, ../../app/assets/stylesheets/multi-step.scss */
+article .error {
+  border: 1px solid #B01117;
+  background-color: #FFF3CF;
+  color: #B01117;
+  margin: 0 0 -0.5em -0.5em;
+  padding: 0.5em;
+}
+/* line 289, ../../app/assets/stylesheets/multi-step.scss */
+article .error ul {
+  margin-bottom: 0;
+}
+
+/* line 294, ../../app/assets/stylesheets/multi-step.scss */
+.error-message {
+  margin-top: 0;
+  color: #B01117;
+}
+
+/*
+ * calculators
+ */
+/* line 302, ../../app/assets/stylesheets/multi-step.scss */
+.calculator article {
+  min-height: 0;
+}
+
+/*
+ * loading indicators
+ */
+/* line 309, ../../app/assets/stylesheets/multi-step.scss */
+.smart_answer .loading p {
+  display: -moz-inline-stack;
+  display: inline-block;
+  line-height: 1.5em;
+  height: 32px;
+  margin: 0 0 0 1.3em;
+  padding: 0;
+  vertical-align: top;
+}

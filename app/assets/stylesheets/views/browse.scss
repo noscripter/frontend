@@ -226,6 +226,7 @@
           @include bold-19;
 
           a {
+            @include bold-24;
             text-decoration:none;
 
             &:hover {
@@ -394,6 +395,8 @@
         display: inline-block;
       }
 
+      
+
       li {
         @include media(desktop) {
           float:left;
@@ -446,7 +449,7 @@
       @include media(desktop) {
         display: inline-block;
         width: 100%;
-        margin: 30px 0 0 0;
+        margin: 25px 0 0 0;
         padding: 15px 0 0 0;
         border-top: 1px $grey-2 solid;
       }
@@ -551,6 +554,14 @@
 
             ul li {
               width:100%;
+
+              a {
+                text-decoration:none;
+
+                &:hover {
+                  text-decoration:underline;
+                }
+              }
             }
           }
         }
@@ -591,6 +602,9 @@
         }
 
         p {
+
+          margin: 5px 0 0 0;
+  
           a {
             @include bold-19;
             margin-bottom:0;
