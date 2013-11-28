@@ -79,15 +79,15 @@ class BrowseControllerTest < ActionController::TestCase
       assert_equal "404", response.code
       assert_equal "max-age=600, public",  response.headers["Cache-Control"]
 
-      get :section, section: "fco\xA0" # Invalid UTF-8
+      get :section, section: "fco\xA0".force_encoding("ASCII-8BIT") # Invalid UTF-8
       assert_equal "404", response.code
       assert_equal "max-age=600, public",  response.headers["Cache-Control"]
 
-      get :section, section: "br54ba\x9CAQ\xC4\xFD\x928owse" # Malformed UTF-8
+      get :section, section: "br54ba\x9CAQ\xC4\xFD\x928owse".force_encoding("ASCII-8BIT") # Malformed UTF-8
       assert_equal "404", response.code
       assert_equal "max-age=600, public",  response.headers["Cache-Control"]
 
-      get :section, section: "\xE9\xF3(\xE9\xF3ges" # Differently Malformed UTF-8
+      get :section, section: "\xE9\xF3(\xE9\xF3ges".force_encoding("ASCII-8BIT") # Differently Malformed UTF-8
       assert_equal "404", response.code
       assert_equal "max-age=600, public",  response.headers["Cache-Control"]
 
@@ -190,15 +190,15 @@ class BrowseControllerTest < ActionController::TestCase
       assert_equal "404", response.code
       assert_equal "max-age=600, public",  response.headers["Cache-Control"]
 
-      get :sub_section, section: "fco\xA0", sub_section: "foo" # Invalid UTF-8
+      get :sub_section, section: "fco\xA0".force_encoding("ASCII-8BIT"), sub_section: "foo" # Invalid UTF-8
       assert_equal "404", response.code
       assert_equal "max-age=600, public",  response.headers["Cache-Control"]
 
-      get :sub_section, section: "br54ba\x9CAQ\xC4\xFD\x928owse", sub_section: "foo" # Malformed UTF-8
+      get :sub_section, section: "br54ba\x9CAQ\xC4\xFD\x928owse".force_encoding("ASCII-8BIT"), sub_section: "foo" # Malformed UTF-8
       assert_equal "404", response.code
       assert_equal "max-age=600, public",  response.headers["Cache-Control"]
 
-      get :sub_section, section: "\xE9\xF3(\xE9\xF3ges", sub_section: "foo" # Differently Malformed UTF-8
+      get :sub_section, section: "\xE9\xF3(\xE9\xF3ges".force_encoding("ASCII-8BIT"), sub_section: "foo" # Differently Malformed UTF-8
       assert_equal "404", response.code
       assert_equal "max-age=600, public",  response.headers["Cache-Control"]
 
@@ -217,15 +217,15 @@ class BrowseControllerTest < ActionController::TestCase
       assert_equal "404", response.code
       assert_equal "max-age=600, public",  response.headers["Cache-Control"]
 
-      get :sub_section, section: "foo", sub_section: "fco\xA0" # Invalid UTF-8
+      get :sub_section, section: "foo", sub_section: "fco\xA0".force_encoding("ASCII-8BIT") # Invalid UTF-8
       assert_equal "404", response.code
       assert_equal "max-age=600, public",  response.headers["Cache-Control"]
 
-      get :sub_section, section: "foo", sub_section: "br54ba\x9CAQ\xC4\xFD\x928owse" # Malformed UTF-8
+      get :sub_section, section: "foo", sub_section: "br54ba\x9CAQ\xC4\xFD\x928owse".force_encoding("ASCII-8BIT") # Malformed UTF-8
       assert_equal "404", response.code
       assert_equal "max-age=600, public",  response.headers["Cache-Control"]
 
-      get :sub_section, section: "foo", sub_section: "\xE9\xF3(\xE9\xF3ges" # Differently Malformed UTF-8
+      get :sub_section, section: "foo", sub_section: "\xE9\xF3(\xE9\xF3ges".force_encoding("ASCII-8BIT") # Differently Malformed UTF-8
       assert_equal "404", response.code
       assert_equal "max-age=600, public",  response.headers["Cache-Control"]
 

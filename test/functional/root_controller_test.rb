@@ -119,14 +119,14 @@ class RootControllerTest < ActionController::TestCase
   end
 
   test "should return a cacheable 404 without calling content_api if a slug has invalid UTF-8 chars in it" do
-    get :publication, :slug => "fco\xA0"
+    get :publication, :slug => "fco\xA0".force_encoding("ASCII-8BIT")
     assert_equal "404", response.code
     assert_equal "max-age=600, public",  response.headers["Cache-Control"]
     assert_not_requested(:get, %r{\A#{CONTENT_API_ENDPOINT}})
   end
 
   test "should return a cacheable 404 without calling content_api if a slug has malformed UTF-8 chars in it" do
-    get :publication, :slug => "br54ba\x9CAQ\xC4\xFD\x928owse"
+    get :publication, :slug => "br54ba\x9CAQ\xC4\xFD\x928owse".force_encoding("ASCII-8BIT")
     assert_equal "404", response.code
     assert_equal "max-age=600, public",  response.headers["Cache-Control"]
     assert_not_requested(:get, %r{\A#{CONTENT_API_ENDPOINT}})
