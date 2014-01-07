@@ -9,6 +9,9 @@ class BrowseController < ApplicationController
   before_filter(:only => [:sub_section]) { validate_slug_param(:sub_section) }
   before_filter :set_expiry
 
+  def startpage
+  end
+
   def index
     setup_page_title("All categories")
     @categories = content_api.root_sections.results.sort_by { |category| category.title }

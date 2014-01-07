@@ -1,0 +1,233 @@
+@import "design-patterns/_buttons";
+
+
+$gutter:            30px;
+$gutter-one-sixth:  $gutter*(1/6); // equivalent to 5px
+$gutter-one-third:  $gutter*(1/3); // equivalent to 10px
+$gutter-half:       $gutter*(1/2); // equivalent to 15px
+$gutter-two-thirds: $gutter*(2/3); // equivalent to 20px
+
+
+.inner-block {
+  padding: 0 $gutter-half;
+
+  @include media(tablet){
+    padding: 0 $gutter;
+  }
+
+  &.floated-children {
+    @extend %contain-floats;
+
+    padding: 0;
+
+    @include media(tablet){
+      padding: 0 $gutter-half;
+    }
+  }
+}
+
+
+.one-third,
+.one-half, 
+.two-third {
+  display: block;
+  float: none;
+  width: 100%;
+}
+
+@include media(desktop) {
+  .one-third {
+    float: left;
+    display: inline;
+    width: 33.333%;
+    //background-color:#ccc;
+    //min-height: 300px;
+  }
+
+  .one-half {
+    float: left;
+    display: inline;
+    width: 50%;
+  }
+
+  .two-third {
+    float: left;
+    display: inline;
+    width: 66.666%;
+    //background-color:#333;
+    //min-height: 300px;
+  }
+}
+
+main.start-page {
+
+  .inner-block {
+    padding: 0 30px;
+  }
+
+  header.page-header {
+
+    .heading-extra {
+      float: right;
+      width: 33.33%;
+      margin: 20px 0;
+
+
+        ul {
+          list-style: none;
+          font-weight: 700;
+          margin-top: 0;
+        } 
+        a {
+          text-decoration: none;
+        }
+    }
+
+    div {
+      //padding: 15px;
+      width:100%;
+
+      @include media(desktop) {
+        float: left;
+        width: 66.66%;
+      }
+
+      h1 {
+        @include bold-48;
+        display: block;
+      }
+
+      h2 {
+        @include core-24;
+        color: inherit;
+        margin: 0;
+      }
+    }
+  }
+
+  .info {
+      clear: both; 
+      .beta {
+      background: #f47738;
+      color: #fff;
+      @include core-16;
+      line-height: 1.25;
+      font-weight: 700;
+      line-height: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-decoration: none;
+      padding: 4px 5px 0px 6px;
+      margin-left: 1em;
+      margin-right: 1em;
+      vertical-align: middle;
+      margin-left: 2em;
+    }
+  }
+
+  // .methods {
+  //   // @extend %contain-floats;
+  //   border-top: 1px solid $border-colour;
+  //   // margin: 0 30px;
+  //   padding: 0.5em 0 2em 0;
+  //   // h1 {
+  //   //   @include heading-24;
+  //   //   font-weight: 700;
+  //   //   float: left;
+  //   //   width: 50%;
+  //   // }
+  //   // .content {
+  //   //   float: left;
+  //   //   width: 50%;
+  //   //   ul {
+  //   //     @include core-19;
+  //   //     padding-left: 20px;
+  //   //   }
+  //   //   h2 {
+  //   //     @include heading-24;
+  //   //     font-weight: 700;
+  //   //     margin: 0;
+  //   //   }
+  //   //   .charges {
+  //   //     @include core-14;
+  //   //     color: $grey-1;
+  //   //     padding-bottom: 2em;
+  //   //   }
+  //   //   .contact-details {
+  //   //     float: left;
+  //   //     width: 50%;
+  //   //     padding-bottom: 0.5em;
+  //   //     p {
+  //   //       span {
+  //   //         @include core-24;
+  //   //         display: block;
+  //   //         font-weight: 700;
+  //   //       }
+  //   //     }
+  //   //   }
+  //   // }
+
+  //   // .vehicle-details,
+  //   // .you-will-need {
+  //   //   float: left;
+  //   //   width: 66.66%;
+  //   //   margin-top: 0.5em;
+  //   //   h1 {
+  //   //     width: 100%;
+  //   //   }
+  //   // }
+  //   // .you-will-need {
+  //   //   width: 33.33%;
+  //   //   h2 {
+  //   //    @include core-24;
+  //   //    font-weight: 700;
+  //   //    margin: 0;
+  //   //   }
+  //   // }
+
+  //   // .service-info {
+  //   //   float: left;
+  //   //   width: 50%;
+  //   //   padding-top: 1em;
+  //   //   h1 {
+  //   //     width: 100%;
+  //   //   }
+  //   //   ul {
+  //   //     list-style: none;
+  //   //     padding-left: 0;
+  //   //   }
+  //   //   .help,
+  //   //   .related-bottom {
+  //   //     border-top: 10px solid $light-blue;
+  //   //   }
+  //   //   .help {
+  //   //     margin-right: 15px;
+  //   //   }
+  //   //   .related-bottom {
+  //   //     margin-left: 15px;
+  //   //   }
+  //   // }
+
+  //   //  .button-secondary{
+  //   //   @include button($grey-3);
+  //   //   margin-right: 0.5em;
+  //   //   }
+  //   //   .destination {
+  //   //     @include core-14;
+  //   //     color: $grey-1;
+  //   //   }
+  //   //   details {
+  //   //     @include core-19;
+  //   //     text-decoration: underline;
+  //   //     color: #2E3191;
+  //   //     padding-top: 1em;
+  //   //   }
+
+  //   }
+
+  //   .borderless {
+  //     border-top: 0;
+  //   }
+
+}
+
