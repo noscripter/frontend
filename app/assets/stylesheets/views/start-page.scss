@@ -1,26 +1,6 @@
 @import "design-patterns/_buttons";
 
 
-// override mad declaration in static that applies styles to ANY div inside .page-header
-// about the least future-proof css evah.  :/
-
-header.page-header div,
-body.full-width header.page-header div {
-
-  padding:15px 0 0 0;
-
-  @include media(desktop) {
-    padding: 30px 0 0 0;
-  }
-}
-
-
-
-.button-secondary{
-  @include button($grey-3);
-  font-weight:700;
-}
-
 
 .start-header,
 .start-container {
@@ -68,19 +48,34 @@ summary {
       @include bold-24;
 
       @include media(desktop) {
-        float: left;  
+        float: left; 
+      }
+
+      span.beta {
+
+        margin-top: 5px;
+
+        @include media(desktop) {
+          margin-top: 0;
+          margin-left:10px;
+        }
       }
     }
 
     h2 {
-      @include bold-24;
+      @include bold-19;
+
+      @include media(desktop) {
+        @include bold-24;
+      }
     }
 
     .eligibility-check {
       @include media(desktop){
-        width:70%;
+        width: 65%;
+        margin-right:5%;
         float:left;
-        margin-bottom: 50px;
+        margin-bottom: 42px;
       }
 
       h1 {
@@ -89,12 +84,13 @@ summary {
     }
 
     .you-will-need {
-      display: block;
+      display: none;
 
       @include media(desktop){
+        display: block;
         width:30%;
         float:right;
-        margin-bottom: 50px;
+        margin-bottom: 42px;
       }
     }
 
@@ -102,7 +98,13 @@ summary {
     .contacts {
       display: block;
 
-      @include media(desktop){
+      margin-left:0;
+
+      @include media($min-width:'769px'){
+        margin-left: 55%;
+      }
+
+      @include media($min-width:'831px'){
         margin-left: 50%;
       }
     }
@@ -112,7 +114,7 @@ summary {
         width:47%;
         margin-right:3%;
         float:left;
-        margin-bottom: 50px;
+        margin-bottom: 42px;
         border-top: 10px solid $light-blue;
         padding-top: 1em; 
         min-height:150px;
@@ -122,7 +124,7 @@ summary {
       @include media(desktop){
         width:50%;
         float:right;
-        margin-bottom: 50px;
+        margin-bottom: 42px;
         border-top: 10px solid $light-blue;
         padding-top: 1em;
         min-height:150px;
@@ -135,13 +137,26 @@ summary {
   .offline-apply {
     clear:both;
     border-top: 1px solid $border-colour;
-    margin-bottom:25px;
+    margin-bottom:42px;
+
+    .this-is-a-beta {
+      margin:0;
+      padding-top:12px;
+      margin-bottom:20px;
+      max-width: 350px;
+
+      @include media(desktop){
+        float: left;
+      }
+    }
   }
 
   .help-and-related-links {
-    display:block;
+    display:inline-block;
+    width: 100%;
     clear:both;
     float:none;
+    padding-top: 0;
 
     h1 {
       @include media(desktop) {
@@ -207,16 +222,18 @@ nav.popular-needs {
   margin-left: 30px;
   margin-bottom: 15px;
   @include copy-16;
-  
-  span.beta {
-      background: #f47738;
-      color: #fff;
-      @include bold-16;
-      text-transform: uppercase;
-      padding: 4px 5px 0px 6px;
-      vertical-align: middle;
-      margin-right:10px;
-  }
+}
+
+span.beta {
+  display: inline-block;
+  background: #f47738;
+  color: #fff;
+  @include bold-16;
+  line-height:1;
+  text-transform: uppercase;
+  padding: 5px 5px 2px 6px;
+  vertical-align: middle;
+  margin-right:10px;
 }
 
 .contact-numbers {
@@ -225,11 +242,15 @@ nav.popular-needs {
     li {
       @include core-24;
       font-weight: 700;
-      width: 50%;
+      width: 100%;
       float: left;
       list-style: none;
       padding-left: 0;
       padding-bottom: 1em;
+
+      @include media(desktop) {
+        width: 50%;
+      }
     }
 
     .contact-type {
@@ -242,7 +263,6 @@ nav.popular-needs {
 .call-charges {
   p {
     @include core-14;
-    color: $grey-1;
     padding-top: 0;
     padding-bottom: 0;
     margin-bottom: 0;
@@ -254,19 +274,56 @@ nav.popular-needs {
     margin: 0;
     li {
       @include core-14;
-      color: $grey-1;
       padding-left: 0;
       margin-left: 0;
     }
   }
 }
 
+
+
+.destination {
+  display: block;
+  margin-top: 10px;
+}
+
+.by-phone {
+  margin-top: 20px;
+
+  @include media(desktop){
+    margin-top: 0;
+  }
+}
+
 .at-post-office {
+  margin-top: 40px;
   @include media(desktop){
     margin-top: 50px;
   }
 }
 
+
+
+
+// override mad declaration in static that applies styles to ANY div inside .page-header
+// about the least future-proof css evah.  :/
+
+header.page-header div,
+body.full-width header.page-header div {
+
+  padding:15px 0 0 0;
+
+  @include media(desktop) {
+    padding: 30px 0 0 0;
+  }
+}
+
+
+
+.button-secondary{
+  @include button($grey-3);
+  font-weight:700;
+}
 
 
 
