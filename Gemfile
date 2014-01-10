@@ -15,7 +15,7 @@ gem 'htmlentities', '4.3.1'
 if ENV['SLIMMER_DEV']
   gem 'slimmer', :path => '../slimmer'
 else
-  gem 'slimmer', '3.20.0'
+  gem 'slimmer', '3.25.0'
 end
 
 if ENV['CDN_DEV']
@@ -27,12 +27,12 @@ end
 if ENV['API_DEV']
   gem 'gds-api-adapters', :path => '../gds-api-adapters'
 else
-  gem 'gds-api-adapters', '7.18.0'
+  gem 'gds-api-adapters', '8.2.1'
 end
 
 gem "addressable"
 gem 'exception_notification', '3.0.1'
-gem 'logstasher', '0.4.0'
+gem 'logstasher', '0.4.1'
 
 gem 'rack_strip_client_ip', '0.0.1'
 
