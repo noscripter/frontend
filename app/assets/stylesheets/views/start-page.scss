@@ -284,7 +284,12 @@ span.beta {
 
 .destination {
   display: block;
-  margin-top: 10px;
+  margin-top:25px;
+  margin-bottom:5px;
+}
+
+form.get-started {
+  margin-top: 0;
 }
 
 .by-phone {
@@ -323,6 +328,10 @@ body.full-width header.page-header div {
 .button-secondary{
   @include button($grey-3);
   font-weight:700;
+}
+
+.opening {
+  margin-top:0;
 }
 
 

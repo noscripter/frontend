@@ -9,8 +9,8 @@
 
     <nav class="popular-needs">
       <ul class="top-tasks">
-        <li><a href="#TODO">Make a SORN declaration</a></li>
-        <li><a href="#TODO">Apply for an HGV vehicle tax disc</a></li>
+        <li><a href="#TODO">Make a <acronym title="Statutory off road notice">SORN</acronym> declaration</a></li>
+        <li><a href="#TODO">Apply for an <acronym title="Heavy goods vehicle">HGV</acronym> vehicle tax disc</a></li>
         <li><a href="#TODO">Read the guide on car tax</a></li>
       </ul>
     </nav>
@@ -20,38 +20,38 @@
 
   <div class="start-container full-width start-page">
 
-    <section class="primary-apply">
+    <section class="primary-apply" aria-labelledby="primary-apply-label">
       <div class="eligibility-check">
         
-        <h1>Before you start</h1>
+        <h1 id="primary-apply-label">Before you start</h1>
         <p>To be eligible to apply online you will need either:</p>
         <ul>
           <li>the 16 digit reference number from your tax disc renewal letter (V11)</li>
           <li>the 11 digit reference number from your log book (V5C)</li>
         </ul>
 
+        <span class="destination">Apply on the DVLA website:</span>
         <form class="get-started" action="#TODO" method="#TODO">
           <input type="submit" value="Apply now" class="button medium" />
         </form>
-        <span class="destination"> on the DVLA website</span>
+        
 
       </div>
 
       <div class="you-will-need">
         <h2>You will need</h2>
         <p>Tax disc renewal letter (V11)</p>
-        <%= image_tag 'start-pages/v11-diagram.png', alt: 'v11 diagram', width: '220' %>
+        <%= image_tag 'start-pages/v11-diagram.png', alt: 'Tax disc renewal letter (V11)', width: '220' %>
       </div>
     </section>
 
 
-    <section class="secondary-apply">
-      <h1>Apply using the new service <span class="beta">beta</span></h1>
+    <section class="secondary-apply" aria-labelledby="secondary-apply-label">
+      <h1 id="secondary-apply-label">Apply using the new service <span class="beta">beta</span></h1>
       <p class="this-is-a-beta">This is a 'beta' service - find out <a href="#TODO">what this means for you</a></p>
 
       <div class="application-details">
-        <h2>Before you start</h2>
-        <p>To apply using the new beta service you will need either:</p>
+        <p class="opening">To apply using the new beta service you will need either:</p>
         <ul>
           <li>the 16 digit reference number from your tax disc renewal letter (V11)</li>
           <li>the 11 digit reference number from your log book (V5C)</li>
@@ -69,8 +69,8 @@
     </section>
 
 
-    <section class="offline-apply">
-      <h1>Other ways to apply</h1>
+    <section class="offline-apply" aria-labelledby="offline-apply-label">
+      <h1 id="offline-apply-label">Other ways to apply</h1>
       <div class="contacts">
 
         <div class="by-phone">
@@ -110,8 +110,8 @@
 
 
     <section class="help-and-related-links">
-      <section class="help">
-        <h1>Help with tax discs</h1>
+      <section class="help" aria-labelledby="help-label">
+        <h1 id="help-label">Help with tax discs</h1>
         <ul>
           <li>
             <a href="TODO">Contact DVLA for questions about car tax</a>
@@ -120,8 +120,8 @@
       </section>
 
 
-      <section class="related-links">
-        <h1>Tax discs and car tax</h1>
+      <section class="related-links" aria-labelledby="related-links-label">
+        <h1 id="related-links-label">Tax discs and car tax</h1>
         <ul>
           <li><a href="TODO">Make a SORN (Statutory Off Road Notification</a></li>
           <li><a href="TODO">Calculate vehicle tax rates</a></li>
