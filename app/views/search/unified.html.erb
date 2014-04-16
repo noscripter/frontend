@@ -3,12 +3,18 @@
 
 <main id="content" role="main" class="group search ancillary">
   <%= render partial: 'form' %>
+  <div class="filter-form">
+    <%= render partial: 'select_facet', locals: {facets: @facets["organisations"]} %>
+  </div>
 
   <div id="unified-results">
+    <div class="result-count">
+      <%= @result_count %> results found on GOV.UK
+    </div>
     <h2 class="visuallyhidden">Top result</h2>
     <ul class="results-list">
-      <% @results.each_with_index do |top_result, index| %>
-      <%= render partial: "result", locals: { result: top_result } %>
+      <% @results.each_with_index do |result, index| %>
+        <%= render partial: "result", locals: { result: result } %>
       <% end %>
     </ul>
   </div>

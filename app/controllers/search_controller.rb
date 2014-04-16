@@ -10,6 +10,7 @@ class SearchController < ApplicationController
 
   DEFAULT_RESULTS_PER_PAGE = 50
   MAX_RESULTS_PER_PAGE = 100
+  INITIAL_ORG_FACET_OPTIONS = 10
 
   def index
     @search_term = params[:q]
@@ -48,10 +49,12 @@ class SearchController < ApplicationController
       count: "#{requested_result_count}",
       q: @search_term,
       filter_organisations: [*params[:filter_organisations]],
+      facet_organisations: "#{INITIAL_ORG_FACET_OPTIONS}",
     }
     search_response = search_client.unified_search(search_params)
 
     results = UnifiedSearchResultsPresenter.new(search_response)
+    @facets = search_response["facets"]
     @spelling_suggestion = results.spelling_suggestion
     @result_count = results.result_count
     @results = results.results
