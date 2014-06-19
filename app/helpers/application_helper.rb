@@ -7,6 +7,10 @@ module ApplicationHelper
     [title, 'GOV.UK'].select(&:present?).join(" - ")
   end
 
+  def page_description(publication)
+    [publication.short_description, publication.summary].find(&:present?)
+  end
+
   def wrapper_class(publication = nil)
     services = %W[transaction local_transaction completed_transaction place]
     answers = %W[answer business_support]

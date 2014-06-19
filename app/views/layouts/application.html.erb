@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <title><% if @publication %><%= page_title(@publication) %><% else %><%= yield :title %><% end %></title>
+    <% if @publication %>
+      <meta name="description" content="<%=page_description(@publication)%>">
+    <% end %>
     <%= yield :extra_stylesheets %>
 
     <link title="Search" rel="search" type="application/opensearchdescription+xml" href="/search/opensearch.xml"/>
