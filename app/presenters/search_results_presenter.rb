@@ -2,9 +2,9 @@ class SearchResultsPresenter
   include ActionView::Helpers::TextHelper
   include ActionView::Helpers::NumberHelper
 
-  def initialize(search_response, query, params)
-    @search_response = search_response
-    @query = query
+  def initialize(search_query, params)
+    @search_response = search_query.response
+    @query = search_query.query
     @debug = params[:debug_score]
     @params = params
   end

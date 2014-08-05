@@ -1,12 +1,22 @@
 require_relative "../../test_helper"
 
 class SearchResultsPresenterTest < ActiveSupport::TestCase
+
+  def mock_search_query(query, response)
+    mock("SearchQuery",
+      query: query,
+      response: response,
+    )
+  end
+
   should "return an appropriate hash" do
-    results = SearchResultsPresenter.new({
+    query = mock_search_query('my-query', {
       "total" => 1,
       "results" => [ { "index" => "mainstream" } ],
       "facets" => []
-    }, 'my-query', {})
+    })
+
+    results = SearchResultsPresenter.new(query, {})
     assert_equal 'my-query', results.to_hash[:query]
     assert_equal 1, results.to_hash[:result_count]
     assert_equal '1 result', results.to_hash[:result_count_string]
@@ -14,7 +24,7 @@ class SearchResultsPresenterTest < ActiveSupport::TestCase
   end
 
   should "return an entry for a facet" do
-    results = SearchResultsPresenter.new({
+    query = mock_search_query('my-query', {
       "results" => [],
       "facets" => {
         "organisations" => {
@@ -27,7 +37,9 @@ class SearchResultsPresenterTest < ActiveSupport::TestCase
           } ]
         }
       }
-    }, 'my-query', {})
+    })
+
+    results = SearchResultsPresenter.new(query, {})
 
     assert results.to_hash[:filter_fields]["organisations"]
     assert_equal 1, results.to_hash[:filter_fields]["organisations"][:options].length
