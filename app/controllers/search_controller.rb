@@ -20,10 +20,10 @@ class SearchController < ApplicationController
       debug: params[:debug],
       filter_organisations: [*params[:filter_organisations]],
     )
-    @query.perform
+    @response = @query.perform
 
-    @results = SearchResultsPresenter.new(@query, params)
-    @facets = @query.response["facets"]
+    @results = SearchResponsePresenter.new(@response, params)
+    @facets = @response.facets
     @spelling_suggestion = @results.spelling_suggestion
 
     fill_in_slimmer_headers(@results.result_count)

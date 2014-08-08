@@ -1,12 +1,10 @@
 require_relative "../../test_helper"
 
-class SearchResultsPresenterTest < ActiveSupport::TestCase
+class SearchResponsePresenterTest < ActiveSupport::TestCase
 
   def mock_search_query(query, response)
-    mock("SearchQuery",
-      query: query,
-      response: response,
-    )
+    query = stub("SearchQuery", query: query)
+    SearchResponse.new(response, query)
   end
 
   should "return an appropriate hash" do
@@ -16,7 +14,7 @@ class SearchResultsPresenterTest < ActiveSupport::TestCase
       "facets" => []
     })
 
-    results = SearchResultsPresenter.new(query, {})
+    results = SearchResponsePresenter.new(query, {})
     assert_equal 'my-query', results.to_hash[:query]
     assert_equal 1, results.to_hash[:result_count]
     assert_equal '1 result', results.to_hash[:result_count_string]
@@ -39,7 +37,7 @@ class SearchResultsPresenterTest < ActiveSupport::TestCase
       }
     })
 
-    results = SearchResultsPresenter.new(query, {})
+    results = SearchResponsePresenter.new(query, {})
 
     assert results.to_hash[:filter_fields]["organisations"]
     assert_equal 1, results.to_hash[:filter_fields]["organisations"][:options].length

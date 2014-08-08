@@ -54,7 +54,7 @@ class SearchControllerTest < ActionController::TestCase
     response_body = response(results, suggestions)
     parameters = {
       :start => nil,
-      :count => '50',
+      :count => 50,
       :q => query,
       :filter_organisations => organisations,
       :fields => rummager_result_fields,
@@ -69,7 +69,7 @@ class SearchControllerTest < ActionController::TestCase
   def expect_search_client_is_requested(organisations, query = "search-term")
     parameters = {
       :start => nil,
-      :count => '50',
+      :count => 50,
       :q => query,
       :filter_organisations => organisations,
       :fields => rummager_result_fields,

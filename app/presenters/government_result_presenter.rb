@@ -1,7 +1,4 @@
-class GovernmentResult < SearchResult
-  include ERB::Util
-  result_accessor :display_type
-
+class GovernmentResultPresenter < SearchResultPresenter
   def to_hash
     super.merge({
       metadata: metadata,
@@ -15,10 +12,10 @@ class GovernmentResult < SearchResult
   def metadata
     out = []
     out << public_timestamp if public_timestamp.present?
-    if display_type.present?
-      out << display_type
-    elsif %w{ corporate_information document_series }.include?(format)
-      out << format.humanize
+    if result.display_type.present?
+      out << result.display_type
+    elsif %w{ corporate_information document_series }.include?(result.format)
+      out << result.format.humanize
     end
     out << organisations if organisations.present?
     out << world_locations if world_locations.present?
@@ -26,7 +23,7 @@ class GovernmentResult < SearchResult
   end
 
   def sections
-    case format
+    case result.format
     when 'minister' then
       [
         { hash: 'responsibilities', title: 'Responsibilities' },
@@ -51,27 +48,27 @@ class GovernmentResult < SearchResult
   end
 
   def title
-    if format == 'organisation' && result["organisation_state"] == 'closed'
-      "Closed organisation: " + result["title"]
+    if result.format == 'organisation' && result.organisation_state == 'closed'
+      "Closed organisation: " + result.title
     else
-      result["title"]
+      result.title
     end
   end
 
   def public_timestamp
-    result["public_timestamp"].to_date.strftime("%e %B %Y") if result["public_timestamp"]
+    result.public_timestamp.to_date.strftime("%e %B %Y") if result.public_timestamp
   end
 
   def description
     description = nil
-    if result["description"].present?
-      description = result["description"]
+    if result.description.present?
+      description = result.description
     end
 
     description = description.truncate(215, :separator => " ") if description
 
-    if format == "organisation" && result["organisation_state"] != 'closed'
-      "The home of #{result["title"]} on GOV.UK. #{description}"
+    if result.format == "organisation" && result.organisation_state != 'closed'
+      "The home of #{result.title} on GOV.UK. #{description}"
     else
       description
     end
@@ -91,8 +88,8 @@ private
   end
 
   def fetch_multi_valued_field(field_name)
-    if result[field_name].present?
-      result[field_name].reject(&:blank?)
+    if result.send(field_name.to_sym).present?
+      result.send(field_name.to_sym).reject(&:blank?)
     else
       []
     end
@@ -107,4 +104,5 @@ private
       end
     end.join(", ")
   end
+
 end

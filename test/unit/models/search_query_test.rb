@@ -34,17 +34,19 @@ class SearchQueryTest < ActiveSupport::TestCase
                       .returns(options[:response])
   end
 
-  should 'perform a search given a query parameter' do
+  should 'perform a search given a query parameter, returning a response' do
     query = SearchQuery.new(query: 'cheese')
+    mock_response = mock('SearchResponse')
 
     expect_search_request(
       search_query: query,
       expected_request: build_search_query(q: 'cheese'),
       response: base_response
     )
+    SearchResponse.expects(:new).with(base_response, query)
+                                .returns(mock_response)
 
-    assert query.perform
-    assert_equal base_response, query.response
+    assert_equal mock_response, query.perform
   end
 
   context '#count' do
@@ -61,7 +63,6 @@ class SearchQueryTest < ActiveSupport::TestCase
       )
 
       assert query.perform
-      assert_equal base_response, query.response
     end
 
     should 'allow a custom count value' do
@@ -74,7 +75,6 @@ class SearchQueryTest < ActiveSupport::TestCase
       )
 
       assert query.perform
-      assert_equal base_response, query.response
     end
 
     should 'limit the count value to the maximum allowed' do
@@ -91,7 +91,6 @@ class SearchQueryTest < ActiveSupport::TestCase
       )
 
       assert query.perform
-      assert_equal base_response, query.response
     end
 
     should 'use the default count value when < 0' do
@@ -107,7 +106,6 @@ class SearchQueryTest < ActiveSupport::TestCase
       )
 
       assert query.perform
-      assert_equal base_response, query.response
     end
   end
 

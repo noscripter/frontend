@@ -13,8 +13,16 @@ class SearchResponse
     end
   end
 
+  def query_string
+    query.query
+  end
+
+  def total
+    response['total'] || results.size
+  end
+
 private
-  attr_reader :response
+  attr_reader :response, :query
 
   def self.response_accessor(*keys)
     keys.each do |key|
@@ -23,6 +31,6 @@ private
       end
     end
   end
-  response_accessor :facets, :suggested_queries, :start, :total
+  response_accessor :facets, :suggested_queries, :start
 
 end

@@ -1,5 +1,5 @@
 class SearchQuery
-  attr_reader :start, :query, :debug, :filter_organisations, :response
+  attr_reader :start, :query, :debug, :filter_organisations
 
   FIELDS = %w{
     description
@@ -32,8 +32,8 @@ class SearchQuery
   end
 
   def perform
-    @response = search_client.unified_search(payload)
-    @response.present?
+    @response_body = search_client.unified_search(payload)
+    SearchResponse.new(@response_body, self)
   end
 
   def count
