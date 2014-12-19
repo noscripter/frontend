@@ -60,9 +60,9 @@ class SearchResultsPresenter
   def results
     search_response["results"].map do |result|
       if result["index"] == "government"
-        GovernmentResult.new(result, debug)
+        GovernmentResult.new(result, self, debug)
       else
-        SearchResult.new(result, debug)
+        SearchResult.new(result, self, debug)
       end
     end
   end
@@ -97,6 +97,20 @@ class SearchResultsPresenter
     if has_previous_page?
       "#{previous_page_number} of #{total_pages}"
     end
+  end
+
+  def search_parameters(extra = {})
+    # explicitly set the format to nil so that the path does not point to
+    # /search.json
+    combined_params = params.merge(format: nil)
+
+    # don't include the 'count' query parameter unless we are overriding the
+    # default value with a custom value
+    unless custom_count_value?
+      combined_params.delete(:count)
+    end
+
+    combined_params.merge(extra)
   end
 
 private
@@ -157,19 +171,4 @@ private
     requested_count != 0 &&
       requested_count != SearchController::DEFAULT_RESULTS_PER_PAGE
   end
-
-  def search_parameters(extra = {})
-    # explicitly set the format to nil so that the path does not point to
-    # /search.json
-    combined_params = params.merge(format: nil)
-
-    # don't include the 'count' query parameter unless we are overriding the
-    # default value with a custom value
-    unless custom_count_value?
-      combined_params.delete(:count)
-    end
-
-    combined_params.merge(extra)
-  end
-
 end
