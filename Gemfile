@@ -33,6 +33,7 @@ gem 'logstasher', '0.4.8'
 gem 'airbrake', '3.1.15'
 gem 'invalid_utf8_rejector', '0.0.1'
 gem 'rack_strip_client_ip', '0.0.1'
+gem 'uk_postcode', '2.1.0'
 
 group :assets do
   # Note that govuk_frontend_toolkit is only used here for SASS mixins and
