@@ -76,7 +76,7 @@ class RootController < ApplicationController
 
   def publication
     @publication = prepare_publication_and_environment
-    @postcode = params[:postcode]
+    @postcode = parse_postcode(params[:postcode])
 
     if ['licence', 'local_transaction'].include?(@publication.format)
       @location = fetch_location @postcode
@@ -265,5 +265,12 @@ protected
 
   def deny_framing?(publication)
     ['transaction', 'local_transaction'].include? publication.format
+  end
+
+  def parse_postcode(postcode)
+    # Strip all non-alpha numeric chars, handles: eg `X9-9XX`, `X9 9XX\`
+    # `UKPostcode` will handle O/0, 1/I substitutions, but struggles
+    # with spaces in the outcode, so strip spaces before parsing too.
+    UKPostcode.parse(postcode.gsub(/[^0-9a-z]/i, '')).to_s if postcode
   end
 end

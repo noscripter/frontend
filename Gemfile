@@ -29,6 +29,7 @@ else
 end
 
 gem "addressable"
+gem 'uk_postcode', '2.1.0'
 gem 'logstasher', '0.4.8'
 gem 'airbrake', '3.1.15'
 gem 'invalid_utf8_rejector', '0.0.1'
