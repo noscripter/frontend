@@ -15,7 +15,9 @@ namespace :postcode_analysis do
 
     File.foreach('../tmp/postcode_sample.txt') do |postcode|
 
-      postcode = UKPostcode.parse(postcode)
+      postcode = UKPostcode.parse(postcode.strip)
+      next unless postcode.valid?
+
       location = controller.send(:fetch_location, postcode.to_s)
       full_snac = controller.send(:appropriate_snac_code_from_location, publication, location)
 
