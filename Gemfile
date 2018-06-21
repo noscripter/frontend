@@ -52,7 +52,7 @@ end
 # variables. Analytics and other javascript features are provided by static.
 gem 'govuk_frontend_toolkit', '~> 4.1.0'
 gem 'sass', '3.4.9'
-gem 'sass-rails'
+gem 'sass-rails', '>= 5.0.3'
 gem "therubyracer", "0.12.2"
 gem 'uglifier'
 
