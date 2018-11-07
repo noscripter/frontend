@@ -13,19 +13,19 @@ gem 'htmlentities', '4.3.1'
 gem 'shared_mustache', '1.0.0'
 
 if ENV['SLIMMER_DEV']
-  gem 'slimmer', :path => '../slimmer'
+  gem 'slimmer', '>= 9.0.0'
 else
   gem 'slimmer', '9.0.0'
 end
 
 if ENV['CDN_DEV']
-  gem 'cdn_helpers', :path => '../cdn_helpers'
+  gem 'cdn_helpers', '>= 0.9'
 else
   gem 'cdn_helpers', '0.9'
 end
 
 if ENV['API_DEV']
-  gem 'gds-api-adapters', :path => '../gds-api-adapters'
+  gem 'gds-api-adapters', '>= 25.0.0'
 else
   gem 'gds-api-adapters', '25.0.0'
 end
@@ -39,7 +39,7 @@ gem 'rack_strip_client_ip', '0.0.1'
 gem 'uk_postcode', '2.1.0'
 
 group :development do
-  gem 'better_errors'
+  gem 'better_errors', '>= 2.1.1'
   gem 'binding_of_caller'
 end
 
@@ -52,7 +52,7 @@ end
 # variables. Analytics and other javascript features are provided by static.
 gem 'govuk_frontend_toolkit', '~> 4.1.0'
 gem 'sass', '3.4.9'
-gem 'sass-rails'
+gem 'sass-rails', '>= 5.0.3'
 gem "therubyracer", "0.12.2"
 gem 'uglifier'
 
