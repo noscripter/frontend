@@ -13,13 +13,13 @@ gem 'htmlentities', '4.3.1'
 gem 'shared_mustache', '1.0.0'
 
 if ENV['SLIMMER_DEV']
-  gem 'slimmer', :path => '../slimmer'
+  gem 'slimmer', '>= 9.0.0'
 else
   gem 'slimmer', '9.0.0'
 end
 
 if ENV['CDN_DEV']
-  gem 'cdn_helpers', :path => '../cdn_helpers'
+  gem 'cdn_helpers', '>= 0.9'
 else
   gem 'cdn_helpers', '0.9'
 end
@@ -52,7 +52,7 @@ end
 # variables. Analytics and other javascript features are provided by static.
 gem 'govuk_frontend_toolkit', '~> 4.1.0'
 gem 'sass', '3.4.9'
-gem 'sass-rails'
+gem 'sass-rails', '>= 5.0.3'
 gem "therubyracer", "0.12.2"
 gem 'uglifier'
 
@@ -65,6 +65,6 @@ group :test do
   gem 'capybara', '2.1.0'
   gem 'poltergeist', '1.3.0'
   gem "launchy"
-  gem "shoulda"
+  gem "shoulda", ">= 3.5.0"
   gem "timecop", "0.6.3"
 end
